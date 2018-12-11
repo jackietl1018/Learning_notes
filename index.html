@@ -19,7 +19,8 @@
         <img src="images/step_2.png" alt="settings设置"/>
         <img src="images/step_3.png" alt="settings设置"/>
     </p>
-    <p style="clear:both;">将git repository clone到本地任意盘，然后打开webstorm创建一个本地对应project，以后只要将本地project目录下的内容copy到git repository目录就行，
+    <p style="clear:both;">将git repository clone到本地任意盘，然后打开webstorm创建一个本地对应project，以后只要将本地project目录下的内容copy到git
+        repository目录就行，
         后续通过git bash 进行代码commit到git上（貌似webstorm也可自动commit）<br/>
         <img src="images/step_4.png" alt="clone repository 到本地"/>
         <img src="images/step_5.png" alt="webstorm创建本地project"/>
@@ -36,8 +37,114 @@
         <img src="images/step_10.1.png" alt="对应网址"/>
         <img src="images/step_10.2.png" alt="网站效果"/>
     </p>
-
 </div>
 
-</body>
-</html>
+<div>
+    <h2>2018年12月10号-星期一</h2>
+    <h3>javascript判断语句</h3>
+    <script type="text/javascript">
+
+        var score = 59;
+        if (score >= 60) {
+            document.write("<label style='font-family:serif;color:blue;'>没及格，下次考试继续努力呦！</label>");  <!--思考一下该如何改变document.write输出的内容字体颜色等，百度没找到-->
+        } else {
+            document.write("wa,还不错呦，及格啦!<br/>");
+        }
+        var a = 75;
+        if (a < 60) {
+            document.write("没及格，下次考试继续努力呦！<br/>");
+        } else if (a < 80) {
+            document.write("成绩良好！<br/>");
+        } else if (a < 90) {
+            document.write("成绩优秀！<br/>");
+        } else {
+            document.write("成绩非常优秀，棒棒棒！<br/>");
+        }
+        document.write("<span style='color:darkblue;'>" + "JS输出空格的两种方法：" + "<br/>" + "<span/>");<!--只给一个document.write添加样式，后面所有的document.write好像都默认这个样式了-->
+        document.write("方法一：" + "1" + "&nbsp;&nbsp;&nbsp;&nbsp;" + "23" + "<br/>");
+        document.write("<span style='white-space:pre;color:yellow;'>" + "方法二：" + "1   2   3" + "<span/>")  <!--在输出时添加“white-space:pre;”样式属性。这个样式表示"空白会被浏览器保留"-->
+
+        function show() {
+            var content = "Cherish everyday!";
+            alert(content);       <!--有想过如何改变alert弹窗内容的字体，大小，颜色等等样式如何控制吗？-->
+        }
+
+        function dialog() {
+            var message = confirm("性别为女吗？");
+            if (message == true) {
+                document.write("你是女士！");
+            } else {
+                document.write("你是男士！");
+            }
+        }
+
+    </script>
+    <input name="button" type="button" value="点击我，弹出对话框！" onClick="show()"/>
+    <input name="button" type="button" value="点击我，弹出确认对话框！" onClick="dialog()"/>
+
+</div>
+<div class="column_1">
+    <h2>About HTML and CSS</h2>
+    <div class="container_1">
+        <div class="center_1">
+            <p>水平垂直居中方法一：通过left：50%；top：50%；margin-left和margin-top为center_1div宽高一半的负值</p>
+        </div>
+        <div class="center_2">
+            <p>不定高盒子水平垂直居中这样可实现否？（如水平垂直居中方法一）</p>
+        </div>
+        <div class="center_3">
+            <p>我才是正宗的不定高盒子水平垂直居中！</p>
+        </div>
+        <div class="center_4">
+            <p>我实现了不定宽高的盒子居中！！！77777777778888888888888</p>
+        </div>
+    </div>
+
+    <div class="container_2">
+        <div class="flex_box">
+            <p>水平垂直居中方法二：通过flex布局</p>
+        </div>
+    </div>
+</div>
+<div class="column_2">
+    <h2>About Javascript</h2>
+    <script type="text/javascript">
+        function rec() {
+            var score;
+            score = prompt("请输入你的成绩：");
+            if (score!=null) {
+                if (score >= 90) {
+                    document.write("你很棒！");
+                } else if (score >= 70) {
+                    document.write("不错呦！");
+                }else if (score>=60) {
+                    document.write("要加油！");
+                }else {
+                    document.write("要努力了！");
+                }
+            } else {
+                {}
+            }
+
+        }
+
+        function openWindow(){
+            var message=confirm("是否打开新窗口？");
+            if(message==true) {
+                var net=prompt("请输入你要打开的网址：","http://www.imooc.com/");       //在js文件中写法不一样：var net=prompt(message:"请输入你要打开的网址：",_default:"http://www.imooc.com/")
+                if(net!=null) {
+                    window.open(net,'_blank','width=400,height=600,top=100,left=0,menubar=no,toolbar=no,status=no,scrollbars=no')
+                }else {
+                    {}
+                }
+            }
+        }
+    </script>
+    <input name="button" type="button" value="点击我，对成绩做评价！" onClick="rec()"/><br/>
+    <input name="button" type="button" value="新窗口打开网站！" onclick="openWindow()"/>
+</div>
+<p>体会一下清除浮动与不清楚的效果！</p>
+<p style="clear:both;"> 清除浮动后显示位置</p>
+
+< /body>
+< /html>

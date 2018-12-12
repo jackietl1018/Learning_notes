@@ -105,6 +105,13 @@
             <p>水平垂直居中方法二：通过flex布局</p>
         </div>
     </div>
+    <div class="container_3">
+        <form method="get" action="">
+            <label for="introduction" style="color:darkblue">个人简介：</label><br/>
+            <textarea cols="50" rows="10" id="introduction">在这里输入内容...label for=后面的字段introduction与text-area后面的id相同的话就可以达到一种锁定区域的感觉，我们将鼠标点击在“个人简介”这些字上面时，光标会聚焦到文本框区域，可进行输入！
+            </textarea>     <!--文本区域可以输入10行，每行50个char-->
+        </form>
+    </div>
 </div>
 <div class="column_2">
     <h2>About Javascript</h2>
@@ -112,30 +119,32 @@
         function rec() {
             var score;
             score = prompt("请输入你的成绩：");
-            if (score!=null) {
+            if (score != null) {
                 if (score >= 90) {
                     document.write("你很棒！");
                 } else if (score >= 70) {
                     document.write("不错呦！");
-                }else if (score>=60) {
+                } else if (score >= 60) {
                     document.write("要加油！");
-                }else {
+                } else {
                     document.write("要努力了！");
                 }
             } else {
-                {}
+                {
+                }
             }
 
         }
 
-        function openWindow(){
-            var message=confirm("是否打开新窗口？");
-            if(message==true) {
-                var net=prompt("请输入你要打开的网址：","http://www.imooc.com/");       //在js文件中写法不一样：var net=prompt(message:"请输入你要打开的网址：",_default:"http://www.imooc.com/")
-                if(net!=null) {
-                    window.open(net,'_blank','width=400,height=600,top=100,left=0,menubar=no,toolbar=no,status=no,scrollbars=no')
-                }else {
-                    {}
+        function openWindow() {
+            var message = confirm("是否打开新窗口？");
+            if (message == true) {
+                var net = prompt("请输入你要打开的网址：", "http://www.imooc.com/");       //在js文件中写法不一样：var net=prompt(message:"请输入你要打开的网址：",_default:"http://www.imooc.com/")
+                if (net != null) {
+                    window.open(net, '_blank', 'width=400,height=600,top=100,left=0,menubar=no,toolbar=no,status=no,scrollbars=no')
+                } else {
+                    {
+                    }
                 }
             }
         }
@@ -162,5 +171,5 @@
 <p>体会一下清除浮动与不清楚的效果！</p>
 <p style="clear:both;"> 清除浮动后显示位置</p>
 
-< /body>
-< /html>
+</body>
+</html>

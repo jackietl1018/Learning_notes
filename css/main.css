@@ -86,3 +86,12 @@ img{
 /*flex布局是改变子元素的布局，所以为box添加了一个contain_2容器。
 这里为了直观一点，我为container_2设置了宽高和边框，弹性布局中任何一个容器，
 行内元素都可以用flex布局，但是webkit内核的浏览器需要在flex前加-webkit-。 */
+.container_3 {
+    width: 500px;
+    height: 400px;
+    border: 1px solid blue;
+    position: absolute;
+    left: 50%;
+    margin-left: -250px;
+    margin-top: 900px;
+}

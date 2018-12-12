@@ -141,7 +141,23 @@
         }
     </script>
     <input name="button" type="button" value="点击我，对成绩做评价！" onClick="rec()"/><br/>
-    <input name="button" type="button" value="新窗口打开网站！" onclick="openWindow()"/>
+    <input name="button" type="button" value="新窗口打开网站！" onclick="openWindow()"/><br/>
+    <h3>javascript打开新窗口：</h3>
+    <p><span style="color:purple;font-size:18px;">语法：</span><br/>
+        window.open([URL], [窗口名称], [参数字符串])<br/>
+        <span style="color:purple;font-size:18px;">参数说明：</span><br/>
+        <span style="color:yellow;">URL：</span>可选参数，在窗口中要显示网页的网址或路径。如果省略这个参数，或者它的值是空字符串，那么窗口就不显示任何文档。<br/>
+        <span style="color:yellow;">窗口名称：</span>可选参数，被打开窗口的名称。<br/>
+        1.该名称由字母、数字和下划线字符组成。<br/>
+        2."_top"、"_blank"、"_self"具有特殊意义的名称。<br/>
+        _blank：在新窗口显示目标网页<br/>
+        _self：在当前窗口显示目标网页<br/>
+        _top：框架网页中在上部窗口中显示目标网页<br/>
+        3.相同 name 的窗口只能创建一个，要想创建多个窗口则 name 不能相同。<br/>
+        4.name 不能包含有空格。<br/>
+        参数字符串：可选参数，设置窗口参数，各参数用逗号隔开。<br/>
+        <img src="images/chuangkou_canshu_set.jpg" alt="窗口参数设置图"/>
+    </p>
 </div>
 <p>体会一下清除浮动与不清楚的效果！</p>
 <p style="clear:both;"> 清除浮动后显示位置</p>

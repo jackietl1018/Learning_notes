@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三种样式优先级比较</title>
+    <link rel="icon" href="images/title_icon.png">
+    <link rel="stylesheet" type="text/css" href="css/style.css">      <!--调换<link>与<style>和</style>之间的内容，对比一下效果，体会嵌入式样式与外部式样式的优先级，其实就是“就近原则”-->
+    <style type="text/css">
+        .container{
+            position:absolute;
+            height:200px;
+            width:200px;
+            top:50%;
+            left:50%;
+            margin-top:-100px;
+            margin-left:-100px;
+            border:1px solid yellow;
+            color:red;
+        }
+        .set-1{
+            font-size:30px;
+        }
+        .set-2{
+            color:brown;
+        }
+        .set-3{
+            color:darkblue;
+        }
+    </style>
+</head>
+<body>
+<div class="container">赤道之旅
+    <span class="set-1 set-2">给我设置多个样式把！</span>
+    <span class="set-1 set-3">我与“给我设置多个样式把”有相同也有不同</span>
+</div>
+<!--可以使用类选择器词列表方法为一个元素同时设置多个样式。我们可以为一个元素同时设多个样式，但只可以用类选择器的方法实现，ID选择器是不可以的（不能使用 ID 词列表）。-->
+
+</body>
+</html>

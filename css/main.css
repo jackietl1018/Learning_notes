@@ -88,7 +88,7 @@ img{
 行内元素都可以用flex布局，但是webkit内核的浏览器需要在flex前加-webkit-。 */
 .container_3 {
     width: 500px;
-    height: 400px;
+    height: 800px;
     border: 1px solid blue;
     position: absolute;
     left: 50%;

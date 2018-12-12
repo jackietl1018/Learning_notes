@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js强大之处-实现一个类似计算器</title>
+    <link rel="icon" href="images/title_icon.png"/>
+    <script type="text/javascript">
+        //第一步把之前的数据写成一个数组的形式,定义变量为 infos
+        var infos=[["小A","女",21,"大一"],
+            ["小B","男",23,"大三"],
+            ["小C","男",24,"大四"],
+            ["小D","女",21,"大一"],
+            ["小E","女",22,"大四"],
+            ["小F","男",21,"大一"],
+            ["小G","女",22,"大二"],
+            ["小H","女",20,"大三"],
+            ["小I","女",20,"大一"],
+            ["小J","男",20,"大三"]];
+
+        //第一次筛选，找出都是大一的信息
+        for(var i=0;i<infos.length;i++)
+        {
+            if(infos[i][3]==="大一"&&infos[i][1]==="女")         //js中什么时候使用===，什么时候使用==，详述见：https://www.cnblogs.com/iceflorence/p/8903850.html
+            {
+                document.write(infos[i][0]+"<br/>");
+            }
+        }
+
+
+        //第二次筛选，找出都是女生的信息
+
+        function add3(x,y,z)
+        {
+            sum=x+y+z;
+            document.write(`${x}、${y}、${z}和为：${sum}<br/>`);
+            document.write(x+"、"+y+"、"+z+"和为："+sum+"<br/>");
+        }
+        add3(2,3,5)
+
+
+        function message()
+        {
+            alert("请选择，你现在的职业！");
+        }
+
+
+        window.onbeforeunload=onunload_message;
+        function onunload_message()
+        {
+            return "你确定离开该网页吗？";                    //Microsoft Edge浏览器可以实现关闭网页出现提示框，而Chrome浏览器不行
+        }
+
+
+        function count()
+        {
+            var operand1=document.getElementById("txt1").value;
+            var operand2=document.getElementById("txt2").value;
+            var operator=document.getElementById("select").value;
+            var result;
+            switch(operator)
+            {
+                case "+":
+                    result=parseFloat(operand1)+parseFloat(operand2);
+                    break;
+                case "-":
+                    result=parseFloat(operand1)-parseFloat(operand2);
+                    break;
+                case "*":
+                    result=parseFloat(operand1)*parseFloat(operand2);
+                    break;
+                case "/":
+                    result=parseFloat(operand1)/parseFloat(operand2);
+            }
+            document.getElementById("fruit").value=result;
+            //获取第一个输入框的值
+            // 获取第二个输入框的值
+            //获取选择框的值
+            //获取通过下拉框来选择的值来改变加减乘除的运算法则
+            //设置结果输入框的值
+
+        }
+
+    </script>
+</head>
+<body onbeforeunload=" return onunload_message()">
+<label>请选择您的职业:</label>
+<form>
+    <select name="career" onfocus="message()">
+        //alert 这个是
+
+        // 弹出对话框，当你点击弹出框的“确定”时，你的文本框就失去焦点了，而你点击了之后文本框又获得焦点了，这个时候就陷入死循环了（此时新一下网页就好）
+
+        //解决的办法： 不用这个onfocus =" " 属性，换成 onclick=""属性，就OK了。
+        <option>学生</option>
+        <option>教师</option>
+        <option>演员</option>
+        <option>会计</option>
+    </select>
+</form>
+
+<input type='text' id='txt1'/>
+<select id='select'>
+    <option value='+'>+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+</select>
+<input type='text' id='txt2' />
+<input type='button' value=' = ' onClick="count()" /> <!--通过 = 按钮来调用创建的函数，得到结果-->
+<input type='text' id='fruit' />
+
+</body>
+</html>
+
+<!--在一个大学的编程选修课班里，我们得到了一组参加该班级的学生数据，分别是姓名、性别、年龄和年级，接下来呢，我们要利用JavaScript的知识挑出其中所有是大一的女生的的名字哦。
+
+学生信息如下：
+
+('小A','女',21,'大一'),  ('小B','男',23,'大三'),
+
+('小C','男',24,'大四'),  ('小D','女',21,'大一'),
+
+('小E','女',22,'大四'),  ('小F','男',21,'大一'),
+
+('小G','女',22,'大二'),  ('小H','女',20,'大三'),
+
+('小I','女',20,'大一'),  ('小J','男',20,'大三')
+
+任务
+第一步： 把这些数据组成一个数组，方便我们之后操作哦。
+
+提示: 使用二维数组。
+第二步： 筛选数据吧，首先找出都是大一的所有信息 ;
+
+第三步： 最后再一次筛选上一步得到的数据，打印出都是女生的姓名 ;
+
+提示: 可以用switch 或 if 语句进行筛选。
+-->

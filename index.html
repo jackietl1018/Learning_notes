@@ -62,7 +62,7 @@
         }
         document.write("<span style='color:darkblue;'>" + "JS输出空格的两种方法：" + "<br/>" + "<span/>");<!--只给一个document.write添加样式，后面所有的document.write好像都默认这个样式了-->
         document.write("方法一：" + "1" + "&nbsp;&nbsp;&nbsp;&nbsp;" + "23" + "<br/>");
-        document.write("<span style='white-space:pre;color:yellow;'>" + "方法二：" + "1   2   3" + "<span/>")  <!--在输出时添加“white-space:pre;”样式属性。这个样式表示"空白会被浏览器保留"-->
+        document.write("<span style='white-space:pre;color:yellow;'>" + "方法二：" + "1   2   3" + "<span/>");  <!--在输出时添加“white-space:pre;”样式属性。这个样式表示"空白会被浏览器保留"-->
 
         function show() {
             var content = "Cherish everyday!";
@@ -107,10 +107,68 @@
     </div>
     <div class="container_3">
         <form method="get" action="">
-            <label for="introduction" style="color:darkblue">个人简介：</label><br/>
+            <label for="introduction" style="color:darkblue">个人简介：</label><br/>       <!--文本框实现-->
             <textarea cols="50" rows="10" id="introduction">在这里输入内容...label for=后面的字段introduction与text-area后面的id相同的话就可以达到一种锁定区域的感觉，我们将鼠标点击在“个人简介”这些字上面时，光标会聚焦到文本框区域，可进行输入！
-            </textarea>     <!--文本区域可以输入10行，每行50个char-->
+            </textarea><br/>     <!--文本区域可以输入10行，每行50个char-->
+            <input type="submit" name="submit" value="确定"/>
+            <input type="reset" name="reset" value="重置"/>
+            <br/><br/>
+
+            <label>性别：</label>                                   <!--单选框实现-->
+            <label for="man">男</label>
+            <input type="radio" name="gender-man" id="man"/>
+            <label for="woman">女</label>
+            <input type="radio" name="gender-woman" id="woman"/>
+            <!--注意：只有将性别里两个input的name设置成相同时，才不会出现单选框两个都能选中的情况！-->
+            <br/><br/>
+
+            <label>性别：</label>                                   <!--单选框实现-->
+            <label for="man1">男</label>
+            <input type="radio" name="gender" id="man1"/>
+            <label for="woman1">女</label>
+            <input type="radio" name="gender" id="woman1"/>
+            <br/><br/>
+
+            <label>你对哪些运动感兴趣？</label><br/>                 <!--复选框实现-->
+            <input type="checkbox" name="跑步" value="跑步"/>
+            <label>跑步</label>
+            <input type="checkbox" name="打球" value="打球" checked="checked"/>    <!--加上checked="checked"表示默认选中-->
+            <label>打球</label>
+            <input type="checkbox" name="登山" value="登山" checked="checked"/>
+            <label>登山</label>
+            <input type="checkbox" name="游泳" value="游泳"/>
+            <label>游泳</label>
+            <br/><br/>
+
+            <label>喜欢：</label>                                   <!--使用下拉列表，节省网页空间-->
+            <select multiple="multiple">                            <!--下拉列表也可以进行多选操作，在<select>标签中设置multiple="multiple"属性，就可以实现多选功能，
+                                                                     在 windows 操作系统下，进行多选时按下Ctrl键同时进行单击（在 Mac下使用 Command +单击），可以选择多个选项。-->
+                <option value="旅游" selected="selected">旅游</option>
+                <option value="生活">生活</option>
+                <option value="购物">购物</option>
+                <option value="一切">一切</option>
+            </select>
         </form>
+        <br/>
+        <a href="compare_css.html" target="_blank;">HTML三种样式优先级比较</a><br/>
+        <a href="outer_js.html" target="_blank;" style="text-decoration: none;">js文件链入html</a><br/>
+        <a href="index_1.html" target="_blank;" style="text-decoration:none;">使用javascript改变HTML样式</a><br/>
+        <a href="index_2.html" target="_blank;" style="text-decoration: none;">js强大之处-实现一个类似计算器</a><br/><br/>
+        <p>@@@字符串相关@@@</p>
+        <script type="text/javascript">
+            var mystr = "HELLO world!";
+            document.write(mystr.length + "<br/>");      //字符串中的空格和其他符号（如标点符号等）都算一个长度，str.length方法用来计算字符串长度。
+            document.write(mystr.indexOf("o", 5) + "<br/>");    //计算字符串中从第五个字符开始，出现字符“o”的第一个index位置（会区分字符大小写不，下一行代码试一下）
+            document.write(mystr.indexOf("O", 5) + "<br/>" + "上面的结果为-1可知，是会区分大小写的，js对大小写敏感！" + "<br/>" + "<br/>");
+
+            document.write("<span style='color:brown;'>" + "数组连接问题" + "<br/>" + "</span>");
+            var myarr1 = ["86", "010"];
+            var myarr2 = new Array("13022858182");
+            var myarr = myarr1.concat(myarr2);           //两数组连接
+            document.write(myarr.join("-")+"<br/>");           //数组内各值用-连接
+        </script>
+        <a href="about_time.html">时间输出格式控制问题</a>
+
     </div>
 </div>
 <div class="column_2">

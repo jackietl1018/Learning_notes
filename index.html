@@ -214,8 +214,8 @@
     <p><span style="color:purple;font-size:18px;">语法：</span><br/>
         window.open([URL], [窗口名称], [参数字符串])<br/>
         <span style="color:purple;font-size:18px;">参数说明：</span><br/>
-        <span style="color:yellow;">URL：</span>可选参数，在窗口中要显示网页的网址或路径。如果省略这个参数，或者它的值是空字符串，那么窗口就不显示任何文档。<br/>
-        <span style="color:yellow;">窗口名称：</span>可选参数，被打开窗口的名称。<br/>
+        <span style="color:darkslategrey;">URL：</span>可选参数，在窗口中要显示网页的网址或路径。如果省略这个参数，或者它的值是空字符串，那么窗口就不显示任何文档。<br/>
+        <span style="color:darkslategrey;">窗口名称：</span>可选参数，被打开窗口的名称。<br/>
         1.该名称由字母、数字和下划线字符组成。<br/>
         2."_top"、"_blank"、"_self"具有特殊意义的名称。<br/>
         _blank：在新窗口显示目标网页<br/>
@@ -227,24 +227,67 @@
         <img src="images/chuangkou_canshu_set.jpg" alt="窗口参数设置图"/>
     </p>
 
-    <p>点击一下，查看js中操作符之间的优先级</p><br/><br/><br/><br/>
-
-    <div id="txt" style="width:300px;height:100px;border:1px solid blue;">
-        <p>7777</p>
-    </div>
-
-    <input type="button" name="button" value="点我" onclick="hide()"/>
+    <p id="para" onmouseover="change()" onmouseout="rec()">点击一下，查看js中操作符之间的优先级</p><br/><br/>
+    <p>举个例子：</p>
+    <script type="text/javascript">
+        var result = 6 + 30 > 10 && 6 * 3 < 2;
+        document.write(result + "<br/>");
+    </script>
     <a href="index_3.html" target="_blank;" style="text-decoration:none;">利用js的函数为按钮添加事件，改变div（显示或者隐藏等）</a><br/>
     <a href="index_4.html" target="_blank;" style="text-decoration:none;">js变量反复定义最终值确定问题及变量a++与++a（两种自增）研究</a>
-</div>
-<p>体会一下清除浮动与不清楚的效果！</p>
-<p style=" clear:both;"> 清除浮动后显示位置</p>
-<script type="text/javascript">
-    var txt = document.getElementById("txt");
 
-    function hide() {
-        console.log(111111)
-        txt.style.display = "none"
+</div>
+<div class="clear" style="clear:both;"></div>                  <!--可以去掉这行，若不清除浮动，div会出现高度塌陷，相当于没有高度-->
+<p>体会一下清除浮动与不清除的效果！</p>
+<p> <a href="https://zhidao.baidu.com/question/648980034747582965.html" style="background-color:#E6E6E6;text-decoration:none;">使用了浮动的div好像在body里面撑不开内容，就像不显示一样的原因</a></p>
+<p style="text-indent:2em;"> div如果是没有内容的默认是不被撑开的，再有如果div里面的元素全部浮动了，而你有没有清除浮动，那么div会出现高度“塌陷”，也是没有高度的。再有如果你div里面仅有一个元素，并且定义了absolute或者fixed，那么这个div也是没有高度的。不知道你是否是以上情况中的一个。如果有最简单的方法就是将div设置一个理想的高度</p>
+<p><a href="http://www.divcss5.com/jiqiao/j406.shtml" style="background-color:#E6E6E6;text-decoration:none;">浮动产生的原因，负作用以及清除浮动的三种方法（介绍得很好，很仔细！）</a></p>
+<p><a href="https://www.jianshu.com/p/5a7854a73298" style="background-color:#E6E6E6;text-decoration:none;">什么时候需要清除浮动，清除浮动有哪些方法（简书上的回答），也写的非常精湛，易理解！</a></p>
+<p><a href="https://blog.csdn.net/thelostlamb/article/details/79581984" style="background-color:#E6E6E6;text-decoration:none;">与此同时，这就牵扯到关于文档流，以及如何脱离文档流的方法（之一就是设置浮动，还有position:absolute;和position:fixed(相对于浏览器窗口定位）的方法</a></p>
+<p>里面揭示了一个关于不清除浮动，为什么后面元素的内容如p标签里的内容出现位置如此奇怪的原因：</p>
+<p style="text-indent:2em;">注意！！！：使用float脱离文档流时，其他盒子会无视这个元素，但其他盒子内的文本依然会为这个元素让出位置，环绕在该元素的周围。</p>
+<p style="text-indent:2em;">这也是利用浮动特性实现文字环绕效果的深刻体会呀！</p>
+
+<div>
+    <h2>2018年12月13号-星期四</h2>
+    <div class="column_1">
+        <h2>About HTML and CSS</h2>
+        <p><span style="font-size:1.5em;color:blue;">js变量命名规则：</span><br/>
+            1.必须以字母、下划线或美元符$开头，后面可以跟字母、下划线、美元符号和数字。如下：<br/>
+            正确：<br/>
+            mynum<br/>
+            _mychar<br/>
+            $numa1<br/>
+            错误:<br/>
+            6num  //开头不能用数字<br/>
+            %sum //开头不能用除(_ $)外特殊符号,如(%  + /等)<br/>
+            sum+num //开头中间不能使用除(_ $)外特殊符号，如(%  + /等)<br/><br/>
+            2.变量名区分大小写，如:A与a是两个不同变量。<br/><br/>
+            3.不允许使用JavaScript关键字和保留字做变量名。
+        </p>
+        <p style="text-align:center;"><img src="images/js_keywords_reservedwords.jpg" style="margin:0 auto;" alt="JS关键字和保留字图示"/></p>
+        <div class="container_1" style="text-align:center;line-height:400px;">
+           <!-- <div class="center_box" style="vertical-align:middle;width:150px;height:150px;border:1px solid purple;display:inline-block;">利用text-align:center;结合vertical-align:middle;试试能否做到水平垂直居中</div>      （div里有文本的话由于设置了行高会出问题的，溢出边界）   -->
+            <img style="display:inline-block;vertical-align:middle;" src="images/center_image.png" alt="一张水平垂直居中的图片"/>
+        </div>
+    </div>
+    <div class="column_2">
+        <h2>About Javascript</h2>
+    </div>
+    <div class="clear" style="clear:both;"></div>
+</div>
+
+
+
+<script type="text/javascript">
+    var para = document.getElementById("para");
+
+    function change() {
+        para.innerHTML = "算术操作符→比较操作符→逻辑操作符→=赋值符号（由高到低）";
+    }
+
+    function rec() {
+        para.innerHTML = "点击一下，查看js中操作符之间的优先级";
     }
 </script>
 <script type="text/javascript" src="js/canvas-nest.min.js"></script>

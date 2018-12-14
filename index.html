@@ -84,7 +84,7 @@
 
 </div>
 <div class="column_1">
-    <h2>About HTML and CSS</h2>
+    <h3>About HTML and CSS</h3>
     <div class="container_1">
         <div class="center_1">
             <p>水平垂直居中方法一：通过left：50%；top：50%；margin-left和margin-top为center_1div宽高一半的负值</p>
@@ -172,7 +172,7 @@
     </div>
 </div>
 <div class="column_2">
-    <h2>About Javascript</h2>
+    <h3>About Javascript</h3>
     <script type="text/javascript">
         function rec() {
             var score;
@@ -239,11 +239,17 @@
 </div>
 <div class="clear" style="clear:both;"></div>                  <!--可以去掉这行，若不清除浮动，div会出现高度塌陷，相当于没有高度-->
 <p>体会一下清除浮动与不清除的效果！</p>
-<p> <a href="https://zhidao.baidu.com/question/648980034747582965.html" style="background-color:#E6E6E6;text-decoration:none;">使用了浮动的div好像在body里面撑不开内容，就像不显示一样的原因</a></p>
-<p style="text-indent:2em;"> div如果是没有内容的默认是不被撑开的，再有如果div里面的元素全部浮动了，而你有没有清除浮动，那么div会出现高度“塌陷”，也是没有高度的。再有如果你div里面仅有一个元素，并且定义了absolute或者fixed，那么这个div也是没有高度的。不知道你是否是以上情况中的一个。如果有最简单的方法就是将div设置一个理想的高度</p>
-<p><a href="http://www.divcss5.com/jiqiao/j406.shtml" style="background-color:#E6E6E6;text-decoration:none;">浮动产生的原因，负作用以及清除浮动的三种方法（介绍得很好，很仔细！）</a></p>
-<p><a href="https://www.jianshu.com/p/5a7854a73298" style="background-color:#E6E6E6;text-decoration:none;">什么时候需要清除浮动，清除浮动有哪些方法（简书上的回答），也写的非常精湛，易理解！</a></p>
-<p><a href="https://blog.csdn.net/thelostlamb/article/details/79581984" style="background-color:#E6E6E6;text-decoration:none;">与此同时，这就牵扯到关于文档流，以及如何脱离文档流的方法（之一就是设置浮动，还有position:absolute;和position:fixed(相对于浏览器窗口定位）的方法</a></p>
+<p><a href="https://zhidao.baidu.com/question/648980034747582965.html"
+      style="background-color:#E6E6E6;text-decoration:none;">使用了浮动的div好像在body里面撑不开内容，就像不显示一样的原因</a></p>
+<p style="text-indent:2em;">
+    div如果是没有内容的默认是不被撑开的，再有如果div里面的元素全部浮动了，而你有没有清除浮动，那么div会出现高度“塌陷”，也是没有高度的。再有如果你div里面仅有一个元素，并且定义了absolute或者fixed，那么这个div也是没有高度的。不知道你是否是以上情况中的一个。如果有最简单的方法就是将div设置一个理想的高度</p>
+<p><a href="http://www.divcss5.com/jiqiao/j406.shtml" style="background-color:#E6E6E6;text-decoration:none;">浮动产生的原因，负作用以及清除浮动的三种方法（介绍得很好，很仔细！）</a>
+</p>
+<p><a href="https://www.jianshu.com/p/5a7854a73298" style="background-color:#E6E6E6;text-decoration:none;">什么时候需要清除浮动，清除浮动有哪些方法（简书上的回答），也写的非常精湛，易理解！</a>
+</p>
+<p><a href="https://blog.csdn.net/thelostlamb/article/details/79581984"
+      style="background-color:#E6E6E6;text-decoration:none;">与此同时，这就牵扯到关于文档流，以及如何脱离文档流的方法（之一就是设置浮动，还有position:absolute;和position:fixed(相对于浏览器窗口定位）的方法</a>
+</p>
 <p>里面揭示了一个关于不清除浮动，为什么后面元素的内容如p标签里的内容出现位置如此奇怪的原因：</p>
 <p style="text-indent:2em;">注意！！！：使用float脱离文档流时，其他盒子会无视这个元素，但其他盒子内的文本依然会为这个元素让出位置，环绕在该元素的周围。</p>
 <p style="text-indent:2em;">这也是利用浮动特性实现文字环绕效果的深刻体会呀！</p>
@@ -251,7 +257,14 @@
 <div>
     <h2>2018年12月13号-星期四</h2>
     <div class="column_1">
-        <h2>About HTML and CSS</h2>
+        <h3>About HTML and CSS</h3>
+        <div class="container_1" style="text-align:center;line-height:400px;">
+            <!-- <div class="center_box" style="vertical-align:middle;width:150px;height:150px;border:1px solid purple;display:inline-block;">利用text-align:center;结合vertical-align:middle;试试能否做到水平垂直居中</div>      （div里有文本的话由于设置了行高会出问题的，溢出边界）   -->
+            <img style="display:inline-block;vertical-align:middle;" src="images/center_image.png" alt="一张水平垂直居中的图片"/>
+        </div>
+    </div>
+    <div class="column_2">
+        <h3>About Javascript</h3>
         <p><span style="font-size:1.5em;color:blue;">js变量命名规则：</span><br/>
             1.必须以字母、下划线或美元符$开头，后面可以跟字母、下划线、美元符号和数字。如下：<br/>
             正确：<br/>
@@ -259,31 +272,216 @@
             _mychar<br/>
             $numa1<br/>
             错误:<br/>
-            6num  //开头不能用数字<br/>
-            %sum //开头不能用除(_ $)外特殊符号,如(%  + /等)<br/>
-            sum+num //开头中间不能使用除(_ $)外特殊符号，如(%  + /等)<br/><br/>
+            6num //开头不能用数字<br/>
+            %sum //开头不能用除(_ $)外特殊符号,如(% + /等)<br/>
+            sum+num //开头中间不能使用除(_ $)外特殊符号，如(% + /等)<br/><br/>
             2.变量名区分大小写，如:A与a是两个不同变量。<br/><br/>
             3.不允许使用JavaScript关键字和保留字做变量名。
         </p>
-        <p style="text-align:center;"><img src="images/js_keywords_reservedwords.jpg" style="margin:0 auto;" alt="JS关键字和保留字图示"/></p>
-        <div class="container_1" style="text-align:center;line-height:400px;">
-           <!-- <div class="center_box" style="vertical-align:middle;width:150px;height:150px;border:1px solid purple;display:inline-block;">利用text-align:center;结合vertical-align:middle;试试能否做到水平垂直居中</div>      （div里有文本的话由于设置了行高会出问题的，溢出边界）   -->
-            <img style="display:inline-block;vertical-align:middle;" src="images/center_image.png" alt="一张水平垂直居中的图片"/>
-        </div>
-    </div>
-    <div class="column_2">
-        <h2>About Javascript</h2>
+        <p style="text-align:center;"><img src="images/js_keywords_reservedwords.jpg" style="margin:0 auto;"
+                                           alt="JS关键字和保留字图示"/></p>
+        <p><strong>声明变量语法：var 变量名;</strong></p>
+        <p>var关键字的作用是声明变量，并为变量准备位置（即内存）<br/>
+            var也可以一次声明多个变量，变量之间用“，”逗号隔开<br/>
+            var num1,num2;<br/>
+            <strong>注意：变量也可以不声明，直接使用，但为了规范，需要先声明，再使用。</strong>
+        </p>
+        <h4>变量中的六种类型</h4>
+        <p>1.number<br/>
+            2.string<br/>
+            3.boolean<br/>
+            4.undefined<br/>
+            5.null<br/>
+            6.object<br/><br/>
+            <strong>如何判断变量类型example：<br/></strong>
+            <script type="text/javascript">
+                var u;
+                document.write("<strong>" + u + "</strong>" + "<br/>");      <!--对变量进行了声明但未初始化赋值，那么他的类型就是undefined（系统也不知道他属于js六种数据类型中的哪种）-->
+                var array = [1, 2, 3];
+                var num = 7;
+                document.write(array + "<br/>");
+                document.write("<strong>" + typeof array + "</strong>" + "<br/>");
+                document.write("<strong>" + typeof num + "</strong>" + "<br/>");
+                document.write("123" === 123);
+                document.write("<br/>");
+            </script>
+            <strong>注意</strong><br/>
+            1. 查找HTML元素使用querySelector()方法；<br/>
+            2. 判断相等时尽量使用“===”别用‘’==‘’，‘’===‘’是属性相等类型相等；<br/>
+            3. null和undefined都是false，number类型中0为false其他值为1；<br/>
+            4. 尽量别使用‘i++’，使用‘i+=i’和‘i=i+1’，在Python不能使用i++这种形式。<br/><br/>
+            <strong>JS中null和undefined的区别：</strong><br/>
+            原文链接：<br/>
+            <a href="https://www.cnblogs.com/dyh-air/articles/7943295.html" style="text-decoration:none;"
+               target="_blank">https://www.cnblogs.com/dyh-air/articles/7943295.html</a><br/><br/>
+            <strong>判断变量不为空</strong><br/>
+            一般不用<br/>
+            if(obj==""){}<br/>
+            而用<br/>
+            if(obj){}<br/>
+            <strong>原文链接一：</strong><br/>
+            <a href="https://blog.csdn.net/qq_42650983/article/details/80975011" style="text-decoration:none;"
+               target="_blank">https://blog.csdn.net/qq_42650983/article/details/80975011</a><br/>
+            <strong>原文链接二：</strong><br/>
+            <a href="https://www.cnblogs.com/zhengyeye/p/6485124.html" style="text-decoration:none;" target="_blank">https://www.cnblogs.com/zhengyeye/p/6485124.html</a>
+        </p>
     </div>
     <div class="clear" style="clear:both;"></div>
 </div>
+<div>
+    <h2>2018年12月14日-星期五</h2>
+    <div class="column_1">
+        <h3>About HTML and CSS</h3>
+    </div>
+    <div class="column_2">
+        <h3>About Javascript</h3>
+        <p>
+            <script type="text/javascript">
+                var myarr = new Array();          <!--定义数组-->
+                myarr[0] = 60;
+                myarr[1] = 70;
+                myarr[2] = 80;
+                document.write("数组内容输出：" + myarr + "<br/>");
+                myarr[5] = 100;
+                document.write("数组增加一个元素后，数组长度增加了，那未赋初值的那些数组元素默认为0还是？" + "<br/>" + "输出看看就知道了" + "<br/>" + myarr + "<br/>");
+            </script>
+            也可以这样定义数组：在创建数组的同时，为数组指定长度，长度可任意指定。<br/>
+            var myarr=new Array(8);<br/>
+            <strong>注意：<br/></strong>
+            1.创建的新数组是空数组，没有值，如输出，则显示undefined。<br/>
+            2.虽然创建数组时，指定了长度，但实际上数组都是变长的，也就是说即使指定了长度为8，仍然可以将元素存储在规定长度以外。<br/><br/>
+            定义数组，给数组赋值，我们可以“一气呵成”将这两步合为一步<br/>
+            <strong>第一种方法：</strong><br/>
+            var myarr=new Array(66,80,90,77,59);<br/>
+            <strong>第二种方法：</strong><br/>
+            var myarr=[66,80,90,77,59];<br/><br/>
+            获得数组的长度和获得字符串长度是一致的：<br/>
+            <script type="text/javascript">
+                var mystr = "tanglong";
+                document.write("字符串“tanglong”的长度为：" + mystr.length + "<br/>");
+                var myarr = [1, 2, 3, 4, 5, 6, 7];
+                document.write("数组[1,2,3,4,,5,6,7]的长度为：" + myarr.length + "<br/><br/>");
+            </script>
+            <strong>二维数组相关</strong><br/>
+        </p>
+        1.二维数组的定义方法一<br/>
+        <pre>var myarr=new Array()             //先声明一维
+             for(var i=0;i<2;i++){             //一维长度为2
+                 myarr[i]=new Array();         //再声明二维
+                 for(var j=0;j<3;j++){         //二维长度为3
+                 myarr[i][j]=i+j;              //赋值，每个数组元素的值为i+j
+                 }
+             }
+        </pre>
+        2.二维数组的定义方法二<br/>
+        下面这种方法定义的数组和方法一中定义的数组完全一样，两行三列的一个数组
+        <pre>var myarr=[[0,1,2],[1,2,3]];
+        </pre>
+        <script type="text/javascript">
+            var myarr = [[0, 1, 2], [1, 2, 3]]
+            document.write("输出myarr:" + myarr + "<br/>");
+            document.write("按照两行三列的形式输出:" + "<br/>");
+            for (var i = 0; i < 2; i++) {
+                for (var j = 0; j < 3; j++) {
+                    document.write(myarr[i][j] + "&nbsp;");
+                }
+                document.write("<br/>");
+            }
+        </script>
 
+        <p>当有很多种选项的时候，switch比if else 使用更方便<br/></p>
+        <pre>语法：
+            switch(表达式)
+            {
+            case值1:
+              执行代码块 1
+              break;
+            case值2:
+              执行代码块 2
+              break;
+            ...
+            case值n:
+              执行代码块 n
+              break;
+            default:
+              与 case值1 、 case值2...case值n 不同时执行的代码
+            }
+        </pre>
+        <p>语法说明：<br/>
+            Switch必须赋初始值，值与每个case值匹配。满足执行该 case 后的所有语句，并用break语句来阻止运行下一个case。如所有case值都不匹配，执行<strong>default</strong>后的语句。<br/><br/>
+            <strong>下面是switch语句的执行效果：<br/></strong>
+            <script type="text/javascript">
+                var week=6;      <!--week变量表示星期几变量-->
+                switch(week){
+                    case 1:
+                    case 2:
+                        document.write("周一周二认真上班！"+"<br/>");
+                        break;
+                    case 3:
+                    case 4:
+                        document.write("周三周四还是要认真上班的！！"+"<br/>");
+                        break;
+                    case 5:
+                        document.write("周五也不能放松呀！！！"+"<br/>");
+                        break;
+                    default:
+                        document.write("周末也要花点时间学习呢！！！！"+"<br/>");
+                }
+
+                document.write("<br/>"+"退出循环使用break"+"<br/>");
+                var num;
+                for(num=1;num<=10;num++){
+                    if(num===5){
+                        break;       <!--如果num是5，退出循环-->
+                    }
+                    document.write("数值："+num+"<br/>");
+                }
+
+                document.write("<br/>"+"继续循环使用continue"+"<br/>");
+                var num2;
+                for(num2=1;num2<=10;num2++){
+                    if(num2===5){
+                        continue;       <!--如果num是5，仅仅跳过本次循环，整个循环体继续执行-->
+                    }
+                    document.write("数值："+num2+"<br/>");
+                }
+
+                document.write("<br/>"+"使用javascript代码写出一个函数：实现传入两个整数后弹出较大的整数"+"<br/>");
+                var a,b;
+                function max(a,b){
+                    if(a> b){
+                        return a;
+                    }else if(a===b){
+                        return a;
+                    }else{
+                        return b;
+                    }
+                }
+                max1=max(2,3);
+                max2=max(7,7);
+                max3=max(8,5);
+                document.write("2,3的最大值是："+max1+"<br/>");
+                document.write("7,7的最大值是："+max2+"<br/>");
+                document.write("8,5的最大值是："+max3+"<br/>");
+            </script>
+        </p>
+
+        <p><strong>什么是事件</strong><br/>
+            JavaScript 创建动态页面。事件是可以被 JavaScript 侦测到的行为。 网页中的每个元素都可以产生某些可以触发 JavaScript 函数或程序的事件。<br/><br/>
+            比如说，当用户单击按钮或者提交表单数据时，就发生一个鼠标单击（onclick）事件，需要浏览器做出处理，返回给用户一个结果。<br/>
+            主要事件表：<br/>
+            <img src="images/action.jpg" alt="主要事件表图示"/>
+        </p>
+    </div>
+    <div class="clear" style="clear:both;"></div>
+</div>
 
 
 <script type="text/javascript">
     var para = document.getElementById("para");
 
     function change() {
-        para.innerHTML = "算术操作符→比较操作符→逻辑操作符→=赋值符号（由高到低）";
+        para.innerHTML = "算术操作符→比较操作符→逻辑操作符→=赋值符号（由高到低），逻辑操作符（也称为关系运算符）的优先级：！>&&>||（非>且>或）";
     }
 
     function rec() {

@@ -125,6 +125,7 @@
             <label>性别：</label>                                   <!--单选框实现-->
             <label for="man1">男</label>
             <input type="radio" name="gender" id="man1"/>
+
             <label for="woman1">女</label>
             <input type="radio" name="gender" id="woman1"/>
             <br/><br/>
@@ -168,9 +169,32 @@
             document.write(myarr.join("-") + "<br/>");           //数组内各值用-连接
         </script>
         <a href="about_time.html">时间输出格式控制问题</a>
+    </div>
 
+    <div class="container_4">        <!--展示tab切换的容器-->
+        <ul>
+            <li><a href="#tab1">tab1名称</a></li>
+            <li><a href="#tab2">tab2名称</a></li>
+            <li><a href="#tab3">tab3名称</a></li>
+            <li><a href="#tab4">tab4名称</a></li>
+        </ul>
+
+        <div class="nav_content">
+            <div id="tab1"><p style="text-indent:2em;">
+                实现导航条的关键就在于如何建立导航标题与导航内容之间的联系，而锚点就可以实现类似效果。通过点击锚点，页面生成一个哈希值，然后跳转到相应内容的位置。</p>
+                <p style="text-indent:2em;text-align:center;color:brown;">纯CSS实现tab切换</p>
+            </div>
+            <div id="tab2"><p style="text-indent:2em;">
+                在视觉布局中，四个导航内容属于同一个父元素，与父元素的高度相同，并按照块级元素的排列方式进行排布，父元素设置溢出隐藏时，默认只显示第一个导航内容
+                。点击导航标题时，对应的导航内容到达导航标题行下面，达到了导航切换的效果。<br/>
+                【缺点】：锚点技术本身的局限是锚点目标会尽可能的到达可视区域上方，从而可能会生成页面跳动；（用户体验很差，所以，将锚点利用在tab切换上效果不佳，了解就好，不会用来做网页）
+            </p></div>
+            <div id="tab3">tab3对应的content</div>
+            <div id="tab4">tab4对应的content</div>
+        </div>
     </div>
 </div>
+
 <div class="column_2">
     <h3>About Javascript</h3>
     <script type="text/javascript">
@@ -253,6 +277,7 @@
 <p>里面揭示了一个关于不清除浮动，为什么后面元素的内容如p标签里的内容出现位置如此奇怪的原因：</p>
 <p style="text-indent:2em;">注意！！！：使用float脱离文档流时，其他盒子会无视这个元素，但其他盒子内的文本依然会为这个元素让出位置，环绕在该元素的周围。</p>
 <p style="text-indent:2em;">这也是利用浮动特性实现文字环绕效果的深刻体会呀！</p>
+<p style="text-indent:2em;">父元素设置了position：absolute；或position：fixed之后，子div设置float失效。</p>
 
 <div>
     <h2>2018年12月13号-星期四</h2>
@@ -262,7 +287,40 @@
             <!-- <div class="center_box" style="vertical-align:middle;width:150px;height:150px;border:1px solid purple;display:inline-block;">利用text-align:center;结合vertical-align:middle;试试能否做到水平垂直居中</div>      （div里有文本的话由于设置了行高会出问题的，溢出边界）   -->
             <img style="display:inline-block;vertical-align:middle;" src="images/center_image.png" alt="一张水平垂直居中的图片"/>
         </div>
+
+        <div class="tab_self">
+
+            <ul>
+                <li id="li_1" onmouseover="content1_show()">tab1名称</li>
+                <li id="li_2" onmouseover="content2_show()">tab2名称</li>
+                <li id="li_3" onmouseover="content3_show()">tab3名称</li>
+                <li id="li_4" onmouseover="content4_show()">tab4名称</li>
+            </ul>
+
+            <div class="nav_content">
+                <div class="content" style="display: block">1</div>
+                <div class="content" >2</div>
+                <div class="content">3</div>
+                <div class="content">4</div>
+            </div>
+        </div>
+        <div class="tab_self2">
+            <ul>
+                <li onmouseover="content11_show()">tab1.1名称</li>
+                <li onmouseover="content12_show()">tab2.1名称</li>
+                <li onmouseover="content13_show()">tab3.1名称</li>
+                <li onmouseover="content14_show()">tab4.1名称</li>
+            </ul>
+
+            <div class="nav_content2">
+                <div class="content" style="display: block">1</div>
+                <div class="content" >2</div>
+                <div class="content">3</div>
+                <div class="content">4</div>
+            </div>
+        </div>
     </div>
+
     <div class="column_2">
         <h3>About Javascript</h3>
         <p><span style="font-size:1.5em;color:blue;">js变量命名规则：</span><br/>
@@ -325,9 +383,27 @@
             <strong>原文链接二：</strong><br/>
             <a href="https://www.cnblogs.com/zhengyeye/p/6485124.html" style="text-decoration:none;" target="_blank">https://www.cnblogs.com/zhengyeye/p/6485124.html</a>
         </p>
+        <p>
+            <strong>Tab切换实现过程中体会到的getElementsByClassName的神奇之处</strong><br/>
+            <span style="text-indent:2em;display:inline-block;text-align:justify;">js中getElementsByClassName获取到的是一个对象（object），虽然不是数组类型，但是是一种array-like（类数组）对象，是HTMLCollection,在javascript有array之前就已经存在的东西。</span><br/><br/>
+            <a href="https://segmentfault.com/q/1010000000643219" style="text-decoration:none;" target="_blank;">关于getElementsByClassName获取到的对象到底是什么类型？</a>
+            <br/><br/>
+            块级元素设置text-indent才会有效的，span标签设置text-indent无效，a超链接标签设置text-indent无效，因为span和a标签不像div标签和p标签那样默认是块元素（默认独占一行才具有空间性）。
+        </p>
     </div>
     <div class="clear" style="clear:both;"></div>
 </div>
+
+<div class="carousel">
+    <div class="carousel_domain">
+        <img src="images/carousel1.jpg" alt="轮播第一张图片"/>
+    </div>
+    <div class="left"></div>
+    <div class="right"></div>
+
+</div>
+<p><a href="https://www.cnblogs.com/ada-blog/p/7242664.html" style="text-decoration:none;" target="_blank;">margin：auto探索出的关于水平垂直居中的另一个小方法！</a></p>
+
 <div>
     <h2>2018年12月14日-星期五</h2>
     <div class="column_1">
@@ -411,58 +487,60 @@
             Switch必须赋初始值，值与每个case值匹配。满足执行该 case 后的所有语句，并用break语句来阻止运行下一个case。如所有case值都不匹配，执行<strong>default</strong>后的语句。<br/><br/>
             <strong>下面是switch语句的执行效果：<br/></strong>
             <script type="text/javascript">
-                var week=6;      <!--week变量表示星期几变量-->
-                switch(week){
+                var week = 6;      <!--week变量表示星期几变量-->
+                switch (week) {
                     case 1:
                     case 2:
-                        document.write("周一周二认真上班！"+"<br/>");
+                        document.write("周一周二认真上班！" + "<br/>");
                         break;
                     case 3:
                     case 4:
-                        document.write("周三周四还是要认真上班的！！"+"<br/>");
+                        document.write("周三周四还是要认真上班的！！" + "<br/>");
                         break;
                     case 5:
-                        document.write("周五也不能放松呀！！！"+"<br/>");
+                        document.write("周五也不能放松呀！！！" + "<br/>");
                         break;
                     default:
-                        document.write("周末也要花点时间学习呢！！！！"+"<br/>");
+                        document.write("周末也要花点时间学习呢！！！！" + "<br/>");
                 }
 
-                document.write("<br/>"+"退出循环使用break"+"<br/>");
+                document.write("<br/>" + "退出循环使用break" + "<br/>");
                 var num;
-                for(num=1;num<=10;num++){
-                    if(num===5){
+                for (num = 1; num <= 10; num++) {
+                    if (num === 5) {
                         break;       <!--如果num是5，退出循环-->
                     }
-                    document.write("数值："+num+"<br/>");
+                    document.write("数值：" + num + "<br/>");
                 }
 
-                document.write("<br/>"+"继续循环使用continue"+"<br/>");
+                document.write("<br/>" + "继续循环使用continue" + "<br/>");
                 var num2;
-                for(num2=1;num2<=10;num2++){
-                    if(num2===5){
+                for (num2 = 1; num2 <= 10; num2++) {
+                    if (num2 === 5) {
                         continue;       <!--如果num是5，仅仅跳过本次循环，整个循环体继续执行-->
                     }
-                    document.write("数值："+num2+"<br/>");
+                    document.write("数值：" + num2 + "<br/>");
                 }
 
-                document.write("<br/>"+"使用javascript代码写出一个函数：实现传入两个整数后弹出较大的整数"+"<br/>");
-                var a,b;
-                function max(a,b){
-                    if(a> b){
+                document.write("<br/>" + "使用javascript代码写出一个函数：实现传入两个整数后弹出较大的整数" + "<br/>");
+                var a, b;
+
+                function max(a, b) {
+                    if (a > b) {
                         return a;
-                    }else if(a===b){
+                    } else if (a === b) {
                         return a;
-                    }else{
+                    } else {
                         return b;
                     }
                 }
-                max1=max(2,3);
-                max2=max(7,7);
-                max3=max(8,5);
-                document.write("2,3的最大值是："+max1+"<br/>");
-                document.write("7,7的最大值是："+max2+"<br/>");
-                document.write("8,5的最大值是："+max3+"<br/>");
+
+                max1 = max(2, 3);
+                max2 = max(7, 7);
+                max3 = max(8, 5);
+                document.write("2,3的最大值是：" + max1 + "<br/>");
+                document.write("7,7的最大值是：" + max2 + "<br/>");
+                document.write("8,5的最大值是：" + max3 + "<br/>");
             </script>
         </p>
 
@@ -488,6 +566,84 @@
         para.innerHTML = "点击一下，查看js中操作符之间的优先级";
     }
 </script>
+<script type="text/javascript">
+    function content1_show() {
+        var content = document.getElementsByClassName("content");
+        console.log(content instanceof HTMLCollection);
+        content[1].style.display="none";
+        content[2].style.display="none";
+        content[3].style.display="none";
+        content[0].style.display = "block";
+
+    }
+
+    function content2_show() {
+        var content = document.getElementsByClassName("content");
+        console.log(content instanceof HTMLCollection);
+        content[0].style.display="none";
+        content[2].style.display="none";
+        content[3].style.display="none";
+        content[1].style.display = "block";
+
+    }
+
+    function content3_show() {
+        var content = document.getElementsByClassName("content");
+        console.log(content instanceof HTMLCollection);
+        content[0].style.display = "none";
+        content[1].style.display = "none";
+        content[3].style.display = "none";
+        content[2].style.display="block"
+    }
+
+    function content4_show() {
+        var content = document.getElementsByClassName("content");
+        console.log(content instanceof HTMLCollection);
+        content[0].style.display = "none";
+        content[1].style.display = "none";
+        content[2].style.display = "none";
+        content[3].style.display="block";
+    }
+
+    function content11_show() {
+        var content = document.getElementsByClassName("content");
+        console.log(content instanceof HTMLCollection);
+        content[7].style.display = "none";
+        content[6].style.display = "none";
+        content[5].style.display = "none";
+        content[4].style.display="block";
+    }
+
+    function content12_show() {
+        var content = document.getElementsByClassName("content");
+        console.log(content instanceof HTMLCollection);
+        content[7].style.display="none";
+        content[6].style.display="none";
+        content[4].style.display="none";
+        content[5].style.display = "block";
+
+    }
+
+    function content13_show() {
+        var content = document.getElementsByClassName("content");
+        console.log(content instanceof HTMLCollection);
+        content[4].style.display = "none";
+        content[5].style.display = "none";
+        content[7].style.display = "none";
+        content[6].style.display="block"
+    }
+
+    function content14_show() {
+        var content = document.getElementsByClassName("content");
+        console.log(content instanceof HTMLCollection);
+        content[4].style.display = "none";
+        content[5].style.display = "none";
+        content[6].style.display = "none";
+        content[7].style.display="block";
+    }
+</script>
+
 <script type="text/javascript" src="js/canvas-nest.min.js"></script>
+
 </body>
 </html>

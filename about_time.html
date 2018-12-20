@@ -11,6 +11,22 @@
         var day=date.getMonth()+1;
         var week=date.getDay();
         document.write(date.getFullYear()+"年"+day+"月"+date.getDate()+"日"+"  "+weekday[week]);
+        document.write("<br/>"+date.getTime()+"<br/>");         //get/setTime() 返回/设置时间，单位毫秒数，计算从 1970 年 1 月 1 日零时到日期对象所指的日期的毫秒数。
+        date.setTime(date.getTime()+60*60*1000);
+        document.write("推迟一小时后时间为："+date+"<br/>");
+        //成绩是一长窜的字符串不好处理，找规律后分割放到数组里更好操作哦
+        var scoreStr = "小明:87;小花:81;小红:97;小天:76;小张:74;小小:94;小西:90;小伍:76;小迪:64;小曼:76";
+        var scoreArr = scoreStr.split(";");
+        // document.write(scoreArr);//test
+        //从数组中将成绩撮出来，然后求和取整，并输出。
+        var score = new Array();
+        var sum = 0;
+        for (var i = 0; i < scoreArr.length; i ++) {
+            sum += parseInt(scoreArr[i].substr(scoreArr[i].indexOf(":")+1));     //parseInt的作用：解析一个字符串，并返回一个整数，很多时候，我们输入到文本框中的是字符串，需要用parseInt()函数转换为整型后才能计算
+            //document.write("<br>" + sum);//test
+        }
+        document.write("班级总分为:" + sum+"<br/>");
+        document.write("班级平均分为(保留整数):" + Math.round(sum/scoreArr.length))
     </script>
 </head>
 <body>

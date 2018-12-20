@@ -165,10 +165,14 @@
             document.write("<span style='color:brown;'>" + "数组连接问题" + "<br/>" + "</span>");
             var myarr1 = ["86", "010"];
             var myarr2 = new Array("13022858182");
+            var array_test=["我","爱","你"]
+            document.write(array_test+"<br/>");
+            document.write(array_test.join("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;")+"<br/>");    //如果不加&nbsp;那么之间无论多少个空格都默认只隔一个空格连接
+            document.write(array_test.reverse()+"<br/>");
             var myarr = myarr1.concat(myarr2);           //两数组连接
             document.write(myarr.join("-") + "<br/>");           //数组内各值用-连接
         </script>
-        <a href="about_time.html">时间输出格式控制问题</a>
+        <a href="about_time.html" target="_blank;">时间输出格式控制问题</a>
     </div>
 
     <div class="container_4">        <!--展示tab切换的容器-->
@@ -299,7 +303,7 @@
 
             <div class="nav_content">
                 <div class="content" style="display: block">1</div>
-                <div class="content" >2</div>
+                <div class="content">2</div>
                 <div class="content">3</div>
                 <div class="content">4</div>
             </div>
@@ -314,7 +318,7 @@
 
             <div class="nav_content2">
                 <div class="content" style="display: block">1</div>
-                <div class="content" >2</div>
+                <div class="content">2</div>
                 <div class="content">3</div>
                 <div class="content">4</div>
             </div>
@@ -402,8 +406,9 @@
     <div class="right"></div>
 
 </div>
-<p><a href="https://www.cnblogs.com/ada-blog/p/7242664.html" style="text-decoration:none;" target="_blank;">margin：auto探索出的关于水平垂直居中的另一个小方法！</a></p>
-
+<p><a href="https://www.cnblogs.com/ada-blog/p/7242664.html" style="text-decoration:none;" target="_blank;">margin：auto探索出的关于水平垂直居中的另一个小方法！</a>
+</p>
+<div class="center_box"></div>
 <div>
     <h2>2018年12月14日-星期五</h2>
     <div class="column_1">
@@ -554,6 +559,98 @@
     <div class="clear" style="clear:both;"></div>
 </div>
 
+<div>
+    <h2>2018年12月18日-星期一</h2>
+    <div class="column_1">
+        <h3>About HTML and CSS</h3>
+    </div>
+    <div class="column_2">
+        <h3>About Javascript</h3>
+        <p>字符串（string）对象<br/>
+            <span style="display:inline-block;text-indent:2em;">定义好字符串以后，我们就可以访问它的属性和方法。</span><br/>
+            1.访问字符串对象的属性length：<br/>
+            <script type="text/javascript">
+                var mystr = "Self-learning";
+                var strl = mystr.length;
+                document.write("字符串Self-learning的长度为：" + strl + "<br/>");
+            </script>
+
+            2.访问字符串对象的方法：<br/>
+            <script type="text/javascript">
+                document.write("将字符串字符全部转化为大写后：" + mystr.toUpperCase() + "<br/>");
+                document.write("将字符串字符全部转化为小写后：" + mystr.toLowerCase() + "<br/><br/>");
+                document.write("返回指定位置的字符用string.charAt(index)方法，返回index=4的字符：" + mystr.charAt(4) + "<br/>");
+                document.write("返回指定位置的字符用string.charAt(index)方法中index介于0-（str.length-1）之间" + "<br/>");
+                document.write("返回指定位置的字符用string.charAt(index)方法中如果参数index不在0-（str.length-1）之间，该方法将返回一个空字符串：" + mystr.charAt(13) + "<br/>");
+                document.write("返回指定位置的字符用string.charAt()方法，返回最后一个字符：" + mystr.charAt(12) + "<br/>");
+                document.write("<span style='color:red;'>" + "注意：一个空格也算一个字符" + "<br/>" + "</span>" + "<br/>");
+                document.write("字符串分割split（分割标志，也称为separator）方法" + "<br/>");
+                var splitstr = "www.baidu.com";
+                document.write(splitstr + "分割后：" + splitstr.split(".") + "<br/>");
+            </script>
+        </p>
+        <p>Math对象<br/>
+            使用math的属性和方法：<br/>
+        <pre>        var mypi=Math.PI;
+        var myabs=Math.abs(-15);
+        document.write(mypi);
+        document.write(myabs);
+    </pre>
+        <script type="text/javascript">
+            var mypi=Math.PI;
+            var myabs=Math.abs(-7);
+            document.write("PI的值为："+mypi+"<br/>");
+            document.write("-7的绝对值为："+myabs+"<br/>");
+            document.write("Math.ceil()方法可对一个数进行向上取整，7.8向上取整为："+Math.ceil(7.8)+"<br/>");
+            document.write("Math.floor()方法可对一个数进行向下取整，7.8向下取整为："+Math.floor(7.8)+"<br/>");
+            document.write("Math.round()方法可对一个数进行四舍五入:"+"<br/>"+"7.8四舍五入为："+Math.round(7.8)+"<br/>"+"7.49四舍五入为："+Math.round(7.49)+"<br/>");
+            document.write("Math.random()可返回0-1（大于或等于0且小于1）之间的一个随机数"+"<br/>");
+            document.write("那就产生一个随机数看看吧："+Math.random()+"<br/>");
+            document.write("1.利用(Math.random()*10)产生0-10之间的随机数:"+(Math.random()*10)+"<br/>");
+            document.write("2.利用(Math.random()*50+50)产生50-100之间的随机数:"+(Math.random()*50+50)+"<br/>");
+            document.write("3.利用round(Math.random()*50+50)产生50-100之间的随机整数:"+round(Math.random()*50+50)+"<br/>");
+        </script>
+        </p>
+        <p>
+            <strong>数值数组升序降序sort实现</strong><br/>
+            <script type="text/javascript">
+                function sortNum(a,b){
+                    return a-b;         //升序，如果要降序，将a-b改为b-a
+                }
+                var numarray=[1,5,3,6,9,7,8];
+                document.write("数组numarray[1,5,3,6,9,7,8]从小到大排序后为："+numarray.sort(sortNum)+"<br/>");
+            </script>
+        </p>
+    </div>
+    <div class="clear" style="clear:both;"></div>
+</div>
+
+<div>
+    <h2>2018年12月19日-星期三</h2>
+    <h3>Webstorm激活的好方法（貌似有效期到2100年，相当于永久有效）</h3>
+    <p>
+        <strong>方法/步骤</strong><br/>
+        1.首先我们需要下载破解补丁，直接百度搜索关键词——IntelliJ IDEA 注册码。进入红框处网站后，下载红框标注的补丁文件。<br/>
+        <img src="images/active_step1.png" alt="Webstorm永久激活第一步" width="506" height="295"/><br/><br/>
+        <img src="images/active_step2.png" alt="Webstorm永久激活第二步" width="508" height="328"/><br/>
+        2.然后将补丁复制到webstorm安装目录的bin文件夹下面。(右键webstorm桌面快捷方式，选择打开文件所在的位置)<br/>
+        <img src="images/webstorm_setup.png" alt="Webstorm安装目录" width="500" height="408"/><br/>
+        3.接下来需要修改文件，使用记事本打开bin文件夹下面的WebStorm.exe.vmoptions 和WebStorm64.exe.vmoptions这两个文件。<br/>
+        4.然后这里非常关键，在打开的文件最后面加上如下代码：<br/>
+        -javaagent:+路径名称+jar包名称，例如图片上我的路径，修改之后保存文件。<br/>
+        注意这里的路径需要替换成你自己的安装路径，并且是左斜杠“/”，jar包的名称也必须是你刚刚下载的jar包名称。<br/>
+        <img src="images/change_webstormtxt.png" alt="修改webstorm相关配置文件" width="430" height="335"/><br/>
+        5.保存完毕之后，回到IntelliJ IDEA 注册码的网页，点击中间的获得注册码，然后复制弹出的注册码。<br/>
+        <img src="images/get_activation_code.png" alt="获取激活码" width="614" height="399"/><br/>
+        <img src="images/activation_code.png" alt="激活码" width="614" height="395"/><br/>
+        6.重新启动WebStorm，依次点击【help】——【register】——【activation code】，<br/>
+        然后粘贴输入激活码，确认就可以了。<br/>
+        系统右下角会弹出激活提示。<br/>
+        <span style="font-size:18px;">原文链接地址：</span>
+        <a href="https://jingyan.baidu.com/article/77b8dc7faa0ece6174eab6d8.html" style="text-decoration:none;"
+           target="_blank;">https://jingyan.baidu.com/article/77b8dc7faa0ece6174eab6d8.html</a>
+    </p>
+</div>
 
 <script type="text/javascript">
     var para = document.getElementById("para");
@@ -570,9 +667,9 @@
     function content1_show() {
         var content = document.getElementsByClassName("content");
         console.log(content instanceof HTMLCollection);
-        content[1].style.display="none";
-        content[2].style.display="none";
-        content[3].style.display="none";
+        content[1].style.display = "none";
+        content[2].style.display = "none";
+        content[3].style.display = "none";
         content[0].style.display = "block";
 
     }
@@ -580,9 +677,9 @@
     function content2_show() {
         var content = document.getElementsByClassName("content");
         console.log(content instanceof HTMLCollection);
-        content[0].style.display="none";
-        content[2].style.display="none";
-        content[3].style.display="none";
+        content[0].style.display = "none";
+        content[2].style.display = "none";
+        content[3].style.display = "none";
         content[1].style.display = "block";
 
     }
@@ -593,7 +690,7 @@
         content[0].style.display = "none";
         content[1].style.display = "none";
         content[3].style.display = "none";
-        content[2].style.display="block"
+        content[2].style.display = "block"
     }
 
     function content4_show() {
@@ -602,7 +699,7 @@
         content[0].style.display = "none";
         content[1].style.display = "none";
         content[2].style.display = "none";
-        content[3].style.display="block";
+        content[3].style.display = "block";
     }
 
     function content11_show() {
@@ -611,15 +708,15 @@
         content[7].style.display = "none";
         content[6].style.display = "none";
         content[5].style.display = "none";
-        content[4].style.display="block";
+        content[4].style.display = "block";
     }
 
     function content12_show() {
         var content = document.getElementsByClassName("content");
         console.log(content instanceof HTMLCollection);
-        content[7].style.display="none";
-        content[6].style.display="none";
-        content[4].style.display="none";
+        content[7].style.display = "none";
+        content[6].style.display = "none";
+        content[4].style.display = "none";
         content[5].style.display = "block";
 
     }
@@ -630,7 +727,7 @@
         content[4].style.display = "none";
         content[5].style.display = "none";
         content[7].style.display = "none";
-        content[6].style.display="block"
+        content[6].style.display = "block"
     }
 
     function content14_show() {
@@ -639,7 +736,7 @@
         content[4].style.display = "none";
         content[5].style.display = "none";
         content[6].style.display = "none";
-        content[7].style.display="block";
+        content[7].style.display = "block";
     }
 </script>
 

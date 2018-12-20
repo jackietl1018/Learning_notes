@@ -4,7 +4,7 @@ html {
 
 body {
     background-color: #FFFFFF;
-    margin: 0 100px;
+    margin: 0 80px;
 }
 
 .header {
@@ -287,5 +287,11 @@ img {
     padding:0;
     display:block;
     margin:22px auto;
+}
+.center_box{
+    width:60%;
+    height:100px;
+    margin:auto;
+    border:1px solid red;
 }
 

@@ -165,10 +165,10 @@
             document.write("<span style='color:brown;'>" + "数组连接问题" + "<br/>" + "</span>");
             var myarr1 = ["86", "010"];
             var myarr2 = new Array("13022858182");
-            var array_test=["我","爱","你"]
-            document.write(array_test+"<br/>");
-            document.write(array_test.join("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;")+"<br/>");    //如果不加&nbsp;那么之间无论多少个空格都默认只隔一个空格连接
-            document.write(array_test.reverse()+"<br/>");
+            var array_test = ["我", "爱", "你"]
+            document.write(array_test + "<br/>");
+            document.write(array_test.join("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;") + "<br/>");    //如果不加&nbsp;那么之间无论多少个空格都默认只隔一个空格连接
+            document.write(array_test.reverse() + "<br/>");
             var myarr = myarr1.concat(myarr2);           //两数组连接
             document.write(myarr.join("-") + "<br/>");           //数组内各值用-连接
         </script>
@@ -597,28 +597,29 @@
         document.write(myabs);
     </pre>
         <script type="text/javascript">
-            var mypi=Math.PI;
-            var myabs=Math.abs(-7);
-            document.write("PI的值为："+mypi+"<br/>");
-            document.write("-7的绝对值为："+myabs+"<br/>");
-            document.write("Math.ceil()方法可对一个数进行向上取整，7.8向上取整为："+Math.ceil(7.8)+"<br/>");
-            document.write("Math.floor()方法可对一个数进行向下取整，7.8向下取整为："+Math.floor(7.8)+"<br/>");
-            document.write("Math.round()方法可对一个数进行四舍五入:"+"<br/>"+"7.8四舍五入为："+Math.round(7.8)+"<br/>"+"7.49四舍五入为："+Math.round(7.49)+"<br/>");
-            document.write("Math.random()可返回0-1（大于或等于0且小于1）之间的一个随机数"+"<br/>");
-            document.write("那就产生一个随机数看看吧："+Math.random()+"<br/>");
-            document.write("1.利用(Math.random()*10)产生0-10之间的随机数:"+(Math.random()*10)+"<br/>");
-            document.write("2.利用(Math.random()*50+50)产生50-100之间的随机数:"+(Math.random()*50+50)+"<br/>");
-            document.write("3.利用round(Math.random()*50+50)产生50-100之间的随机整数:"+round(Math.random()*50+50)+"<br/>");
+            var mypi = Math.PI;
+            var myabs = Math.abs(-7);
+            document.write("PI的值为：" + mypi + "<br/>");
+            document.write("-7的绝对值为：" + myabs + "<br/>");
+            document.write("Math.ceil()方法可对一个数进行向上取整，7.8向上取整为：" + Math.ceil(7.8) + "<br/>");
+            document.write("Math.floor()方法可对一个数进行向下取整，7.8向下取整为：" + Math.floor(7.8) + "<br/>");
+            document.write("Math.round()方法可对一个数进行四舍五入:" + "<br/>" + "7.8四舍五入为：" + Math.round(7.8) + "<br/>" + "7.49四舍五入为：" + Math.round(7.49) + "<br/>");
+            document.write("Math.random()可返回0-1（大于或等于0且小于1）之间的一个随机数" + "<br/>");
+            document.write("那就产生一个随机数看看吧：" + Math.random() + "<br/>");
+            document.write("1.利用(Math.random()*10)产生0-10之间的随机数:" + (Math.random() * 10) + "<br/>");
+            document.write("2.利用(Math.random()*50+50)产生50-100之间的随机数:" + (Math.random() * 50 + 50) + "<br/>");
+            document.write("3.利用round(Math.random()*50+50)产生50-100之间的随机整数:" + round(Math.random() * 50 + 50) + "<br/>");
         </script>
         </p>
         <p>
             <strong>数值数组升序降序sort实现</strong><br/>
             <script type="text/javascript">
-                function sortNum(a,b){
-                    return a-b;         //升序，如果要降序，将a-b改为b-a
+                function sortNum(a, b) {
+                    return a - b;         //升序，如果要降序，将a-b改为b-a
                 }
-                var numarray=[1,5,3,6,9,7,8];
-                document.write("数组numarray[1,5,3,6,9,7,8]从小到大排序后为："+numarray.sort(sortNum)+"<br/>");
+
+                var numarray = [1, 5, 3, 6, 9, 7, 8];
+                document.write("数组numarray[1,5,3,6,9,7,8]从小到大排序后为：" + numarray.sort(sortNum) + "<br/>");
             </script>
         </p>
     </div>
@@ -651,7 +652,154 @@
            target="_blank;">https://jingyan.baidu.com/article/77b8dc7faa0ece6174eab6d8.html</a>
     </p>
 </div>
+<div>
+    <h2>2018年12月20日-星期四</h2>
+    <div class="column_1">
+        <h3>About HTML and CSS</h3>
+    </div>
+    <div class="column_2">
+        <h3>About Javascript</h3>
+        <p><strong>浏览器对象</strong><br/>
+            介绍浏览器对象中，history,navigator,screen,location等。<br/><br/>
+            window对象是BOM（Browser Object Model,浏览器对象模型）的核心，window指当前的浏览器窗口。<br/>
+            window对象方法：<img src="images/window_object_methods.jpg" alt="window对象方法图示"/><br/>
+            计时器setInterval<br/>
+            在执行时，从载入页面后每隔指定的时间执行代码<br/>
+            <strong>语法：</strong><br/>
+            setInterval(代码，交互时间)；<br/>
+            <strong>参数说明：</strong><br/>
+            1. 代码：要调用的函数或要执行的代码串。<br/>
+            2. 交互时间：周期性执行或调用表达式之间的时间间隔，以毫秒计（1s=1000ms）。<br/>
+            <strong>返回值:</strong><br/>
+            一个可以传递给 clearInterval() 从而取消对"代码"的周期性执行的值。<br/>
+            <strong>调用函数格式(假设有一个clock()函数):</strong><br/>
+            setInterval("clock()",1000)<br/>
+            或<br/>
+            setInterval(clock,1000)<br/><br/>
 
+            <strong>利用setInterval()函数显示动态时间：</strong><br/>
+            <script type="text/javascript">
+                var dynamictime;
+
+                function clock() {
+                    var time = new Date();
+                    dynamictime = time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds();
+                    document.getElementById("clock").value = dynamictime;
+                }
+
+                var int = setInterval(clock, 1000);       //如果不clearInterval()的话，此行代码只需写成setInterval(clock,1000)
+
+                function clock_format() {
+                    var time = new Date();
+                    var hh = time.getHours();
+                    var mm = time.getMinutes();
+                    var ss = time.getSeconds();
+                    var dynamictime_format;
+                    dynamictime_format = (hh < 10 ? ("0" + hh) : hh) + ":" + (mm < 10 ? ("0" + mm) : mm) + ":" + (ss < 10 ? ("0" + ss) : ss);
+                    document.getElementById("clock_format").value = dynamictime_format;
+                }
+
+                setInterval(clock_format, 1000);
+            </script>
+            <input type="text" id="clock" size="10"/>
+            <input type="button" value="stop" onclick="clearInterval(int)"/><br/>
+            <input type="text" id="clock_format" size="10"/><br/>
+            <strong>下面这种动态显示时间的方式是更优的，比较美观格式化！</strong><br/>
+            <span style="font-size:18px;">原文链接：</span>
+            <a href="https://bbs.csdn.net/topics/390256532" style="text-decoration:none;" target="_blank">https://bbs.csdn.net/topics/390256532</a><br/><br/>
+            <strong>计时器setTimeout()</strong><br/>
+            setTimeout()计时器，在载入后延迟指定时间后,去执行一次表达式,仅执行一次。<br/>
+            <strong>语法:</strong><br/>
+            setTimeout(代码,延迟时间);<br/>
+            <strong>参数说明：</strong><br/>
+            1. 要调用的函数或要执行的代码串。<br/>
+            2. 延时时间：在执行代码前需等待的时间，以毫秒为单位（1s=1000ms)。<br/>
+            <script type="text/javascript">
+                function timeout_info() {
+                    var t = setTimeout("alert('我是五秒后出现的alert弹窗')", 5000);
+                }
+
+                var num = 0,i;
+                function numcount() {
+                    document.getElementById("numcount").value = num;
+                    num = num + 1;
+                    i=setTimeout(numcount, 1000);                  //(如果不考虑停止计数问题，此行代码改为setTimeout(numcount,1000)即可)看到这里应该明白setTimeout()和setInterval()的重要区别，setTimeout若写在了他想执行的函数代码内部，那他当然反复执行下去，而若我们尝试将其像setInterval一样写在函数外面，那就只执行一次了。
+                }
+
+                function stop_numcount(){
+                    clearTimeout(i);
+                }
+
+
+                var sumtime=60;
+                function reverse_count(){
+                    document.getElementById("reverse_count").value=sumtime;
+                    sumtime-=1;
+                    setTimeout("reverse_count()",1000);          //想想如何倒计时到0后停止
+                }
+            </script>
+            <input type="button" value="点击我，五秒后出现alert弹窗！" onclick="timeout_info()"/><br/>
+            使用setTimeout()实现计数统计效果，并在文本框中显示数值。<br/>
+            <input type="text" id="numcount" size="10"/>
+            <input type="button" value="开始计时" onclick="numcount()"/>
+            <input type="button" value="停止计时" onclick="stop_numcount()"/><br/>
+
+            由此联想到倒计时效果，并在文本框中显示数值。<br/>
+            <input type="text" id="reverse_count" size="10"/>
+            <input type="button" value="开始倒计时" onclick="reverse_count()"/><br/>
+        </p>
+
+        <p><strong>History对象</strong><br/>
+            history对象记录了用户曾经浏览过的页面(URL)，并可以实现浏览器前进与后退相似导航的功能。<br/>
+            注意:从窗口被打开的那一刻开始记录，每个浏览器窗口、每个标签页乃至每个框架，都有自己的history对象与特定的window对象关联。<br/>
+            <strong>语法：</strong><br/>
+            window.history.属性|方法<br/>
+            <strong>注意：</strong>window可以省略。<br/>
+            History 对象属性<br/>
+            <img src="images/history_object_property.jpg" alt="history对象属性"/>
+            History 对象方法<br/>
+            <img src="images/history_object_method.jpg" alt="history对象方法"/>
+        </p>
+
+        <p><strong>location对象</strong><br/>
+            location用于获取或设置窗体的URL，并且可以用于解析URL。<br/>
+            <strong>语法:</strong><br/>
+            location.属性|方法<br/>
+            location对象属性图示:<br/>
+            <img src="images/location_object_property1.jpg" alt="location对象属性提示"/>
+            location对象属性:<br/>
+            <img src="images/location_object_property2.jpg" alt="location对象属性"/>
+            location对象方法:<br/>
+            <img src="images/location_object_method.jpg" alt="location对象方法"/>
+            <script type="text/javascript">
+                document.write("返回当前完整的URL为："+location.href);
+            </script>
+        </p>
+    </div>
+    <div class="clear" style="clear:both;"></div>
+</div>
+
+<div>
+    <h2>2018年12月21日-星期五</h2>
+    <div class="column_1">
+        <h3>About HTML and CSS</h3>
+    </div>
+
+    <div class="column_2">
+        <h3>About Javascript</h3>
+        <p>编程练习：<br/>
+            制作一个跳转提示页面：<br/>
+            <strong>要求：</strong><br/>
+            1. 如果打开该页面后，如果不做任何操作则5秒后自动跳转到一个新的地址，如慕课网主页。<br/>
+            2. 如果点击“返回”按钮则返回前一个页面。<br/>
+            <strong>效果:</strong><br/>
+            <img src="http://img.mukewang.com/537d6fed0001572608080402.jpg" width="500" height="200" alt="编程练习效果图"/>
+        </p>
+
+    </div>
+
+    <div class="clear" style="clear:both;"></div>
+</div>
 <script type="text/javascript">
     var para = document.getElementById("para");
 

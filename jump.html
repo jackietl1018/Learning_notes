@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>充值完成提示页面</title>
+</head>
+<body>
+<strong style="font-size:1.2em;">操作成功</strong><br/>
+<p><span id="seconds">5</span>秒后回到主页&nbsp;<a href="javascript:back();" style="text-decoration:none;border:1px dashed black;">返回</a>
+</p>
+<script type="text/javascript">
+    var seconds=document.getElementById("seconds").innerHTML;
+    function countDown(){
+        seconds-=1;
+        document.getElementById("seconds").innerHTML=seconds;
+        if(seconds===0){
+            location.assign("http://localhost:63342/Learning_notes/index.html?_ijt=s9c0aoek3j961u74ebe3f06ti6");
+        }
+    }
+    setInterval(countDown,1000);
+
+    function back(){
+        window.history.back();
+    }
+</script>
+</body>
+</html>

@@ -783,6 +783,17 @@
     <h2>2018年12月21日-星期五</h2>
     <div class="column_1">
         <h3>About HTML and CSS</h3>
+        <p>如何使用css画出三角形</p>
+        <div class="triangle_css">
+        <div class="only_border" style="height:0;width:0;float:left;margin-left:50px;border-top:20px solid black;border-right:20px solid yellow;border-bottom:20px solid purple;border-left:20px solid blue;"><</div>
+        <div class="only_border" style="height:0;width:0;float:left;margin-left:50px;border-top:50px solid black;border-right:20px solid yellow;border-bottom:50px solid purple;border-left:20px solid blue;"></div>
+        <div class="triangle" style="height:0;width:0;float:left;margin-left:50px;border-top:50px solid black;border-right:20px solid transparent;border-left:20px solid transparent;"></div>
+            <div class="clear" style="clear:left;"></div>
+        </div>
+
+        <p>一定要深刻理解<strong>border的宽并不是画出来的三角形的边长</strong>，下面这张图会让你深刻理解一下：<br/>
+            <img src="images/triangle_border.png" alt="border的宽与用css画出来的三角形的边长的关系" height="210" width="400"/></p>
+
     </div>
 
     <div class="column_2">
@@ -793,7 +804,33 @@
             1. 如果打开该页面后，如果不做任何操作则5秒后自动跳转到一个新的地址，如慕课网主页。<br/>
             2. 如果点击“返回”按钮则返回前一个页面。<br/>
             <strong>效果:</strong><br/>
-            <img src="http://img.mukewang.com/537d6fed0001572608080402.jpg" width="500" height="200" alt="编程练习效果图"/>
+            <img src="http://img.mukewang.com/537d6fed0001572608080402.jpg" width="500" height="200" alt="编程练习效果图"/><br/>
+            <a href="jump.html" style="text-decoration:none;font-size:1.5em;color:purple;border:1px solid yellow;">充值完成，5秒后跳回主页！</a>
+        </p>
+        <p><strong>string与json互相转化</strong><br/>
+            1.string转json<br/>
+            <script type="text/javascript">
+                var string='{name:"tanglong",age:24}';
+                document.write(eval('('+string+')').name+"<br/>");
+                var string2='{name:"tangdong",age:18}';
+                var string3='{"name":"tangdong","age":18}';
+                document.write(JSON.parse(string3).name+"<br/>");
+                document.write(JSON.parse(string2).name+"<br/>");       //查看console会报错的
+            </script>
+            这个JSON.parse()与eval()都可以实现,但是它们是有区别的,<br/>
+            <span style="display:inline-block;text-indent:2em;">JSON.parse对json字符串要求比eval()更为严格，key名称(例如name)全部必须有双引号。</span><br/>
+            <span style="display:inline-block;text-indent:2em;">而eval必须用括号将json字符串括起来才能成功转换,key名称(例如name)有无双引号都可以成功转化。</span><br/>
+            2.json转string<br/>
+            <script type="text/javascript">
+                var obj={name:"tanglong",age:24};
+                document.write(typeof (obj)+"<br/>");
+                var str=JSON.stringify(obj);
+                document.write(typeof (str)+"<br/>");
+                document.write(str+"<br/>");
+            </script>
+            <span style="display:inline-block;text-indent:2em;text-align:justify;">json的key名称(例如name)有无双引号都可以成功用JSON.stringify()实现转化,但是注意我们最好还是将双引号写上(或者要求后端在返回数据的时候为key名称加上双引号)。</span><br/>
+            <strong style="font-size:1.2em;">原文链接：</strong>
+            <a href="https://www.cnblogs.com/jewave/p/5830637.html" style="text-decoration:none;" target="_blank">https://www.cnblogs.com/jewave/p/5830637.html</a>
         </p>
 
     </div>

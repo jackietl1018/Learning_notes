@@ -268,15 +268,17 @@
 <div class="clear" style="clear:both;"></div>                  <!--可以去掉这行，若不清除浮动，div会出现高度塌陷，相当于没有高度-->
 <p>体会一下清除浮动与不清除的效果！</p>
 <p><a href="https://zhidao.baidu.com/question/648980034747582965.html"
-      style="background-color:#E6E6E6;text-decoration:none;">使用了浮动的div好像在body里面撑不开内容，就像不显示一样的原因</a></p>
+      style="background-color:#E6E6E6;text-decoration:none;" target="_blank">使用了浮动的div好像在body里面撑不开内容，就像不显示一样的原因</a></p>
 <p style="text-indent:2em;">
     div如果是没有内容的默认是不被撑开的，再有如果div里面的元素全部浮动了，而你有没有清除浮动，那么div会出现高度“塌陷”，也是没有高度的。再有如果你div里面仅有一个元素，并且定义了absolute或者fixed，那么这个div也是没有高度的。不知道你是否是以上情况中的一个。如果有最简单的方法就是将div设置一个理想的高度</p>
-<p><a href="http://www.divcss5.com/jiqiao/j406.shtml" style="background-color:#E6E6E6;text-decoration:none;">浮动产生的原因，负作用以及清除浮动的三种方法（介绍得很好，很仔细！）</a>
+<p><a href="http://www.divcss5.com/jiqiao/j406.shtml" style="background-color:#E6E6E6;text-decoration:none;"
+      target="_blank">浮动产生的原因，负作用以及清除浮动的三种方法（介绍得很好，很仔细！）</a>
 </p>
-<p><a href="https://www.jianshu.com/p/5a7854a73298" style="background-color:#E6E6E6;text-decoration:none;">什么时候需要清除浮动，清除浮动有哪些方法（简书上的回答），也写的非常精湛，易理解！</a>
+<p><a href="https://www.jianshu.com/p/5a7854a73298" style="background-color:#E6E6E6;text-decoration:none;"
+      target="_blank">什么时候需要清除浮动，清除浮动有哪些方法（简书上的回答），也写的非常精湛，易理解！</a>
 </p>
 <p><a href="https://blog.csdn.net/thelostlamb/article/details/79581984"
-      style="background-color:#E6E6E6;text-decoration:none;">与此同时，这就牵扯到关于文档流，以及如何脱离文档流的方法（之一就是设置浮动，还有position:absolute;和position:fixed(相对于浏览器窗口定位）的方法</a>
+      style="background-color:#E6E6E6;text-decoration:none;" target="_blank">与此同时，这就牵扯到关于文档流，以及如何脱离文档流的方法（之一就是设置浮动，还有position:absolute;和position:fixed(相对于浏览器窗口定位）的方法</a>
 </p>
 <p>里面揭示了一个关于不清除浮动，为什么后面元素的内容如p标签里的内容出现位置如此奇怪的原因：</p>
 <p style="text-indent:2em;">注意！！！：使用float脱离文档流时，其他盒子会无视这个元素，但其他盒子内的文本依然会为这个元素让出位置，环绕在该元素的周围。</p>
@@ -413,6 +415,18 @@
     <h2>2018年12月14日-星期五</h2>
     <div class="column_1">
         <h3>About HTML and CSS</h3>
+        <p>777777777777777777777777777777777777777777777777777777777777</p>
+        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p>我aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p>aaa aaaa aaaaaa aaaaaaaa aaaa aaaaaaa aaaaa aaaaaa aaaaaaaaaaaaaaaaa</p>
+        <p>是不是很奇怪，为什么会出现内容溢出？</p>
+        <p><strong>详解原文链接:</strong><br/>
+            <a href="https://zhidao.baidu.com/question/647626760350972565.html" style="text-decoration:none;"
+               target="_blank">https://zhidao.baidu.com/question/647626760350972565.html</a></p>
+        <p><strong>margin塌陷现象的解决：</strong><br/>
+            原文链接：<a href="https://www.cnblogs.com/hugejinfan/p/5901320.html" style="text-decoration:none;"
+                    target="_blank">https://www.cnblogs.com/hugejinfan/p/5901320.html</a><br/>
+        </p>
     </div>
     <div class="column_2">
         <h3>About Javascript</h3>
@@ -447,13 +461,13 @@
         </p>
         1.二维数组的定义方法一<br/>
         <pre>var myarr=new Array()             //先声明一维
-             for(var i=0;i<2;i++){             //一维长度为2
-                 myarr[i]=new Array();         //再声明二维
-                 for(var j=0;j<3;j++){         //二维长度为3
-                 myarr[i][j]=i+j;              //赋值，每个数组元素的值为i+j
-                 }
-             }
-        </pre>
+for(var i=0;i<2;i++){             //一维长度为2
+    myarr[i]=new Array();         //再声明二维
+    for(var j=0;j<3;j++){         //二维长度为3
+    myarr[i][j]=i+j;              //赋值，每个数组元素的值为i+j
+    }
+}
+</pre>
         2.二维数组的定义方法二<br/>
         下面这种方法定义的数组和方法一中定义的数组完全一样，两行三列的一个数组
         <pre>var myarr=[[0,1,2],[1,2,3]];
@@ -563,6 +577,140 @@
     <h2>2018年12月18日-星期一</h2>
     <div class="column_1">
         <h3>About HTML and CSS</h3>
+        <strong>HTML5提供的新语义元素定义了网页的不同部分：</strong><br/>
+        <table border="1" style="border-collapse:collapse;border-spacing:0;border:1px solid darkblue;">
+            <caption style="font-weight:bold;">我是表格标题</caption>       <!--定义表格的标题（caption）-->
+            <tr>
+                <th>HTML5新语义元素表</th>
+                <td>这是表头，大多数浏览器会显示为粗体居中文本。</td>
+            </tr>
+            <tr>
+                <td>header</td>
+                <td>定义文档或节的页眉</td>
+            </tr>
+            <tr>
+                <td>nav</td>
+                <td>定义导航链接的容器</td>
+            </tr>
+            <tr>
+                <td>section</td>
+                <td>定义文档中的节</td>
+            </tr>
+            <tr>
+                <td>aside</td>
+                <td>定义内容之外的内容（比如侧栏）</td>
+            </tr>
+            <tr>
+                <td>footer</td>
+                <td>定义文档或节的页脚</td>
+            </tr>
+            <tr>
+                <td>article</td>
+                <td>定义独立的自包含文章</td>
+            </tr>
+            <tr>
+                <td>details</td>
+                <td>定义额外的细节</td>
+            </tr>
+            <tr>
+                <td>summary</td>
+                <td>定义details元素的标题</td>
+            </tr>
+
+        </table>
+        <p>w3c上关于h5新的8个语义元素好像更为准确，有意思！<br/>
+            HTML5 定义了八个新的语义 HTML 元素。所有都是块级元素。<br/>
+            您可以把 CSS display 属性设置为 block，以确保老式浏览器中正确的行为：<br/>
+            <strong>实例</strong>
+        <pre>header, section, footer, aside, nav, main, article, figure {
+display: block;
+}</pre>
+        </p>
+        <p>既然学习了table布局，就深入了解些，边框怎样控制，border="1"什么意思？<br/>
+            border="1"的意思是边框宽度为1px；<br/>
+            单元格边距（cellpadding）:单元格内容与边框之间的空白；（h5已经不再支持）<br/>
+            单元格间距（cellspacing）:单元格之间的距离；（h5已经不再支持）<br/>
+            <strong>关于cellpadding和cellspacing在h5中不再支持的详细说明--原文链接：</strong><br/>
+            <a href="https://www.cnblogs.com/liuyonglong/p/3707872.html" style="text-decoration:none;" target="_blank">https://www.cnblogs.com/liuyonglong/p/3707872.html</a><br/>
+            td：table data（单元格数据）；<br/>
+            可以分别给不同的表格行设置background，以颜色来凸显区别；<br/>
+            border-collapse:collapse(设置后将表格中相邻边框合并为一条，默认是separate)
+        </p>
+
+        <p><strong>关于&lt;!doctype html&gt;：</strong><br/>
+            原文链接一：<br/>
+            <a href="http://www.w3school.com.cn/tags/tag_doctype.asp" style="text-decoration:none;" target="_blank">http://www.w3school.com.cn/tags/tag_doctype.asp</a><br/>
+            原文链接二：<br/>
+            <a href="https://blog.csdn.net/weixin_38469425/article/details/79732718" style="text-decoration:none;"
+               target="_blank">https://blog.csdn.net/weixin_38469425/article/details/79732718</a>
+        </p>
+        <strong>HTML版本</strong><br/>
+        从1991年第一个html版本诞生至今，现在已经发展出多个html版本。<br/>
+        <table class="table1" border="1" style="border-collapse:collapse;border-spacing:0;border:1px solid green;">
+            <caption>HTML从诞生以来的8个版本</caption>
+            <tr style="background:#3f3f3f;color:white;">
+                <td>版本</td>
+                <td>年份</td>
+            </tr>
+            <tr>
+                <td>HTML</td>
+                <td>1991</td>
+            </tr>
+            <tr>
+                <td>HTML+</td>
+                <td>1993</td>
+            </tr>
+            <tr>
+                <td>HTML2.0</td>
+                <td>1995</td>
+            </tr>
+            <tr>
+                <td>HTML3.2</td>
+                <td>1997</td>
+            </tr>
+            <tr>
+                <td>HTML4.01</td>
+                <td>1999</td>
+            </tr>
+            <tr>
+                <td>XHTML1.0</td>
+                <td>2000</td>
+            </tr>
+            <tr>
+                <td>HTML5</td>
+                <td>2012</td>
+            </tr>
+            <tr>
+                <td>XHTML5</td>
+                <td>2013</td>
+            </tr>
+        </table>
+        <p><strong>HTML字符实体介绍，比如&lt;,&gt;,&copy;等怎么表示</strong><br/>
+            详述见链接：<a href="http://www.w3school.com.cn/html/html_entities.asp" style="text-decoration:none;"
+                     target="_blank">http://www.w3school.com.cn/html/html_entities.asp</a>
+        </p>
+        <p><strong>HTML5 - 新特性</strong><br/>
+            HTML5中一些最有趣的新特性：<br/>
+        <ul type="disc" style="margin:0;">
+            <li>新的语义元素，比如header，nav，section，aside，footer，article，details，summary</li>
+            <li>新的表单控件，比如数字，日期，时间，日历和滑块。</li>
+            <li>强大的图像支持（借由&lt;canvas&gt;和&lt;svg&gt;）</li>
+            <li>强大的多媒体支持（借由&lt;video&gt;和&lt;audio&gt;）</li>
+            <li>强大的新API，比如用本地存储取代cookie。</li>
+        </ul>
+        </p>
+        <strong>HTML5图像：</strong><br/>
+        <table  class="table2" border="1" style="border-collapse:collapse;border-spacing:0;">
+            <tr style="background:#3f3f3f;color:white;">
+                <td>标签</td><td>描述</td>
+            </tr>
+            <tr>
+                <td>&lt;canvas&gt;</td><td>定义使用JavaScript的图像绘制</td>
+            </tr>
+            <tr>
+                <td>&lt;svg&gt;</td><td>定义使用SVG的图像绘制</td>
+            </tr>
+        </table>
     </div>
     <div class="column_2">
         <h3>About Javascript</h3>
@@ -591,11 +739,12 @@
         </p>
         <p>Math对象<br/>
             使用math的属性和方法：<br/>
-        <pre>        var mypi=Math.PI;
-        var myabs=Math.abs(-15);
-        document.write(mypi);
-        document.write(myabs);
+        <pre>            var mypi=Math.PI;
+            var myabs=Math.abs(-15);
+            document.write(mypi);
+            document.write(myabs);
     </pre>
+
         <script type="text/javascript">
             var mypi = Math.PI;
             var myabs = Math.abs(-7);
@@ -719,23 +868,25 @@
                     var t = setTimeout("alert('我是五秒后出现的alert弹窗')", 5000);
                 }
 
-                var num = 0,i;
+                var num = 0, i;
+
                 function numcount() {
                     document.getElementById("numcount").value = num;
                     num = num + 1;
-                    i=setTimeout(numcount, 1000);                  //(如果不考虑停止计数问题，此行代码改为setTimeout(numcount,1000)即可)看到这里应该明白setTimeout()和setInterval()的重要区别，setTimeout若写在了他想执行的函数代码内部，那他当然反复执行下去，而若我们尝试将其像setInterval一样写在函数外面，那就只执行一次了。
+                    i = setTimeout(numcount, 1000);                  //(如果不考虑停止计数问题，此行代码改为setTimeout(numcount,1000)即可)看到这里应该明白setTimeout()和setInterval()的重要区别，setTimeout若写在了他想执行的函数代码内部，那他当然反复执行下去，而若我们尝试将其像setInterval一样写在函数外面，那就只执行一次了。
                 }
 
-                function stop_numcount(){
+                function stop_numcount() {
                     clearTimeout(i);
                 }
 
 
-                var sumtime=60;
-                function reverse_count(){
-                    document.getElementById("reverse_count").value=sumtime;
-                    sumtime-=1;
-                    setTimeout("reverse_count()",1000);          //想想如何倒计时到0后停止
+                var sumtime = 60;
+
+                function reverse_count() {
+                    document.getElementById("reverse_count").value = sumtime;
+                    sumtime -= 1;
+                    setTimeout("reverse_count()", 1000);          //想想如何倒计时到0后停止
                 }
             </script>
             <input type="button" value="点击我，五秒后出现alert弹窗！" onclick="timeout_info()"/><br/>
@@ -772,7 +923,7 @@
             location对象方法:<br/>
             <img src="images/location_object_method.jpg" alt="location对象方法"/>
             <script type="text/javascript">
-                document.write("返回当前完整的URL为："+location.href);
+                document.write("返回当前完整的URL为：" + location.href);
             </script>
         </p>
     </div>
@@ -785,9 +936,14 @@
         <h3>About HTML and CSS</h3>
         <p>如何使用css画出三角形</p>
         <div class="triangle_css">
-        <div class="only_border" style="height:0;width:0;float:left;margin-left:50px;border-top:20px solid black;border-right:20px solid yellow;border-bottom:20px solid purple;border-left:20px solid blue;"><</div>
-        <div class="only_border" style="height:0;width:0;float:left;margin-left:50px;border-top:50px solid black;border-right:20px solid yellow;border-bottom:50px solid purple;border-left:20px solid blue;"></div>
-        <div class="triangle" style="height:0;width:0;float:left;margin-left:50px;border-top:50px solid black;border-right:20px solid transparent;border-left:20px solid transparent;"></div>
+            <div class="only_border"
+                 style="height:0;width:0;float:left;margin-left:50px;border-top:20px solid black;border-right:20px solid yellow;border-bottom:20px solid purple;border-left:20px solid blue;">
+                <
+            </div>
+            <div class="only_border"
+                 style="height:0;width:0;float:left;margin-left:50px;border-top:50px solid black;border-right:20px solid yellow;border-bottom:50px solid purple;border-left:20px solid blue;"></div>
+            <div class="triangle"
+                 style="height:0;width:0;float:left;margin-left:50px;border-top:50px solid black;border-right:20px solid transparent;border-left:20px solid transparent;"></div>
             <div class="clear" style="clear:left;"></div>
         </div>
 
@@ -804,29 +960,30 @@
             1. 如果打开该页面后，如果不做任何操作则5秒后自动跳转到一个新的地址，如慕课网主页。<br/>
             2. 如果点击“返回”按钮则返回前一个页面。<br/>
             <strong>效果:</strong><br/>
-            <img src="http://img.mukewang.com/537d6fed0001572608080402.jpg" width="500" height="200" alt="编程练习效果图"/><br/>
+            <img src="http://img.mukewang.com/537d6fed0001572608080402.jpg" width="500" height="200"
+                 alt="编程练习效果图"/><br/>
             <a href="jump.html" style="text-decoration:none;font-size:1.5em;color:purple;border:1px solid yellow;">充值完成，5秒后跳回主页！</a>
         </p>
         <p><strong>string与json互相转化</strong><br/>
             1.string转json<br/>
             <script type="text/javascript">
-                var string='{name:"tanglong",age:24}';
-                document.write(eval('('+string+')').name+"<br/>");
-                var string2='{name:"tangdong",age:18}';
-                var string3='{"name":"tangdong","age":18}';
-                document.write(JSON.parse(string3).name+"<br/>");
-                document.write(JSON.parse(string2).name+"<br/>");       //查看console会报错的
+                var string = '{name:"tanglong",age:24}';
+                document.write(eval('(' + string + ')').name + "<br/>");
+                var string2 = '{name:"tangdong",age:18}';
+                var string3 = '{"name":"tangdong","age":18}';
+                document.write(JSON.parse(string3).name + "<br/>");
+                document.write(JSON.parse(string2).name + "<br/>");       //查看console会报错的
             </script>
             这个JSON.parse()与eval()都可以实现,但是它们是有区别的,<br/>
             <span style="display:inline-block;text-indent:2em;">JSON.parse对json字符串要求比eval()更为严格，key名称(例如name)全部必须有双引号。</span><br/>
             <span style="display:inline-block;text-indent:2em;">而eval必须用括号将json字符串括起来才能成功转换,key名称(例如name)有无双引号都可以成功转化。</span><br/>
             2.json转string<br/>
             <script type="text/javascript">
-                var obj={name:"tanglong",age:24};
-                document.write(typeof (obj)+"<br/>");
-                var str=JSON.stringify(obj);
-                document.write(typeof (str)+"<br/>");
-                document.write(str+"<br/>");
+                var obj = {name: "tanglong", age: 24};
+                document.write(typeof (obj) + "<br/>");
+                var str = JSON.stringify(obj);
+                document.write(typeof (str) + "<br/>");
+                document.write(str + "<br/>");
             </script>
             <span style="display:inline-block;text-indent:2em;text-align:justify;">json的key名称(例如name)有无双引号都可以成功用JSON.stringify()实现转化,但是注意我们最好还是将双引号写上(或者要求后端在返回数据的时候为key名称加上双引号)。</span><br/>
             <strong style="font-size:1.2em;">原文链接：</strong>

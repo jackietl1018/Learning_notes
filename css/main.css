@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background-color: #FFFFFF;
+    background-color:#f8f6f2;
     margin: 0 80px;
 }
 
@@ -295,3 +295,6 @@ img {
     border:1px solid red;
 }
 
+.table1 td, .table2 td{
+    width:230px;
+}

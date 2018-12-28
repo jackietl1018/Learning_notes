@@ -7,7 +7,8 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-<div class="header">    <!--让这个div不管网页如何下拉，都处于顶部-->
+<!-- 让这个div不管网页如何下拉，都处于顶部 -->
+<div class="header">
     <h1 style="text-align: center;line-height:50px;">Self-discipline,self-learning!</h1>
 </div>
 <div style="margin-top:150px;">
@@ -46,7 +47,8 @@
 
         var score = 59;
         if (score >= 60) {
-            document.write("<label style='font-family:serif;color:blue;'>没及格，下次考试继续努力呦！</label>");  <!--思考一下该如何改变document.write输出的内容字体颜色等，百度没找到-->
+            document.write("<label style='font-family:serif;color:blue;'>没及格，下次考试继续努力呦！</label>");
+            <!-- 思考一下该如何改变document.write输出的内容字体颜色等，百度没找到 -->
         } else {
             document.write("wa,还不错呦，及格啦!<br/>");
         }
@@ -60,14 +62,18 @@
         } else {
             document.write("成绩非常优秀，棒棒棒！<br/>");
         }
-        document.write("<span style='color:darkblue;'>" + "JS输出空格的两种方法：" + "<br/>" + "<span/>");<!--只给一个document.write添加样式，后面所有的document.write好像都默认这个样式了-->
+        document.write("<span style='color:darkblue;'>" + "JS输出空格的两种方法：" + "<br/>" + "<span/>");
+        <!-- 只给一个document.write添加样式，后面所有的document.write好像都默认这个样式了 -->
         document.write("方法一：" + "1" + "&nbsp;&nbsp;&nbsp;&nbsp;" + "23" + "<br/>");
-        document.write("<span style='white-space:pre;color:yellow;'>" + "方法二：" + "1   2   3" + "<span/>");  <!--在输出时添加“white-space:pre;”样式属性。这个样式表示"空白会被浏览器保留"-->
+        document.write("<span style='white-space:pre;color:yellow;'>" + "方法二：" + "1   2   3" + "<span/>");
 
+        <!-- 在输出时添加“white-space:pre;”样式属性。这个样式表示"空白会被浏览器保留" -->
         function show() {
             var content = "Cherish everyday!";
-            alert(content);       <!--有想过如何改变alert弹窗内容的字体，大小，颜色等等样式如何控制吗？-->
+            alert(content);
         }
+
+        <!--有想过如何改变alert弹窗内容的字体，大小，颜色等等样式如何控制吗？-->
 
         function dialog() {
             var message = confirm("性别为女吗？");
@@ -107,33 +113,40 @@
     </div>
     <div class="container_3">
         <form method="get" action="">
-            <label for="introduction" style="color:darkblue">个人简介：</label><br/>       <!--文本框实现-->
-            <textarea cols="50" rows="10" id="introduction">在这里输入内容...label for=后面的字段introduction与text-area后面的id相同的话就可以达到一种锁定区域的感觉，我们将鼠标点击在“个人简介”这些字上面时，光标会聚焦到文本框区域，可进行输入！
-            </textarea><br/>     <!--文本区域可以输入10行，每行50个char-->
+            <!-- 文本框实现 -->
+            <label for="introduction" style="color:darkblue">个人简介：</label><br/>
+            <!-- 文本区域可以输入10行，每行50个char -->
+            <textarea cols="50" rows="10" id="introduction">在这里输入内容...label for=后面的字段introduction与text-area后面的id相同的话就可以达到一种
+                锁定区域的感觉，我们将鼠标点击在“个人简介”这些字上面时，光标会聚焦到文本框区域，可进行输入！
+            </textarea>
+            <br/>
             <input type="submit" name="submit" value="确定"/>
             <input type="reset" name="reset" value="重置"/>
             <br/><br/>
 
-            <label>性别：</label>                                   <!--单选框实现-->
+            <!-- 单选框实现 -->
+            <label>性别：</label>
             <label for="man">男</label>
             <input type="radio" name="gender-man" id="man"/>
             <label for="woman">女</label>
             <input type="radio" name="gender-woman" id="woman"/>
-            <!--注意：只有将性别里两个input的name设置成相同时，才不会出现单选框两个都能选中的情况！-->
+            <!-- 注意：只有将性别里两个input的name设置成相同时，才不会出现单选框两个都能选中的情况！-->
             <br/><br/>
 
-            <label>性别：</label>                                   <!--单选框实现-->
+            <!-- 单选框实现 -->
+            <label>性别：</label>
             <label for="man1">男</label>
             <input type="radio" name="gender" id="man1"/>
-
             <label for="woman1">女</label>
             <input type="radio" name="gender" id="woman1"/>
             <br/><br/>
 
-            <label>你对哪些运动感兴趣？</label><br/>                 <!--复选框实现-->
+            <!-- 复选框实现 -->
+            <label>你对哪些运动感兴趣？</label><br/>
             <input type="checkbox" name="跑步" value="跑步"/>
             <label>跑步</label>
-            <input type="checkbox" name="打球" value="打球" checked="checked"/>    <!--加上checked="checked"表示默认选中-->
+            <input type="checkbox" name="打球" value="打球" checked="checked"/>
+            <!-- 加上checked="checked"表示默认选中 -->
             <label>打球</label>
             <input type="checkbox" name="登山" value="登山" checked="checked"/>
             <label>登山</label>
@@ -141,9 +154,13 @@
             <label>游泳</label>
             <br/><br/>
 
-            <label>喜欢：</label>                                   <!--使用下拉列表，节省网页空间-->
-            <select multiple="multiple">                            <!--下拉列表也可以进行多选操作，在<select>标签中设置multiple="multiple"属性，就可以实现多选功能，
-                                                                     在 windows 操作系统下，进行多选时按下Ctrl键同时进行单击（在 Mac下使用 Command +单击），可以选择多个选项。-->
+            <!--
+                使用下拉列表，节省网页空间
+                下拉列表也可以进行多选操作，在<select>标签中设置multiple="multiple"属性，就可以实现多选功能，
+                 在 windows 操作系统下，进行多选时按下Ctrl键同时进行单击（在 Mac下使用 Command +单击），可以选择多个选项。
+            -->
+            <label>喜欢：</label>
+            <select multiple="multiple">
                 <option value="旅游" selected="selected">旅游</option>
                 <option value="生活">生活</option>
                 <option value="购物">购物</option>
@@ -158,8 +175,10 @@
         <p>@@@字符串相关@@@</p>
         <script type="text/javascript">
             var mystr = "HELLO world!";
-            document.write(mystr.length + "<br/>");      //字符串中的空格和其他符号（如标点符号等）都算一个长度，str.length方法用来计算字符串长度。
-            document.write(mystr.indexOf("o", 5) + "<br/>");    //计算字符串中从第五个字符开始，出现字符“o”的第一个index位置（会区分字符大小写不，下一行代码试一下）
+            document.write(mystr.length + "<br/>");
+            //字符串中的空格和其他符号（如标点符号等）都算一个长度，str.length方法用来计算字符串长度。
+            document.write(mystr.indexOf("o", 5) + "<br/>");
+            //计算字符串中从第五个字符开始，出现字符“o”的第一个index位置（会区分字符大小写不，下一行代码试一下）
             document.write(mystr.indexOf("O", 5) + "<br/>" + "上面的结果为-1可知，是会区分大小写的，js对大小写敏感！" + "<br/>" + "<br/>");
 
             document.write("<span style='color:brown;'>" + "数组连接问题" + "<br/>" + "</span>");
@@ -167,15 +186,19 @@
             var myarr2 = new Array("13022858182");
             var array_test = ["我", "爱", "你"]
             document.write(array_test + "<br/>");
-            document.write(array_test.join("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;") + "<br/>");    //如果不加&nbsp;那么之间无论多少个空格都默认只隔一个空格连接
+            document.write(array_test.join("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;") + "<br/>");
+            //如果不加&nbsp;那么之间无论多少个空格都默认只隔一个空格连接。
             document.write(array_test.reverse() + "<br/>");
-            var myarr = myarr1.concat(myarr2);           //两数组连接
-            document.write(myarr.join("-") + "<br/>");           //数组内各值用-连接
+            var myarr = myarr1.concat(myarr2);
+            //两数组连接
+            document.write(myarr.join("-") + "<br/>");
+            //数组内各值用-连接
         </script>
         <a href="about_time.html" target="_blank;">时间输出格式控制问题</a>
     </div>
 
-    <div class="container_4">        <!--展示tab切换的容器-->
+    <!-- 展示tab切换的容器 -->
+    <div class="container_4">
         <ul>
             <li><a href="#tab1">tab1名称</a></li>
             <li><a href="#tab2">tab2名称</a></li>
@@ -184,17 +207,29 @@
         </ul>
 
         <div class="nav_content">
-            <div id="tab1"><p style="text-indent:2em;">
-                实现导航条的关键就在于如何建立导航标题与导航内容之间的联系，而锚点就可以实现类似效果。通过点击锚点，页面生成一个哈希值，然后跳转到相应内容的位置。</p>
-                <p style="text-indent:2em;text-align:center;color:brown;">纯CSS实现tab切换</p>
+            <div id="tab1">
+                <p style="text-indent:2em;">
+                    实现导航条的关键就在于如何建立导航标题与导航内容之间的联系，而锚点就可以实现类似效果。通过点击锚点，页面生成一个哈希值，
+                    然后跳转到相应内容的位置。
+                </p>
+                <p style="text-indent:2em;text-align:center;color:brown;">
+                    纯CSS实现tab切换
+                </p>
             </div>
-            <div id="tab2"><p style="text-indent:2em;">
-                在视觉布局中，四个导航内容属于同一个父元素，与父元素的高度相同，并按照块级元素的排列方式进行排布，父元素设置溢出隐藏时，默认只显示第一个导航内容
-                。点击导航标题时，对应的导航内容到达导航标题行下面，达到了导航切换的效果。<br/>
-                【缺点】：锚点技术本身的局限是锚点目标会尽可能的到达可视区域上方，从而可能会生成页面跳动；（用户体验很差，所以，将锚点利用在tab切换上效果不佳，了解就好，不会用来做网页）
-            </p></div>
-            <div id="tab3">tab3对应的content</div>
-            <div id="tab4">tab4对应的content</div>
+            <div id="tab2">
+                <p style="text-indent:2em;">
+                    在视觉布局中，四个导航内容属于同一个父元素，与父元素的高度相同，并按照块级元素的排列方式进行排布，父元素设置溢出隐藏时，
+                    默认只显示第一个导航内容 。点击导航标题时，对应的导航内容到达导航标题行下面，达到了导航切换的效果。<br/>
+                    【缺点】：锚点技术本身的局限是锚点目标会尽可能的到达可视区域上方，从而可能会生成页面跳动。（用户体验很差，所以，
+                    将锚点利用在tab切换上效果不佳，了解就好，不会用来做网页）
+                </p>
+            </div>
+            <div id="tab3">
+                tab3对应的content
+            </div>
+            <div id="tab4">
+                tab4对应的content
+            </div>
         </div>
     </div>
 </div>
@@ -225,7 +260,8 @@
         function openWindow() {
             var message = confirm("是否打开新窗口？");
             if (message == true) {
-                var net = prompt("请输入你要打开的网址：", "http://www.imooc.com/");       //在js文件中写法不一样：var net=prompt(message:"请输入你要打开的网址：",_default:"http://www.imooc.com/")
+                var net = prompt("请输入你要打开的网址：", "http://www.imooc.com/");
+                //在js文件中写法不一样：var net=prompt(message:"请输入你要打开的网址：",_default:"http://www.imooc.com/")
                 if (net != null) {
                     window.open(net, '_blank', 'width=400,height=600,top=100,left=0,menubar=no,toolbar=no,status=no,scrollbars=no')
                 } else {
@@ -239,10 +275,12 @@
     <input name="button" type="button" value="点击我，对成绩做评价！" onClick="rec()"/><br/>
     <input name="button" type="button" value="新窗口打开网站！" onclick="openWindow()"/><br/>
     <h3>javascript打开新窗口：</h3>
-    <p><span style="color:purple;font-size:18px;">语法：</span><br/>
+    <p>
+        <span style="color:purple;font-size:18px;">语法：</span><br/>
         window.open([URL], [窗口名称], [参数字符串])<br/>
         <span style="color:purple;font-size:18px;">参数说明：</span><br/>
-        <span style="color:darkslategrey;">URL：</span>可选参数，在窗口中要显示网页的网址或路径。如果省略这个参数，或者它的值是空字符串，那么窗口就不显示任何文档。<br/>
+        <span style="color:darkslategrey;">URL：</span>可选参数，在窗口中要显示网页的网址或路径。如果省略这个参数，或者它的值是空字符串，
+        那么窗口就不显示任何文档。<br/>
         <span style="color:darkslategrey;">窗口名称：</span>可选参数，被打开窗口的名称。<br/>
         1.该名称由字母、数字和下划线字符组成。<br/>
         2."_top"、"_blank"、"_self"具有特殊意义的名称。<br/>
@@ -255,7 +293,10 @@
         <img src="images/chuangkou_canshu_set.jpg" alt="窗口参数设置图"/>
     </p>
 
-    <p id="para" onmouseover="change()" onmouseout="rec()">点击一下，查看js中操作符之间的优先级</p><br/><br/>
+    <p id="para" onmouseover="change()" onmouseout="rec()">
+        点击一下，查看js中操作符之间的优先级
+    </p>
+    <br/><br/>
     <p>举个例子：</p>
     <script type="text/javascript">
         var result = 6 + 30 > 10 && 6 * 3 < 2;
@@ -263,46 +304,61 @@
     </script>
     <a href="index_3.html" target="_blank;" style="text-decoration:none;">利用js的函数为按钮添加事件，改变div（显示或者隐藏等）</a><br/>
     <a href="index_4.html" target="_blank;" style="text-decoration:none;">js变量反复定义最终值确定问题及变量a++与++a（两种自增）研究</a>
-
 </div>
-<div class="clear" style="clear:both;"></div>                  <!--可以去掉这行，若不清除浮动，div会出现高度塌陷，相当于没有高度-->
+<!-- 可以去掉这行，若不清除浮动，div会出现高度塌陷，相当于没有高度 -->
+<div class="clear" style="clear:both;"></div>
 <p>体会一下清除浮动与不清除的效果！</p>
 <p><a href="https://zhidao.baidu.com/question/648980034747582965.html"
       style="background-color:#E6E6E6;text-decoration:none;" target="_blank">使用了浮动的div好像在body里面撑不开内容，就像不显示一样的原因</a></p>
 <p style="text-indent:2em;">
-    div如果是没有内容的默认是不被撑开的，再有如果div里面的元素全部浮动了，而你有没有清除浮动，那么div会出现高度“塌陷”，也是没有高度的。再有如果你div里面仅有一个元素，并且定义了absolute或者fixed，那么这个div也是没有高度的。不知道你是否是以上情况中的一个。如果有最简单的方法就是将div设置一个理想的高度</p>
+    div如果是没有内容的默认是不被撑开的，再有如果div里面的元素全部浮动了，而你有没有清除浮动，那么div会出现高度“塌陷”，也是没有高度的。
+    再有如果你div里面仅有一个元素，并且定义了absolute或者fixed，那么这个div也是没有高度的。不知道你是否是以上情况中的一个。如果有最简单的
+    方法就是将div设置一个理想的高度
+</p>
 <p><a href="http://www.divcss5.com/jiqiao/j406.shtml" style="background-color:#E6E6E6;text-decoration:none;"
-      target="_blank">浮动产生的原因，负作用以及清除浮动的三种方法（介绍得很好，很仔细！）</a>
+      target="_blank">
+    浮动产生的原因，负作用以及清除浮动的三种方法（介绍得很好，很仔细！）</a>
 </p>
 <p><a href="https://www.jianshu.com/p/5a7854a73298" style="background-color:#E6E6E6;text-decoration:none;"
-      target="_blank">什么时候需要清除浮动，清除浮动有哪些方法（简书上的回答），也写的非常精湛，易理解！</a>
+      target="_blank">
+    什么时候需要清除浮动，清除浮动有哪些方法（简书上的回答），也写的非常精湛，易理解！</a>
 </p>
 <p><a href="https://blog.csdn.net/thelostlamb/article/details/79581984"
-      style="background-color:#E6E6E6;text-decoration:none;" target="_blank">与此同时，这就牵扯到关于文档流，以及如何脱离文档流的方法（之一就是设置浮动，还有position:absolute;和position:fixed(相对于浏览器窗口定位）的方法</a>
+      style="background-color:#E6E6E6;text-decoration:none;" target="_blank">
+    与此同时，这就牵扯到关于文档流，以及如何脱离文档流的方法（之一就是设置浮动，还有position:absolute;和
+    position:fixed(相对于浏览器窗口定位）的方法
+</a>
 </p>
-<p>里面揭示了一个关于不清除浮动，为什么后面元素的内容如p标签里的内容出现位置如此奇怪的原因：</p>
-<p style="text-indent:2em;">注意！！！：使用float脱离文档流时，其他盒子会无视这个元素，但其他盒子内的文本依然会为这个元素让出位置，环绕在该元素的周围。</p>
+<p>
+    里面揭示了一个关于不清除浮动，为什么后面元素的内容如p标签里的内容出现位置如此奇怪的原因：
+</p>
+<p style="text-indent:2em;">注意！！！：使用float脱离文档流时，其他盒子会无视这个元素，但其他盒子内的文本依然会为这个元素让出位置，
+    环绕在该元素的周围。
+</p>
 <p style="text-indent:2em;">这也是利用浮动特性实现文字环绕效果的深刻体会呀！</p>
 <p style="text-indent:2em;">父元素设置了position：absolute；或position：fixed之后，子div设置float失效。</p>
+
 
 <div>
     <h2>2018年12月13号-星期四</h2>
     <div class="column_1">
         <h3>About HTML and CSS</h3>
         <div class="container_1" style="text-align:center;line-height:400px;">
-            <!-- <div class="center_box" style="vertical-align:middle;width:150px;height:150px;border:1px solid purple;display:inline-block;">利用text-align:center;结合vertical-align:middle;试试能否做到水平垂直居中</div>      （div里有文本的话由于设置了行高会出问题的，溢出边界）   -->
+            <!--
+            <div class="center_box" style="vertical-align:middle;width:150px;height:150px;border:1px solid purple;display:inline-block;">
+            利用text-align:center;结合vertical-align:middle;试试能否做到水平垂直居中</div>
+            （div里有文本的话由于设置了行高会出问题的，溢出边界）
+            -->
             <img style="display:inline-block;vertical-align:middle;" src="images/center_image.png" alt="一张水平垂直居中的图片"/>
         </div>
 
         <div class="tab_self">
-
             <ul>
                 <li id="li_1" onmouseover="content1_show()">tab1名称</li>
                 <li id="li_2" onmouseover="content2_show()">tab2名称</li>
                 <li id="li_3" onmouseover="content3_show()">tab3名称</li>
                 <li id="li_4" onmouseover="content4_show()">tab4名称</li>
             </ul>
-
             <div class="nav_content">
                 <div class="content" style="display: block">1</div>
                 <div class="content">2</div>
@@ -317,7 +373,6 @@
                 <li onmouseover="content13_show()">tab3.1名称</li>
                 <li onmouseover="content14_show()">tab4.1名称</li>
             </ul>
-
             <div class="nav_content2">
                 <div class="content" style="display: block">1</div>
                 <div class="content">2</div>
@@ -360,7 +415,8 @@
             <strong>如何判断变量类型example：<br/></strong>
             <script type="text/javascript">
                 var u;
-                document.write("<strong>" + u + "</strong>" + "<br/>");      <!--对变量进行了声明但未初始化赋值，那么他的类型就是undefined（系统也不知道他属于js六种数据类型中的哪种）-->
+                document.write("<strong>" + u + "</strong>" + "<br/>");
+                //对变量进行了声明但未初始化赋值，那么他的类型就是undefined（系统也不知道他属于js六种数据类型中的哪种）
                 var array = [1, 2, 3];
                 var num = 7;
                 document.write(array + "<br/>");
@@ -377,7 +433,10 @@
             <strong>JS中null和undefined的区别：</strong><br/>
             原文链接：<br/>
             <a href="https://www.cnblogs.com/dyh-air/articles/7943295.html" style="text-decoration:none;"
-               target="_blank">https://www.cnblogs.com/dyh-air/articles/7943295.html</a><br/><br/>
+               target="_blank">
+                https://www.cnblogs.com/dyh-air/articles/7943295.html
+            </a>
+            <br/><br/>
             <strong>判断变量不为空</strong><br/>
             一般不用<br/>
             if(obj==""){}<br/>
@@ -385,16 +444,29 @@
             if(obj){}<br/>
             <strong>原文链接一：</strong><br/>
             <a href="https://blog.csdn.net/qq_42650983/article/details/80975011" style="text-decoration:none;"
-               target="_blank">https://blog.csdn.net/qq_42650983/article/details/80975011</a><br/>
+               target="_blank">
+                https://blog.csdn.net/qq_42650983/article/details/80975011
+            </a>
+            <br/>
             <strong>原文链接二：</strong><br/>
-            <a href="https://www.cnblogs.com/zhengyeye/p/6485124.html" style="text-decoration:none;" target="_blank">https://www.cnblogs.com/zhengyeye/p/6485124.html</a>
+            <a href="https://www.cnblogs.com/zhengyeye/p/6485124.html" style="text-decoration:none;" target="_blank">
+                https://www.cnblogs.com/zhengyeye/p/6485124.html
+            </a>
         </p>
         <p>
             <strong>Tab切换实现过程中体会到的getElementsByClassName的神奇之处</strong><br/>
-            <span style="text-indent:2em;display:inline-block;text-align:justify;">js中getElementsByClassName获取到的是一个对象（object），虽然不是数组类型，但是是一种array-like（类数组）对象，是HTMLCollection,在javascript有array之前就已经存在的东西。</span><br/><br/>
-            <a href="https://segmentfault.com/q/1010000000643219" style="text-decoration:none;" target="_blank;">关于getElementsByClassName获取到的对象到底是什么类型？</a>
+            <span style="text-indent:2em;display:inline-block;text-align:justify;">
+                js中getElementsByClassName获取到的是一个对象（object），虽然不是数组类型，但是是一种array-like（类数组）对象，
+                是HTMLCollection,在javascript有array之前就已经存在的东西。
+            </span>
             <br/><br/>
-            块级元素设置text-indent才会有效的，span标签设置text-indent无效，a超链接标签设置text-indent无效，因为span和a标签不像div标签和p标签那样默认是块元素（默认独占一行才具有空间性）。
+            <a href="https://segmentfault.com/q/1010000000643219" style="text-decoration:none;" target="_blank;">
+                关于getElementsByClassName获取到的对象到底是什么类型？
+            </a>
+            <br/><br/>
+            块级元素设置text-indent才会有效的，span标签设置text-indent无效，a超链接标签设置text-indent无效，因为span和a标签不像
+            div标签和p标签那样默认
+            是块元素（默认独占一行才具有空间性）。
         </p>
     </div>
     <div class="clear" style="clear:both;"></div>
@@ -406,11 +478,15 @@
     </div>
     <div class="left"></div>
     <div class="right"></div>
-
 </div>
-<p><a href="https://www.cnblogs.com/ada-blog/p/7242664.html" style="text-decoration:none;" target="_blank;">margin：auto探索出的关于水平垂直居中的另一个小方法！</a>
+<p>
+    <a href="https://www.cnblogs.com/ada-blog/p/7242664.html" style="text-decoration:none;" target="_blank;">
+        margin：auto探索出的关于水平垂直居中的另一个小方法！
+    </a>
 </p>
 <div class="center_box"></div>
+
+
 <div>
     <h2>2018年12月14日-星期五</h2>
     <div class="column_1">
@@ -422,29 +498,38 @@
         <p>是不是很奇怪，为什么会出现内容溢出？</p>
         <p><strong>详解原文链接:</strong><br/>
             <a href="https://zhidao.baidu.com/question/647626760350972565.html" style="text-decoration:none;"
-               target="_blank">https://zhidao.baidu.com/question/647626760350972565.html</a></p>
+               target="_blank">
+                https://zhidao.baidu.com/question/647626760350972565.html
+            </a>
+        </p>
         <p><strong>margin塌陷现象的解决：</strong><br/>
             原文链接：<a href="https://www.cnblogs.com/hugejinfan/p/5901320.html" style="text-decoration:none;"
-                    target="_blank">https://www.cnblogs.com/hugejinfan/p/5901320.html</a><br/>
+                    target="_blank">
+                https://www.cnblogs.com/hugejinfan/p/5901320.html
+            </a>
+            <br/>
         </p>
     </div>
     <div class="column_2">
         <h3>About Javascript</h3>
         <p>
             <script type="text/javascript">
-                var myarr = new Array();          <!--定义数组-->
+                <!-- 定义数组 -->
+                var myarr = new Array();
                 myarr[0] = 60;
                 myarr[1] = 70;
                 myarr[2] = 80;
                 document.write("数组内容输出：" + myarr + "<br/>");
                 myarr[5] = 100;
-                document.write("数组增加一个元素后，数组长度增加了，那未赋初值的那些数组元素默认为0还是？" + "<br/>" + "输出看看就知道了" + "<br/>" + myarr + "<br/>");
+                document.write("数组增加一个元素后，数组长度增加了，那未赋初值的那些数组元素默认为0还是？" + "<br/>" + "输出看看就知道了" +
+                    "<br/>" + myarr + "<br/>");
             </script>
             也可以这样定义数组：在创建数组的同时，为数组指定长度，长度可任意指定。<br/>
             var myarr=new Array(8);<br/>
-            <strong>注意：<br/></strong>
+            <strong>注意：</strong><br/>
             1.创建的新数组是空数组，没有值，如输出，则显示undefined。<br/>
-            2.虽然创建数组时，指定了长度，但实际上数组都是变长的，也就是说即使指定了长度为8，仍然可以将元素存储在规定长度以外。<br/><br/>
+            2.虽然创建数组时，指定了长度，但实际上数组都是变长的，也就是说即使指定了长度为8，仍然可以将元素存储在规定长度以外。
+            <br/><br/>
             定义数组，给数组赋值，我们可以“一气呵成”将这两步合为一步<br/>
             <strong>第一种方法：</strong><br/>
             var myarr=new Array(66,80,90,77,59);<br/>
@@ -503,10 +588,13 @@ for(var i=0;i<2;i++){             //一维长度为2
             }
         </pre>
         <p>语法说明：<br/>
-            Switch必须赋初始值，值与每个case值匹配。满足执行该 case 后的所有语句，并用break语句来阻止运行下一个case。如所有case值都不匹配，执行<strong>default</strong>后的语句。<br/><br/>
-            <strong>下面是switch语句的执行效果：<br/></strong>
+            Switch必须赋初始值，值与每个case值匹配。满足执行该 case 后的所有语句，并用break语句来阻止运行下一个case。如所有case值都不匹配，
+            执行<strong>default</strong>后的语句。
+            <br/><br/>
+            <strong>下面是switch语句的执行效果：</strong><br/>
             <script type="text/javascript">
-                var week = 6;      <!--week变量表示星期几变量-->
+                // week变量表示星期几变量
+                var week = 6;
                 switch (week) {
                     case 1:
                     case 2:
@@ -527,7 +615,8 @@ for(var i=0;i<2;i++){             //一维长度为2
                 var num;
                 for (num = 1; num <= 10; num++) {
                     if (num === 5) {
-                        break;       <!--如果num是5，退出循环-->
+                        break;
+                        // 如果num是5，退出循环
                     }
                     document.write("数值：" + num + "<br/>");
                 }
@@ -536,7 +625,8 @@ for(var i=0;i<2;i++){             //一维长度为2
                 var num2;
                 for (num2 = 1; num2 <= 10; num2++) {
                     if (num2 === 5) {
-                        continue;       <!--如果num是5，仅仅跳过本次循环，整个循环体继续执行-->
+                        continue;
+                        // 如果num是5，仅仅跳过本次循环，整个循环体继续执行
                     }
                     document.write("数值：" + num2 + "<br/>");
                 }
@@ -564,7 +654,8 @@ for(var i=0;i<2;i++){             //一维长度为2
         </p>
 
         <p><strong>什么是事件</strong><br/>
-            JavaScript 创建动态页面。事件是可以被 JavaScript 侦测到的行为。 网页中的每个元素都可以产生某些可以触发 JavaScript 函数或程序的事件。<br/><br/>
+            JavaScript 创建动态页面。事件是可以被 JavaScript 侦测到的行为。 网页中的每个元素都可以产生某些可以触发 JavaScript 函数或程序的事件。
+            <br/><br/>
             比如说，当用户单击按钮或者提交表单数据时，就发生一个鼠标单击（onclick）事件，需要浏览器做出处理，返回给用户一个结果。<br/>
             主要事件表：<br/>
             <img src="images/action.jpg" alt="主要事件表图示"/>
@@ -573,13 +664,15 @@ for(var i=0;i<2;i++){             //一维长度为2
     <div class="clear" style="clear:both;"></div>
 </div>
 
+
 <div>
     <h2>2018年12月18日-星期一</h2>
     <div class="column_1">
         <h3>About HTML and CSS</h3>
         <strong>HTML5提供的新语义元素定义了网页的不同部分：</strong><br/>
         <table border="1" style="border-collapse:collapse;border-spacing:0;border:1px solid darkblue;">
-            <caption style="font-weight:bold;">我是表格标题</caption>       <!--定义表格的标题（caption）-->
+            <!-- 定义表格的标题（caption） -->
+            <caption style="font-weight:bold;">我是表格标题</caption>
             <tr>
                 <th>HTML5新语义元素表</th>
                 <td>这是表头，大多数浏览器会显示为粗体居中文本。</td>
@@ -616,7 +709,6 @@ for(var i=0;i<2;i++){             //一维长度为2
                 <td>summary</td>
                 <td>定义details元素的标题</td>
             </tr>
-
         </table>
         <p>w3c上关于h5新的8个语义元素好像更为准确，有意思！<br/>
             HTML5 定义了八个新的语义 HTML 元素。所有都是块级元素。<br/>
@@ -631,18 +723,25 @@ display: block;
             单元格边距（cellpadding）:单元格内容与边框之间的空白；（h5已经不再支持）<br/>
             单元格间距（cellspacing）:单元格之间的距离；（h5已经不再支持）<br/>
             <strong>关于cellpadding和cellspacing在h5中不再支持的详细说明--原文链接：</strong><br/>
-            <a href="https://www.cnblogs.com/liuyonglong/p/3707872.html" style="text-decoration:none;" target="_blank">https://www.cnblogs.com/liuyonglong/p/3707872.html</a><br/>
+            <a href="https://www.cnblogs.com/liuyonglong/p/3707872.html" style="text-decoration:none;" target="_blank">
+                https://www.cnblogs.com/liuyonglong/p/3707872.html
+            </a>
+            <br/>
             td：table data（单元格数据）；<br/>
             可以分别给不同的表格行设置background，以颜色来凸显区别；<br/>
             border-collapse:collapse(设置后将表格中相邻边框合并为一条，默认是separate)
         </p>
-
         <p><strong>关于&lt;!doctype html&gt;：</strong><br/>
             原文链接一：<br/>
-            <a href="http://www.w3school.com.cn/tags/tag_doctype.asp" style="text-decoration:none;" target="_blank">http://www.w3school.com.cn/tags/tag_doctype.asp</a><br/>
+            <a href="http://www.w3school.com.cn/tags/tag_doctype.asp" style="text-decoration:none;" target="_blank">
+                http://www.w3school.com.cn/tags/tag_doctype.asp
+            </a>
+            <br/>
             原文链接二：<br/>
             <a href="https://blog.csdn.net/weixin_38469425/article/details/79732718" style="text-decoration:none;"
-               target="_blank">https://blog.csdn.net/weixin_38469425/article/details/79732718</a>
+               target="_blank">
+                https://blog.csdn.net/weixin_38469425/article/details/79732718
+            </a>
         </p>
         <strong>HTML版本</strong><br/>
         从1991年第一个html版本诞生至今，现在已经发展出多个html版本。<br/>
@@ -687,7 +786,9 @@ display: block;
         </table>
         <p><strong>HTML字符实体介绍，比如&lt;,&gt;,&copy;等怎么表示</strong><br/>
             详述见链接：<a href="http://www.w3school.com.cn/html/html_entities.asp" style="text-decoration:none;"
-                     target="_blank">http://www.w3school.com.cn/html/html_entities.asp</a>
+                     target="_blank">
+                http://www.w3school.com.cn/html/html_entities.asp
+            </a>
         </p>
         <p><strong>HTML5 - 新特性</strong><br/>
             HTML5中一些最有趣的新特性：<br/>
@@ -700,18 +801,63 @@ display: block;
         </ul>
         </p>
         <strong>HTML5图像：</strong><br/>
-        <table  class="table2" border="1" style="border-collapse:collapse;border-spacing:0;">
+        <table class="table2" border="1" style="border-collapse:collapse;border-spacing:0;">
             <tr style="background:#3f3f3f;color:white;">
-                <td>标签</td><td>描述</td>
+                <td>标签</td>
+                <td>描述</td>
             </tr>
             <tr>
-                <td>&lt;canvas&gt;</td><td>定义使用JavaScript的图像绘制</td>
+                <td>&lt;canvas&gt;</td>
+                <td>定义使用JavaScript的图像绘制</td>
             </tr>
             <tr>
-                <td>&lt;svg&gt;</td><td>定义使用SVG的图像绘制</td>
+                <td>&lt;svg&gt;</td>
+                <td>定义使用SVG的图像绘制</td>
             </tr>
         </table>
+        <br/>
+        canvas画布是一个矩形区域，你可以控制其每一像素<br/>
+        canvas拥有多种绘制路径、矩形、圆形、字符以及添加图像的方法。<br/>
+        <strong>创建canvas元素</strong><br/>
+        向HTML5页面添加canvas元素，规定元素的id、宽度和高度：<br/>
+        <code style="font-size:1.2em;">&lt;canvas id="myCanvas" width="200" height="100"&gt;&lt;/canvas&gt;</code><br/>
+        <strong>通过JavaScript来绘制</strong><br/>
+        canvas元素本身是没有绘图能力的，所有的绘制工作必须在JavaScript内部完成：
+        <div class="canvas_method_draw" style="width:85%;height:150px;margin:0 auto;border:1px dashed red;">
+            <pre style="font-size:1.2em;">
+        &lt;script type="text/javascript"&gt;
+        var c=document.getElementById("myCanvas");
+        var cxt=c.getContext("2d");
+        cxt.fillStyle="#FF0000";
+        cxt.fillRect(0,0,150,75);
+        &lt;/script&gt;
+            </pre>
+        </div>
+        <strong>理解坐标</strong><br/>
+        <img src="images/canvas_explain.png" height="240" width="450"/>
+        <canvas id="myCanvas" style="width:180px;height:100px;border:1px solid red;"></canvas>
+        <!--
+            可见canvas可定义style属性，也可像下面这行代码一样定义宽高，canvas是内置行内元素，这里出现一个内置的概念，
+            区别于非内置行业元素的不同是内置行内元素可设置宽高属性，并有效
+            详细介绍网址：https://segmentfault.com/q/1010000007186319
+        --->
+        <canvas height="100" width="100"></canvas>
+        <span style="height:100px;width:100px;">canvas默认宽高300*150</span>    <!-- 行内元素span设置宽高却是无效的 -->
+        <br/>
+        <canvas id="myCanvas_1" width="180" height="100"></canvas>
+        <canvas id="myCanvas_2"></canvas>
+        <script>
+            var c = document.getElementById("myCanvas");
+            var cxt = c.getContext("2d");
+            cxt.fillStyle = "#e6e6e6";
+            cxt.fillRect(10, 10, 180, 100);
+            var c1 = document.getElementById("myCanvas_1");
+            var cxt1 = c1.getContext("2d");
+            cxt1.fillStyle = "#e6e6e6";
+            cxt1.fillRect(10, 10, 180, 100);
+        </script>
     </div>
+
     <div class="column_2">
         <h3>About Javascript</h3>
         <p>字符串（string）对象<br/>
@@ -729,7 +875,8 @@ display: block;
                 document.write("将字符串字符全部转化为小写后：" + mystr.toLowerCase() + "<br/><br/>");
                 document.write("返回指定位置的字符用string.charAt(index)方法，返回index=4的字符：" + mystr.charAt(4) + "<br/>");
                 document.write("返回指定位置的字符用string.charAt(index)方法中index介于0-（str.length-1）之间" + "<br/>");
-                document.write("返回指定位置的字符用string.charAt(index)方法中如果参数index不在0-（str.length-1）之间，该方法将返回一个空字符串：" + mystr.charAt(13) + "<br/>");
+                document.write("返回指定位置的字符用string.charAt(index)方法中如果参数index不在0-（str.length-1）之间，" +
+                    "该方法将返回一个空字符串：" + mystr.charAt(13) + "<br/>");
                 document.write("返回指定位置的字符用string.charAt()方法，返回最后一个字符：" + mystr.charAt(12) + "<br/>");
                 document.write("<span style='color:red;'>" + "注意：一个空格也算一个字符" + "<br/>" + "</span>" + "<br/>");
                 document.write("字符串分割split（分割标志，也称为separator）方法" + "<br/>");
@@ -752,7 +899,8 @@ display: block;
             document.write("-7的绝对值为：" + myabs + "<br/>");
             document.write("Math.ceil()方法可对一个数进行向上取整，7.8向上取整为：" + Math.ceil(7.8) + "<br/>");
             document.write("Math.floor()方法可对一个数进行向下取整，7.8向下取整为：" + Math.floor(7.8) + "<br/>");
-            document.write("Math.round()方法可对一个数进行四舍五入:" + "<br/>" + "7.8四舍五入为：" + Math.round(7.8) + "<br/>" + "7.49四舍五入为：" + Math.round(7.49) + "<br/>");
+            document.write("Math.round()方法可对一个数进行四舍五入:" + "<br/>" + "7.8四舍五入为：" + Math.round(7.8) + "<br/>" +
+                "7.49四舍五入为：" + Math.round(7.49) + "<br/>");
             document.write("Math.random()可返回0-1（大于或等于0且小于1）之间的一个随机数" + "<br/>");
             document.write("那就产生一个随机数看看吧：" + Math.random() + "<br/>");
             document.write("1.利用(Math.random()*10)产生0-10之间的随机数:" + (Math.random() * 10) + "<br/>");
@@ -764,7 +912,8 @@ display: block;
             <strong>数值数组升序降序sort实现</strong><br/>
             <script type="text/javascript">
                 function sortNum(a, b) {
-                    return a - b;         //升序，如果要降序，将a-b改为b-a
+                    return a - b;
+                    //升序，如果要降序，将a-b改为b-a
                 }
 
                 var numarray = [1, 5, 3, 6, 9, 7, 8];
@@ -774,6 +923,7 @@ display: block;
     </div>
     <div class="clear" style="clear:both;"></div>
 </div>
+
 
 <div>
     <h2>2018年12月19日-星期三</h2>
@@ -798,13 +948,46 @@ display: block;
         系统右下角会弹出激活提示。<br/>
         <span style="font-size:18px;">原文链接地址：</span>
         <a href="https://jingyan.baidu.com/article/77b8dc7faa0ece6174eab6d8.html" style="text-decoration:none;"
-           target="_blank;">https://jingyan.baidu.com/article/77b8dc7faa0ece6174eab6d8.html</a>
+           target="_blank;">
+            https://jingyan.baidu.com/article/77b8dc7faa0ece6174eab6d8.html
+        </a>
     </p>
 </div>
+
+
 <div>
     <h2>2018年12月20日-星期四</h2>
     <div class="column_1">
         <h3>About HTML and CSS</h3>
+        <strong>注意：</strong><br/>
+        <p style="text-indent:2em;text-align:justify;">
+            因为canvas元素有个默认宽高的问题，我们是不能在style里面去定义canvas宽高的，这样就会出现一个将画布进行拉伸
+            操作的现象，很影响效果。
+            &lt;canvas height="200" width="200"&gt;&lt;canvas&gt;这种定义宽高的方式是完全ok的，我们要明确一个问题，这里的width、height
+            和样式style里面的width、height不是同一回事，这里的width、height就是指canvas画布右下角的X、Y坐标。
+            （有没有发现canvas的宽高定义方法和图片一样，不带单位，但单位就是像素px）<br/>
+            <strong>原文链接：</strong>
+            <a href="https://www.cnblogs.com/xiaqilin/p/6841661.html" style="text-decoration:none;" target="_blank">
+                https://www.cnblogs.com/xiaqilin/p/6841661.html
+            </a>
+        </p>
+        canvas是一个行内置换元素，既然涉及到了置换元素这个新概念，那就详细了解一下还有没有其他置换元素,原文链接：<br/>
+        <a href="https://blog.csdn.net/sakurallj/article/details/48277463" style="text-decoration:none;"
+           target="_blank">
+            https://blog.csdn.net/sakurallj/article/details/48277463
+        </a>
+        <canvas id="myCanvas_3" height="150" width="150"></canvas>
+        <br/>
+        <strong>canvas绘图详解笔记之线条及线条属性（讲解得很深入，值得好好研究！）</strong><br/>
+        原文链接：
+        <a href="https://www.cnblogs.com/jr1993/p/4687877.html" style="text-decoration:none;" target="_blank">
+            https://www.cnblogs.com/jr1993/p/4687877.html
+        </a>
+        <br/>
+        原文链接：
+        <a href="https://blog.csdn.net/Applechu_Lu/article/details/79101937" style="text-decoration:none;" target="_blank">
+            https://blog.csdn.net/Applechu_Lu/article/details/79101937
+        </a>
     </div>
     <div class="column_2">
         <h3>About Javascript</h3>
@@ -836,8 +1019,9 @@ display: block;
                     document.getElementById("clock").value = dynamictime;
                 }
 
-                var int = setInterval(clock, 1000);       //如果不clearInterval()的话，此行代码只需写成setInterval(clock,1000)
+                var int = setInterval(clock, 1000);
 
+                //如果不clearInterval()的话，此行代码只需写成setInterval(clock,1000)
                 function clock_format() {
                     var time = new Date();
                     var hh = time.getHours();
@@ -855,7 +1039,10 @@ display: block;
             <input type="text" id="clock_format" size="10"/><br/>
             <strong>下面这种动态显示时间的方式是更优的，比较美观格式化！</strong><br/>
             <span style="font-size:18px;">原文链接：</span>
-            <a href="https://bbs.csdn.net/topics/390256532" style="text-decoration:none;" target="_blank">https://bbs.csdn.net/topics/390256532</a><br/><br/>
+            <a href="https://bbs.csdn.net/topics/390256532" style="text-decoration:none;" target="_blank">
+                https://bbs.csdn.net/topics/390256532
+            </a>
+            <br/><br/>
             <strong>计时器setTimeout()</strong><br/>
             setTimeout()计时器，在载入后延迟指定时间后,去执行一次表达式,仅执行一次。<br/>
             <strong>语法:</strong><br/>
@@ -873,20 +1060,23 @@ display: block;
                 function numcount() {
                     document.getElementById("numcount").value = num;
                     num = num + 1;
-                    i = setTimeout(numcount, 1000);                  //(如果不考虑停止计数问题，此行代码改为setTimeout(numcount,1000)即可)看到这里应该明白setTimeout()和setInterval()的重要区别，setTimeout若写在了他想执行的函数代码内部，那他当然反复执行下去，而若我们尝试将其像setInterval一样写在函数外面，那就只执行一次了。
+                    i = setTimeout(numcount, 1000);
+                    //(如果不考虑停止计数问题，此行代码改为setTimeout(numcount,1000)即可)看到这里应该明白setTimeout()和setInterval()的重要区别，
+                    // setTimeout若写在了他想执行的函数代码内部，那他当然反复执行下去，而若我们尝试将其像setInterval一样写在函数外面，
+                    // 那就只执行一次了。
                 }
 
                 function stop_numcount() {
                     clearTimeout(i);
                 }
 
-
                 var sumtime = 60;
 
                 function reverse_count() {
                     document.getElementById("reverse_count").value = sumtime;
                     sumtime -= 1;
-                    setTimeout("reverse_count()", 1000);          //想想如何倒计时到0后停止
+                    setTimeout("reverse_count()", 1000);
+                    //想想如何倒计时到0后停止
                 }
             </script>
             <input type="button" value="点击我，五秒后出现alert弹窗！" onclick="timeout_info()"/><br/>
@@ -894,12 +1084,10 @@ display: block;
             <input type="text" id="numcount" size="10"/>
             <input type="button" value="开始计时" onclick="numcount()"/>
             <input type="button" value="停止计时" onclick="stop_numcount()"/><br/>
-
             由此联想到倒计时效果，并在文本框中显示数值。<br/>
             <input type="text" id="reverse_count" size="10"/>
             <input type="button" value="开始倒计时" onclick="reverse_count()"/><br/>
         </p>
-
         <p><strong>History对象</strong><br/>
             history对象记录了用户曾经浏览过的页面(URL)，并可以实现浏览器前进与后退相似导航的功能。<br/>
             注意:从窗口被打开的那一刻开始记录，每个浏览器窗口、每个标签页乃至每个框架，都有自己的history对象与特定的window对象关联。<br/>
@@ -911,7 +1099,6 @@ display: block;
             History 对象方法<br/>
             <img src="images/history_object_method.jpg" alt="history对象方法"/>
         </p>
-
         <p><strong>location对象</strong><br/>
             location用于获取或设置窗体的URL，并且可以用于解析URL。<br/>
             <strong>语法:</strong><br/>
@@ -930,6 +1117,7 @@ display: block;
     <div class="clear" style="clear:both;"></div>
 </div>
 
+
 <div>
     <h2>2018年12月21日-星期五</h2>
     <div class="column_1">
@@ -940,16 +1128,17 @@ display: block;
                  style="height:0;width:0;float:left;margin-left:50px;border-top:20px solid black;border-right:20px solid yellow;border-bottom:20px solid purple;border-left:20px solid blue;">
                 <
             </div>
-            <div class="only_border"
-                 style="height:0;width:0;float:left;margin-left:50px;border-top:50px solid black;border-right:20px solid yellow;border-bottom:50px solid purple;border-left:20px solid blue;"></div>
+            <div class="only_border" style="height:0;width:0;float:left;margin-left:50px;border-top:50px solid black;
+            border-right:20px solid yellow;border-bottom:50px solid purple;border-left:20px solid blue;">
+            </div>
             <div class="triangle"
-                 style="height:0;width:0;float:left;margin-left:50px;border-top:50px solid black;border-right:20px solid transparent;border-left:20px solid transparent;"></div>
+                 style="height:0;width:0;float:left;margin-left:50px;border-top:50px solid black;border-right:20px solid transparent;
+                 border-left:20px solid transparent;">
+            </div>
             <div class="clear" style="clear:left;"></div>
         </div>
-
         <p>一定要深刻理解<strong>border的宽并不是画出来的三角形的边长</strong>，下面这张图会让你深刻理解一下：<br/>
             <img src="images/triangle_border.png" alt="border的宽与用css画出来的三角形的边长的关系" height="210" width="400"/></p>
-
     </div>
 
     <div class="column_2">
@@ -975,8 +1164,14 @@ display: block;
                 document.write(JSON.parse(string2).name + "<br/>");       //查看console会报错的
             </script>
             这个JSON.parse()与eval()都可以实现,但是它们是有区别的,<br/>
-            <span style="display:inline-block;text-indent:2em;">JSON.parse对json字符串要求比eval()更为严格，key名称(例如name)全部必须有双引号。</span><br/>
-            <span style="display:inline-block;text-indent:2em;">而eval必须用括号将json字符串括起来才能成功转换,key名称(例如name)有无双引号都可以成功转化。</span><br/>
+            <span style="display:inline-block;text-indent:2em;">
+                JSON.parse对json字符串要求比eval()更为严格，key名称(例如name)全部必须有双引号。
+            </span>
+            <br/>
+            <span style="display:inline-block;text-indent:2em;">
+                而eval必须用括号将json字符串括起来才能成功转换,key名称(例如name)有无双引号都可以成功转化。
+            </span>
+            <br/>
             2.json转string<br/>
             <script type="text/javascript">
                 var obj = {name: "tanglong", age: 24};
@@ -985,20 +1180,25 @@ display: block;
                 document.write(typeof (str) + "<br/>");
                 document.write(str + "<br/>");
             </script>
-            <span style="display:inline-block;text-indent:2em;text-align:justify;">json的key名称(例如name)有无双引号都可以成功用JSON.stringify()实现转化,但是注意我们最好还是将双引号写上(或者要求后端在返回数据的时候为key名称加上双引号)。</span><br/>
+            <span style="display:inline-block;text-indent:2em;text-align:justify;">
+                json的key名称(例如name)有无双引号都可以成功用JSON.stringify()实现转化,但是注意我们最好还是将双引号写上
+                (或者要求后端在返回数据的时候为key名称加上双引号)。
+            </span>
+            <br/>
             <strong style="font-size:1.2em;">原文链接：</strong>
-            <a href="https://www.cnblogs.com/jewave/p/5830637.html" style="text-decoration:none;" target="_blank">https://www.cnblogs.com/jewave/p/5830637.html</a>
+            <a href="https://www.cnblogs.com/jewave/p/5830637.html" style="text-decoration:none;" target="_blank">
+                https://www.cnblogs.com/jewave/p/5830637.html
+            </a>
         </p>
-
     </div>
-
     <div class="clear" style="clear:both;"></div>
 </div>
 <script type="text/javascript">
     var para = document.getElementById("para");
 
     function change() {
-        para.innerHTML = "算术操作符→比较操作符→逻辑操作符→=赋值符号（由高到低），逻辑操作符（也称为关系运算符）的优先级：！>&&>||（非>且>或）";
+        para.innerHTML = "算术操作符→比较操作符→逻辑操作符→=赋值符号（由高到低），逻辑操作符（也称为关系运算符）的优先级：" +
+            "！>&&>||（非>且>或）";
     }
 
     function rec() {
@@ -1013,7 +1213,6 @@ display: block;
         content[2].style.display = "none";
         content[3].style.display = "none";
         content[0].style.display = "block";
-
     }
 
     function content2_show() {
@@ -1023,7 +1222,6 @@ display: block;
         content[2].style.display = "none";
         content[3].style.display = "none";
         content[1].style.display = "block";
-
     }
 
     function content3_show() {
@@ -1060,7 +1258,6 @@ display: block;
         content[6].style.display = "none";
         content[4].style.display = "none";
         content[5].style.display = "block";
-
     }
 
     function content13_show() {
@@ -1081,8 +1278,7 @@ display: block;
         content[7].style.display = "block";
     }
 </script>
-
 <script type="text/javascript" src="js/canvas-nest.min.js"></script>
-
+<script type="text/javascript" src="js/five-star.js"></script>
 </body>
 </html>

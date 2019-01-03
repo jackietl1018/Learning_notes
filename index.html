@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>个人博客</title>
-    <link rel="icon" href="images/title_icon.png">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="images/title_icon.png" rel="icon">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <script src="js/canvas-nest.min.js"></script>
 </head>
 <body>
 <!-- 让这个div不管网页如何下拉，都处于顶部 -->
@@ -14,29 +15,29 @@
 <div style="margin-top:150px;">
     <h2>2018年12月8号-星期六</h2>
     <p>利用github page搭建个人网页的过程：先在github里新建一个repository<br/>
-        <img src="images/step_1.png" alt="搭建第一步"/>
+        <img alt="搭建第一步" src="images/step_1.png"/>
     </p>
     <p>对repository的settings进行设置：<br/><br/>
-        <img src="images/step_2.png" alt="settings设置"/>
-        <img src="images/step_3.png" alt="settings设置"/>
+        <img alt="settings设置" src="images/step_2.png"/>
+        <img alt="settings设置" src="images/step_3.png"/>
     </p>
     <p style="clear:both;">将git repository clone到本地任意盘，然后打开webstorm创建一个本地对应project，以后只要将本地project目录下的内容copy到git
         repository目录就行，
         后续通过git bash 进行代码commit到git上（貌似webstorm也可自动commit）<br/>
-        <img src="images/step_4.png" alt="clone repository 到本地"/>
-        <img src="images/step_5.png" alt="webstorm创建本地project"/>
-        <img src="images/step_6.png" alt="需要copy的内容"/>
-        <img src="images/step_7.png" alt="copy后显示"/>
+        <img alt="clone repository 到本地" src="images/step_4.png"/>
+        <img alt="webstorm创建本地project" src="images/step_5.png"/>
+        <img alt="需要copy的内容" src="images/step_6.png"/>
+        <img alt="copy后显示" src="images/step_7.png"/>
     </p>
     <p>
         进行git同步，在repository目录直接git bash：<br/>
-        <img src="images/step_8.png" alt="git bash command"/><br/>
-        <img src="images/step_9.png" alt="在git上查看commit后repository内容变化"/>
+        <img alt="git bash command" src="images/step_8.png"/><br/>
+        <img alt="在git上查看commit后repository内容变化" src="images/step_9.png"/>
     </p>
     <p>
         输入网址，查看自己个人网站效果：<br/>
-        <img src="images/step_10.1.png" alt="对应网址"/>
-        <img src="images/step_10.2.png" alt="网站效果"/>
+        <img alt="对应网址" src="images/step_10.1.png"/>
+        <img alt="网站效果" src="images/step_10.2.png"/>
     </p>
 </div>
 
@@ -85,8 +86,8 @@
         }
 
     </script>
-    <input name="button" type="button" value="点击我，弹出对话框！" onClick="show()"/>
-    <input name="button" type="button" value="点击我，弹出确认对话框！" onClick="dialog()"/>
+    <input name="button" onClick="show()" type="button" value="点击我，弹出对话框！"/>
+    <input name="button" onClick="dialog()" type="button" value="点击我，弹出确认对话框！"/>
 
 </div>
 <div class="column_1">
@@ -112,45 +113,45 @@
         </div>
     </div>
     <div class="container_3">
-        <form method="get" action="">
+        <form action="" method="get">
             <!-- 文本框实现 -->
             <label for="introduction" style="color:darkblue">个人简介：</label><br/>
             <!-- 文本区域可以输入10行，每行50个char -->
-            <textarea cols="50" rows="10" id="introduction">在这里输入内容...label for=后面的字段introduction与text-area后面的id相同的话就可以达到一种
+            <textarea cols="50" id="introduction" rows="10">在这里输入内容...label for=后面的字段introduction与text-area后面的id相同的话就可以达到一种
                 锁定区域的感觉，我们将鼠标点击在“个人简介”这些字上面时，光标会聚焦到文本框区域，可进行输入！
             </textarea>
             <br/>
-            <input type="submit" name="submit" value="确定"/>
-            <input type="reset" name="reset" value="重置"/>
+            <input name="submit" type="submit" value="确定"/>
+            <input name="reset" type="reset" value="重置"/>
             <br/><br/>
 
             <!-- 单选框实现 -->
             <label>性别：</label>
             <label for="man">男</label>
-            <input type="radio" name="gender-man" id="man"/>
+            <input id="man" name="gender-man" type="radio"/>
             <label for="woman">女</label>
-            <input type="radio" name="gender-woman" id="woman"/>
+            <input id="woman" name="gender-woman" type="radio"/>
             <!-- 注意：只有将性别里两个input的name设置成相同时，才不会出现单选框两个都能选中的情况！-->
             <br/><br/>
 
             <!-- 单选框实现 -->
             <label>性别：</label>
             <label for="man1">男</label>
-            <input type="radio" name="gender" id="man1"/>
+            <input id="man1" name="gender" type="radio"/>
             <label for="woman1">女</label>
-            <input type="radio" name="gender" id="woman1"/>
+            <input id="woman1" name="gender" type="radio"/>
             <br/><br/>
 
             <!-- 复选框实现 -->
             <label>你对哪些运动感兴趣？</label><br/>
-            <input type="checkbox" name="跑步" value="跑步"/>
+            <input name="跑步" type="checkbox" value="跑步"/>
             <label>跑步</label>
-            <input type="checkbox" name="打球" value="打球" checked="checked"/>
+            <input checked="checked" name="打球" type="checkbox" value="打球"/>
             <!-- 加上checked="checked"表示默认选中 -->
             <label>打球</label>
-            <input type="checkbox" name="登山" value="登山" checked="checked"/>
+            <input checked="checked" name="登山" type="checkbox" value="登山"/>
             <label>登山</label>
-            <input type="checkbox" name="游泳" value="游泳"/>
+            <input name="游泳" type="checkbox" value="游泳"/>
             <label>游泳</label>
             <br/><br/>
 
@@ -161,7 +162,7 @@
             -->
             <label>喜欢：</label>
             <select multiple="multiple">
-                <option value="旅游" selected="selected">旅游</option>
+                <option selected="selected" value="旅游">旅游</option>
                 <option value="生活">生活</option>
                 <option value="购物">购物</option>
                 <option value="一切">一切</option>
@@ -169,9 +170,9 @@
         </form>
         <br/>
         <a href="compare_css.html" target="_blank;">HTML三种样式优先级比较</a><br/>
-        <a href="outer_js.html" target="_blank;" style="text-decoration: none;">js文件链入html</a><br/>
-        <a href="index_1.html" target="_blank;" style="text-decoration:none;">使用javascript改变HTML样式</a><br/>
-        <a href="index_2.html" target="_blank;" style="text-decoration: none;">js强大之处-实现一个类似计算器</a><br/><br/>
+        <a href="outer_js.html" style="text-decoration: none;" target="_blank;">js文件链入html</a><br/>
+        <a href="index_1.html" style="text-decoration:none;" target="_blank;">使用javascript改变HTML样式</a><br/>
+        <a href="index_2.html" style="text-decoration: none;" target="_blank;">js强大之处-实现一个类似计算器</a><br/><br/>
         <p>@@@字符串相关@@@</p>
         <script type="text/javascript">
             var mystr = "HELLO world!";
@@ -272,8 +273,8 @@
         }
 
     </script>
-    <input name="button" type="button" value="点击我，对成绩做评价！" onClick="rec()"/><br/>
-    <input name="button" type="button" value="新窗口打开网站！" onclick="openWindow()"/><br/>
+    <input name="button" onClick="rec()" type="button" value="点击我，对成绩做评价！"/><br/>
+    <input name="button" onclick="openWindow()" type="button" value="新窗口打开网站！"/><br/>
     <h3>javascript打开新窗口：</h3>
     <p>
         <span style="color:purple;font-size:18px;">语法：</span><br/>
@@ -290,10 +291,10 @@
         3.相同 name 的窗口只能创建一个，要想创建多个窗口则 name 不能相同。<br/>
         4.name 不能包含有空格。<br/>
         参数字符串：可选参数，设置窗口参数，各参数用逗号隔开。<br/>
-        <img src="images/chuangkou_canshu_set.jpg" alt="窗口参数设置图"/>
+        <img alt="窗口参数设置图" src="images/chuangkou_canshu_set.jpg"/>
     </p>
 
-    <p id="para" onmouseover="change()" onmouseout="rec()">
+    <p id="para" onmouseout="rec()" onmouseover="change()">
         点击一下，查看js中操作符之间的优先级
     </p>
     <br/><br/>
@@ -302,8 +303,8 @@
         var result = 6 + 30 > 10 && 6 * 3 < 2;
         document.write(result + "<br/>");
     </script>
-    <a href="index_3.html" target="_blank;" style="text-decoration:none;">利用js的函数为按钮添加事件，改变div（显示或者隐藏等）</a><br/>
-    <a href="index_4.html" target="_blank;" style="text-decoration:none;">js变量反复定义最终值确定问题及变量a++与++a（两种自增）研究</a>
+    <a href="index_3.html" style="text-decoration:none;" target="_blank;">利用js的函数为按钮添加事件，改变div（显示或者隐藏等）</a><br/>
+    <a href="index_4.html" style="text-decoration:none;" target="_blank;">js变量反复定义最终值确定问题及变量a++与++a（两种自增）研究</a>
 </div>
 <!-- 可以去掉这行，若不清除浮动，div会出现高度塌陷，相当于没有高度 -->
 <div class="clear" style="clear:both;"></div>
@@ -349,7 +350,7 @@
             利用text-align:center;结合vertical-align:middle;试试能否做到水平垂直居中</div>
             （div里有文本的话由于设置了行高会出问题的，溢出边界）
             -->
-            <img style="display:inline-block;vertical-align:middle;" src="images/center_image.png" alt="一张水平垂直居中的图片"/>
+            <img alt="一张水平垂直居中的图片" src="images/center_image.png" style="display:inline-block;vertical-align:middle;"/>
         </div>
 
         <div class="tab_self">
@@ -397,8 +398,8 @@
             2.变量名区分大小写，如:A与a是两个不同变量。<br/><br/>
             3.不允许使用JavaScript关键字和保留字做变量名。
         </p>
-        <p style="text-align:center;"><img src="images/js_keywords_reservedwords.jpg" style="margin:0 auto;"
-                                           alt="JS关键字和保留字图示"/></p>
+        <p style="text-align:center;"><img alt="JS关键字和保留字图示" src="images/js_keywords_reservedwords.jpg"
+                                           style="margin:0 auto;"/></p>
         <p><strong>声明变量语法：var 变量名;</strong></p>
         <p>var关键字的作用是声明变量，并为变量准备位置（即内存）<br/>
             var也可以一次声明多个变量，变量之间用“，”逗号隔开<br/>
@@ -474,7 +475,7 @@
 
 <div class="carousel">
     <div class="carousel_domain">
-        <img src="images/carousel1.jpg" alt="轮播第一张图片"/>
+        <img alt="轮播第一张图片" src="images/carousel1.jpg"/>
     </div>
     <div class="left"></div>
     <div class="right"></div>
@@ -658,7 +659,7 @@ for(var i=0;i<2;i++){             //一维长度为2
             <br/><br/>
             比如说，当用户单击按钮或者提交表单数据时，就发生一个鼠标单击（onclick）事件，需要浏览器做出处理，返回给用户一个结果。<br/>
             主要事件表：<br/>
-            <img src="images/action.jpg" alt="主要事件表图示"/>
+            <img alt="主要事件表图示" src="images/action.jpg"/>
         </p>
     </div>
     <div class="clear" style="clear:both;"></div>
@@ -745,7 +746,7 @@ display: block;
         </p>
         <strong>HTML版本</strong><br/>
         从1991年第一个html版本诞生至今，现在已经发展出多个html版本。<br/>
-        <table class="table1" border="1" style="border-collapse:collapse;border-spacing:0;border:1px solid green;">
+        <table border="1" class="table1" style="border-collapse:collapse;border-spacing:0;border:1px solid green;">
             <caption>HTML从诞生以来的8个版本</caption>
             <tr style="background:#3f3f3f;color:white;">
                 <td>版本</td>
@@ -792,7 +793,7 @@ display: block;
         </p>
         <p><strong>HTML5 - 新特性</strong><br/>
             HTML5中一些最有趣的新特性：<br/>
-        <ul type="disc" style="margin:0;">
+        <ul style="margin:0;" type="disc">
             <li>新的语义元素，比如header，nav，section，aside，footer，article，details，summary</li>
             <li>新的表单控件，比如数字，日期，时间，日历和滑块。</li>
             <li>强大的图像支持（借由&lt;canvas&gt;和&lt;svg&gt;）</li>
@@ -801,7 +802,7 @@ display: block;
         </ul>
         </p>
         <strong>HTML5图像：</strong><br/>
-        <table class="table2" border="1" style="border-collapse:collapse;border-spacing:0;">
+        <table border="1" class="table2" style="border-collapse:collapse;border-spacing:0;">
             <tr style="background:#3f3f3f;color:white;">
                 <td>标签</td>
                 <td>描述</td>
@@ -834,18 +835,18 @@ display: block;
             </pre>
         </div>
         <strong>理解坐标</strong><br/>
-        <img src="images/canvas_explain.png" height="240" width="450"/>
+        <img height="240" src="images/canvas_explain.png" width="450"/>
         <canvas id="myCanvas" style="width:180px;height:100px;border:1px solid red;"></canvas>
         <!--
             可见canvas可定义style属性，也可像下面这行代码一样定义宽高，canvas是内置行内元素，这里出现一个内置的概念，
             区别于非内置行业元素的不同是内置行内元素可设置宽高属性，并有效
             详细介绍网址：https://segmentfault.com/q/1010000007186319
         --->
-        <canvas height="100" width="100"></canvas>
+        <canvas height="100" width="100" style="background:#e6e6e6;"></canvas>
         <span style="height:100px;width:100px;">canvas默认宽高300*150</span>    <!-- 行内元素span设置宽高却是无效的 -->
         <br/>
-        <canvas id="myCanvas_1" width="180" height="100"></canvas>
-        <canvas id="myCanvas_2"></canvas>
+        <canvas height="100" id="myCanvas_1" width="180"></canvas>
+        <canvas id="myCanvas_2" style="background:#e6e6e6;"></canvas>
         <script>
             var c = document.getElementById("myCanvas");
             var cxt = c.getContext("2d");
@@ -931,18 +932,18 @@ display: block;
     <p>
         <strong>方法/步骤</strong><br/>
         1.首先我们需要下载破解补丁，直接百度搜索关键词——IntelliJ IDEA 注册码。进入红框处网站后，下载红框标注的补丁文件。<br/>
-        <img src="images/active_step1.png" alt="Webstorm永久激活第一步" width="506" height="295"/><br/><br/>
-        <img src="images/active_step2.png" alt="Webstorm永久激活第二步" width="508" height="328"/><br/>
+        <img alt="Webstorm永久激活第一步" height="295" src="images/active_step1.png" width="506"/><br/><br/>
+        <img alt="Webstorm永久激活第二步" height="328" src="images/active_step2.png" width="508"/><br/>
         2.然后将补丁复制到webstorm安装目录的bin文件夹下面。(右键webstorm桌面快捷方式，选择打开文件所在的位置)<br/>
-        <img src="images/webstorm_setup.png" alt="Webstorm安装目录" width="500" height="408"/><br/>
+        <img alt="Webstorm安装目录" height="408" src="images/webstorm_setup.png" width="500"/><br/>
         3.接下来需要修改文件，使用记事本打开bin文件夹下面的WebStorm.exe.vmoptions 和WebStorm64.exe.vmoptions这两个文件。<br/>
         4.然后这里非常关键，在打开的文件最后面加上如下代码：<br/>
         -javaagent:+路径名称+jar包名称，例如图片上我的路径，修改之后保存文件。<br/>
         注意这里的路径需要替换成你自己的安装路径，并且是左斜杠“/”，jar包的名称也必须是你刚刚下载的jar包名称。<br/>
-        <img src="images/change_webstormtxt.png" alt="修改webstorm相关配置文件" width="430" height="335"/><br/>
+        <img alt="修改webstorm相关配置文件" height="335" src="images/change_webstormtxt.png" width="430"/><br/>
         5.保存完毕之后，回到IntelliJ IDEA 注册码的网页，点击中间的获得注册码，然后复制弹出的注册码。<br/>
-        <img src="images/get_activation_code.png" alt="获取激活码" width="614" height="399"/><br/>
-        <img src="images/activation_code.png" alt="激活码" width="614" height="395"/><br/>
+        <img alt="获取激活码" height="399" src="images/get_activation_code.png" width="614"/><br/>
+        <img alt="激活码" height="395" src="images/activation_code.png" width="614"/><br/>
         6.重新启动WebStorm，依次点击【help】——【register】——【activation code】，<br/>
         然后粘贴输入激活码，确认就可以了。<br/>
         系统右下角会弹出激活提示。<br/>
@@ -976,7 +977,7 @@ display: block;
            target="_blank">
             https://blog.csdn.net/sakurallj/article/details/48277463
         </a>
-        <canvas id="myCanvas_3" height="150" width="150"></canvas>
+        <canvas height="150" id="myCanvas_3" width="150"></canvas>
         <br/>
         <strong>canvas绘图详解笔记之线条及线条属性（讲解得很深入，值得好好研究！）</strong><br/>
         原文链接：
@@ -988,13 +989,49 @@ display: block;
         <a href="https://blog.csdn.net/Applechu_Lu/article/details/79101937" style="text-decoration:none;" target="_blank">
             https://blog.csdn.net/Applechu_Lu/article/details/79101937
         </a>
+        <p><strong>那如何画一个圆或者或圆弧呢？</strong><br/>
+            详细介绍链接：
+            <a href="https://www.cnblogs.com/joyco773/p/5435393.html" style="text-decoration: none;" target="_blank">
+                https://www.cnblogs.com/joyco773/p/5435393.html
+            </a>
+            <br/>
+            下面是我自己在canvas下体会一下如何画圆，和画圆弧。<br/>
+            <canvas id="myCanvas_4" width="240"></canvas>
+            <canvas id="myCanvas_5" width="240"></canvas>
+            <canvas id="myCanvas_6" width="240" onload="drawCircle(red,2,120,75,70,0,Math.PI*2,true)"></canvas>
+            <!-- 你看画两个圆就得重复写一样形式的js代码，要是我们能够将这个方法封装成一个函数多好，想画的时候直接调用函数就ok。 -->
+            <script>
+                var c4=document.getElementById("myCanvas_4");
+                if(c4.getContext){
+                    var cxt4=c4.getContext("2d");
+                    cxt4.strokeStyle="blue";
+                    cxt4.arc(120,75,70,0,Math.PI*2,true);
+                    cxt4.stroke();
+                }
+                var c5=document.getElementById("myCanvas_5");
+                if(c5.getContext){
+                    var cxt5=c5.getContext("2d");
+                    cxt5.strokeStyle="blue";
+                    cxt5.arc(120,75,70,Math.PI*0.5,Math.PI*2,true);
+                    cxt5.stroke();
+                }
+
+                // 下面这个封装好像没有用呀，后面再学习一下
+                function drawCircle(color,lineWidth,x,y,r,startr,endr,anticlockwise){
+                    cxt.strokeStyle=color;
+                    cxt.lineWidth=lineWidth;
+                    cxt.arc(x,y,r,startr,endr,anticlockwise);
+                    cxt.stroke();
+                }
+            </script>
+        </p>
     </div>
     <div class="column_2">
         <h3>About Javascript</h3>
         <p><strong>浏览器对象</strong><br/>
             介绍浏览器对象中，history,navigator,screen,location等。<br/><br/>
             window对象是BOM（Browser Object Model,浏览器对象模型）的核心，window指当前的浏览器窗口。<br/>
-            window对象方法：<img src="images/window_object_methods.jpg" alt="window对象方法图示"/><br/>
+            window对象方法：<img alt="window对象方法图示" src="images/window_object_methods.jpg"/><br/>
             计时器setInterval<br/>
             在执行时，从载入页面后每隔指定的时间执行代码<br/>
             <strong>语法：</strong><br/>
@@ -1034,9 +1071,9 @@ display: block;
 
                 setInterval(clock_format, 1000);
             </script>
-            <input type="text" id="clock" size="10"/>
-            <input type="button" value="stop" onclick="clearInterval(int)"/><br/>
-            <input type="text" id="clock_format" size="10"/><br/>
+            <input id="clock" size="10" type="text"/>
+            <input onclick="clearInterval(int)" type="button" value="stop"/><br/>
+            <input id="clock_format" size="10" type="text"/><br/>
             <strong>下面这种动态显示时间的方式是更优的，比较美观格式化！</strong><br/>
             <span style="font-size:18px;">原文链接：</span>
             <a href="https://bbs.csdn.net/topics/390256532" style="text-decoration:none;" target="_blank">
@@ -1079,14 +1116,14 @@ display: block;
                     //想想如何倒计时到0后停止
                 }
             </script>
-            <input type="button" value="点击我，五秒后出现alert弹窗！" onclick="timeout_info()"/><br/>
+            <input onclick="timeout_info()" type="button" value="点击我，五秒后出现alert弹窗！"/><br/>
             使用setTimeout()实现计数统计效果，并在文本框中显示数值。<br/>
-            <input type="text" id="numcount" size="10"/>
-            <input type="button" value="开始计时" onclick="numcount()"/>
-            <input type="button" value="停止计时" onclick="stop_numcount()"/><br/>
+            <input id="numcount" size="10" type="text"/>
+            <input onclick="numcount()" type="button" value="开始计时"/>
+            <input onclick="stop_numcount()" type="button" value="停止计时"/><br/>
             由此联想到倒计时效果，并在文本框中显示数值。<br/>
-            <input type="text" id="reverse_count" size="10"/>
-            <input type="button" value="开始倒计时" onclick="reverse_count()"/><br/>
+            <input id="reverse_count" size="10" type="text"/>
+            <input onclick="reverse_count()" type="button" value="开始倒计时"/><br/>
         </p>
         <p><strong>History对象</strong><br/>
             history对象记录了用户曾经浏览过的页面(URL)，并可以实现浏览器前进与后退相似导航的功能。<br/>
@@ -1095,20 +1132,20 @@ display: block;
             window.history.属性|方法<br/>
             <strong>注意：</strong>window可以省略。<br/>
             History 对象属性<br/>
-            <img src="images/history_object_property.jpg" alt="history对象属性"/>
+            <img alt="history对象属性" src="images/history_object_property.jpg"/>
             History 对象方法<br/>
-            <img src="images/history_object_method.jpg" alt="history对象方法"/>
+            <img alt="history对象方法" src="images/history_object_method.jpg"/>
         </p>
         <p><strong>location对象</strong><br/>
             location用于获取或设置窗体的URL，并且可以用于解析URL。<br/>
             <strong>语法:</strong><br/>
             location.属性|方法<br/>
             location对象属性图示:<br/>
-            <img src="images/location_object_property1.jpg" alt="location对象属性提示"/>
+            <img alt="location对象属性提示" src="images/location_object_property1.jpg"/>
             location对象属性:<br/>
-            <img src="images/location_object_property2.jpg" alt="location对象属性"/>
+            <img alt="location对象属性" src="images/location_object_property2.jpg"/>
             location对象方法:<br/>
-            <img src="images/location_object_method.jpg" alt="location对象方法"/>
+            <img alt="location对象方法" src="images/location_object_method.jpg"/>
             <script type="text/javascript">
                 document.write("返回当前完整的URL为：" + location.href);
             </script>
@@ -1138,7 +1175,7 @@ display: block;
             <div class="clear" style="clear:left;"></div>
         </div>
         <p>一定要深刻理解<strong>border的宽并不是画出来的三角形的边长</strong>，下面这张图会让你深刻理解一下：<br/>
-            <img src="images/triangle_border.png" alt="border的宽与用css画出来的三角形的边长的关系" height="210" width="400"/></p>
+            <img alt="border的宽与用css画出来的三角形的边长的关系" height="210" src="images/triangle_border.png" width="400"/></p>
     </div>
 
     <div class="column_2">
@@ -1149,8 +1186,8 @@ display: block;
             1. 如果打开该页面后，如果不做任何操作则5秒后自动跳转到一个新的地址，如慕课网主页。<br/>
             2. 如果点击“返回”按钮则返回前一个页面。<br/>
             <strong>效果:</strong><br/>
-            <img src="http://img.mukewang.com/537d6fed0001572608080402.jpg" width="500" height="200"
-                 alt="编程练习效果图"/><br/>
+            <img alt="编程练习效果图" height="200" src="http://img.mukewang.com/537d6fed0001572608080402.jpg"
+                 width="500"/><br/>
             <a href="jump.html" style="text-decoration:none;font-size:1.5em;color:purple;border:1px solid yellow;">充值完成，5秒后跳回主页！</a>
         </p>
         <p><strong>string与json互相转化</strong><br/>
@@ -1192,6 +1229,18 @@ display: block;
         </p>
     </div>
     <div class="clear" style="clear:both;"></div>
+</div>
+
+
+<div>
+    <h2>2018年12月29日-星期六</h2>
+    <p><strong>像素与分辨率的区别：</strong><br/>
+        组成图像的最小单位是像素，而屏幕分辨率是由DPI（Dots Per Inch 每英寸点数）决定的，像素不等同于分辨率。<br/>
+        <strong>windows配置github ssh key原文链接：</strong><br/>
+        <a href="https://blog.csdn.net/MissXy_/article/details/79901949" style="text-decoration:none;" target="_blank">
+            https://blog.csdn.net/MissXy_/article/details/79901949
+        </a>
+    </p>
 </div>
 <script type="text/javascript">
     var para = document.getElementById("para");
@@ -1278,7 +1327,7 @@ display: block;
         content[7].style.display = "block";
     }
 </script>
-<script type="text/javascript" src="js/canvas-nest.min.js"></script>
-<script type="text/javascript" src="js/five-star.js"></script>
+<script src="js/canvas-nest.min.js" type="text/javascript"></script>
+<script src="js/five-star.js" type="text/javascript"></script>
 </body>
 </html>

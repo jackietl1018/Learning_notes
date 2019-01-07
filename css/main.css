@@ -326,3 +326,95 @@ img {
 .table1 td, .table2 td {
     width: 230px;
 }
+
+.flex_box2{
+    width:700px;
+    height:450px;
+    border:1px solid gray;
+    display:flex;
+}
+
+.flex_child{
+    height:100px;
+    width:350px;
+    margin:auto;
+    border:1px dashed blue;
+}
+
+.parent-box{
+    width:700px;
+    height:450px;
+    border:1px solid gray;
+}
+
+.margin-auto-box{
+    height:100px;
+    width:350px;
+    margin:auto;
+    border:1px dashed blue;
+}
+
+.flex-container{
+    display:flex;
+    flex-flow:row wrap;    /* 这是一个简写flex-direction和flex-wrap属性，它们共同定义了flex容器的主轴和交叉轴。默认是row nowrap。*/
+    justify-content:space-around;
+    list-style:none;
+}
+
+.flex-item{
+    background-color:tomato;
+    padding:5px;
+    width:250px;
+    height:150px;
+    margin-top:30px;
+    line-height:150px;
+    color:white;
+    font-weight:bold;
+    font-size:3em;
+    text-align:center;
+}
+
+.navigation{
+    list-style:none;
+    margin:1em;
+    background-color:deepskyblue;
+    display:flex;
+    justify-content:flex-end;
+}
+
+.navigation a{
+    text-decoration:none;
+    display:block;
+    paddind:1em;
+    color:white;
+    font-size:2em;
+    font-weight:bold;
+}
+
+.navigation a:hover{
+    background-color: skyblue;
+}
+
+@media all and (max-width: 800px) {
+    .navigation {
+        justify-content: space-around;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .navigation {
+        -webkit-flex-flow: column wrap;
+        flex-flow: column wrap;
+        padding: 0;
+    }
+
+    .navigation a {
+        text-align: center;
+        padding: 10px;
+        border-top: 1px solid rgba(255,255,255,0.3);
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    .navigation li:last-of-type a {
+        border-bottom: none;
+    }
+}

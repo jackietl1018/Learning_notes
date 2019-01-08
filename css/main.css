@@ -385,7 +385,7 @@ img {
 .navigation a{
     text-decoration:none;
     display:block;
-    paddind:1em;
+    padding:0 1em;
     color:white;
     font-size:2em;
     font-weight:bold;

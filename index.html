@@ -480,8 +480,8 @@
     </span>
 </p>
 <p><a href="lunbotu.html" style="text-decoration:none;" target="_blank">
-        自己尝试实现轮播图，点击我，跳转到新窗口轮播图demo
-    </a>
+    自己尝试实现轮播图，点击我，跳转到新窗口轮播图demo
+</a>
 </p>
 
 <p>
@@ -1309,6 +1309,130 @@ display: block;
     <h2>2018年1月10日-星期四</h2>
     Bootstrap框架学习，网址:<a href="https://getbootstrap.com" style="text-decoration:none;" target="_blank">https://getbootstrap.com</a><br/>
     <a href="bootstrap.html" style="text-decoration:none;" target="_blank">点击我，看一个bootstrap-demo</a>
+    <hr/>
+    关于负margin的理解与运用，详细网址链接：
+    <a href="http://www.hicss.net/i-know-you-do-not-know-the-negative-margin/" style="text-decoration:none;"
+       target="_blank">
+        http://www.hicss.net/i-know-you-do-not-know-the-negative-margin/
+    </a>
+    <br/>
+    为什么远程桌面连接配置一切正常 但长时间无法连接？（这个是亲身经历，后面也不算太好解决，因为是网络的问题，又不知道问题在哪，只是多尝试了好几次连接
+    最终连接上了）
+    <br/>
+    原文链接：
+    <a href="http://www.pgygho.com/help/2492.html" style="text-decoration:none;" target="_blank">http://www.pgygho.com/help/2492.html</a>
+    <hr/>
+    <h3>
+        自动化测试工具及各种环境搭建
+    </h3>
+    1.安装node.js,将其安装目录添加到环境变量path中，比如我自己的是：C:\Program Files\nodejs；<br/>
+    <hr/>
+    <br/>
+    2.安装python（有python2.x和python3.x版本，我两个都安装了，一个是python2.7，一个是python3.7），安装的时候可以选择添加路径到环境变量中，这样
+    后面就不用自己手动再次添加了，他会出现在用户变量里的。python2.7的使用估计得我自己再添加一下环境变量啦。
+    <hr/>
+    <br/>
+    在cmd命令窗口下分别输入python和python2，结果如下：<br/>
+    <img src="images/cmd_python.png" alt="cmd命令窗口输入python运行截图"/><br/>
+    观察截图可知，python2应该是未添加到环境变量的原因，导致显示'python2' 不是内部或外部命令，也不是可运行的程序
+    或批处理文件。参照python3.7自动添加路径的形式，最终在cmd下输入python依然报同样的错误<br/>
+    <strong>最后一行cls命令是清除cmd命令行记录的作用</strong><br/>
+    原因见原文链接：
+    <a href="https://www.cnblogs.com/zhengyihan1216/p/6011640.html" style="text-decoration: none;"
+       target="_blank">
+        https://www.cnblogs.com/zhengyihan1216/p/6011640.html
+    </a>
+    <br/>
+    进行修改过后最终输入python2成功进入python2的交互式环境，关于如何退出python的交互式环境可参考：python教程-廖雪峰的官方网站
+    <a href="https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000"
+       style="text-decoration:none;" target="_blank">
+        https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000
+    </a>
+    3.安装JDK，并设置JAVA_HOME环境变量。<br/>
+    我的电脑上的jdk下载的.exe执行文件在D:\BaiduNetdiskDownload，安装目录在：C:\Program Files\Java
+    <hr/>
+    <br/>
+    4.安装Android SDK，并设置ANDROID_HOME环境变量；把sdk下的tools和platform-tools也设置环境变量。<br/>
+    我的电脑上的android sdk安装目录是：C:\Users\14917\AppData\Local\Android\android-sdk（这应该是我在安装android studio时的默认android sdk安装目录了）
+    我的电脑上的android studio的安装目录是：D:\AndroidStudio，下载的.exe执行文件在：E:\Choreme_downloads
+    <hr/>
+    <br/>
+    5.安装pycharm，用来编写测试程序，最后结合appium可以进行真机测试，也可以在android studio下配置出android模拟器进行代码自动化测试。
+    <hr/>
+    <br/>
+    6.安装appium，我的电脑上appium.exe可执行文件目录：E:\Choreme_downloads，安装目录;C:\Program Files (x86)
+    （默认安装目录，貌似我根本就无法进行自定义安装），添加环境变量，可以参考电脑上的环境变量配置。<br/>
+    另一种安装方式：直接在cmd命令窗口输入：npm install -g appium
+    <hr/>
+    <br/>
+    7.最后我们需要cmd下输入：appium-doctor看我们的环境是否全部配置成功且齐全，然而，在此之前，我们要知道appium-doctor也是需要安装的：<br/>
+    cmd下输入：npm install -g appium-doctor进行安装，然后输入appium-doctor查看结果：<br/>
+    <img src="images/cmd_appium-doctor.png" alt="cmd窗口下输入appium-doctor截图"/>
+    <hr/>
+    <br/>
+    <strong>自动化测试实例</strong><br/>
+    教程步骤：
+    <a href="https://www.cnblogs.com/xuegonghou/p/7428415.html" style="text-decoration: none;" target="_blank">
+        https://www.cnblogs.com/xuegonghou/p/7428415.html
+    </a>
+    <br/>
+    <strong>1.android模拟器测试</strong><br/>
+    <ol type="I">
+        <li>多打开几个cmd窗口，可能需要同时使用多个；</li>
+        <li>打开pycharm，准备编写测试代码；</li>
+        <li>在一个cmd窗口中输入appium，接下来会触发启动appium桌面版，我们进行启动</li>
+        <li>打开android studio（AS），依次选择菜单栏tools-Android-AVD Manager，启动android模拟器</li>
+        <li>在cmd下输入adb devices查看模拟器设备号，待会在写测试代码的时候需要用到</li>
+        <li>当然，我们还需要在打开的android模拟器里打开设置，查看到对应的android版本，在测试代码中写上，必须完全对应，不然会报错</li>
+        <li>除此之外，代码中还有两个很重要的东西填写：appPackage和appActivity，可是我们需要如何获取呢？
+            <ol>
+                <li>比如我们这次测试针对手机里面的拨号器功能，那我们就打开手机上的拨号器</li>
+                <li>然后我们在cmd下输入：adb shell dumpsys window windows，查看运行结果：<br/>
+                    <img src="images/cmd_adb_shell.png" alt="cmd下输入adb shell dumpsys window windows的运行结果"/>
+                </li>
+                <li>当然我们可以进行一定的过滤（grep），输入adb shell dumpsys window windows|findstr mCurrent，运行结果如下图：
+                    <img src="images/cmd_adb_shell_grep.png"
+                         alt="cmd下输入adb shell dumpsys window windows|findstr mCurrent的运行结果"/>
+                </li>
+            </ol>
+        </li>
+        <li>接下来就涉及到如何写好测试代码了，我们在一个新的cmd窗口输入uiautomatorviewer，去获取app或者手机应用的ResourceId，<br/>
+            进行模拟点击时按照元素id或者class进行操作
+        </li>
+    </ol>
+    <hr/>
+    <br/>
+    <strong>那如果我们要在android studio模拟器上安装apk文件呢?</strong><br/>
+    刚开始找到了安装方法，主要有两种：
+    <div>
+    <ul>
+        <li style="float:left;">直接将电脑桌面上的.apk文件拖动到安卓模拟器里面，结果失败了，如图：<br/>
+            <img src="images/emulator_install_apk.png" alt=".apk文件直接拖动到安卓模拟器安装失败截图"/>
+        </li>
+        <li style="float:right;">
+            方法二链接：
+            <a href="https://blog.csdn.net/xuzhimolol/article/details/62235417" style="text-decoration: none;"
+               target="_blank">
+                https://blog.csdn.net/xuzhimolol/article/details/62235417
+            </a>
+            <br/>
+            <img src="images/adb_install_apk.png" alt="cmd 命令窗口输入adb install apk 失败截图"/>
+        </li>
+        <div class="clear" style="clear:both;"></div>
+    </ul>
+    </div>
+    <strong>那安卓模拟器下显示apk文件无法安装的具体原因是什么呢？</strong><br/>
+    详细解答见链接
+    <a href="https://blog.csdn.net/luweicheng24/article/details/65445343" style="text-decoration:none;" target="_blank">
+        https://blog.csdn.net/luweicheng24/article/details/65445343
+    </a>
+    在我重新添加模拟器的过程中却遇到了很尴尬的问题，根本无法选取到arm cpu架构的模拟器，并且连86架构的选项也特别少<br/>
+    于是，我打开Tools-Android-SDK Manager,安装了一些高version的SDK Platforms，可是还是没用，几经周折，我无意点开了一个<br/>
+    按钮，吓我一跳，原来还有好多没下载好，如图：<br/>
+    <img src="images/sdk_platforms.png" alt="sdk platforms packages下载"/>
+
+
+
 </div>
 <script type="text/javascript">
     var para = document.getElementById("para");

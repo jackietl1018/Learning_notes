@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14c79069-58bc-45d2-9243-ea0e8f2b763e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bootstrap.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/lunbotu.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/lunbotu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lunbotu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/adb_install_apk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/cmd_adb_shell.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/cmd_adb_shell_grep.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/cmd_appium-doctor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/cmd_python.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/emulator_install_apk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/sdk_platforms.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Local_Learning_notes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Local_Learning_notes.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -26,8 +32,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="1300" column="38" lean-forward="true" selection-start-line="1300" selection-start-column="38" selection-end-line="1300" selection-end-column="38" />
+            <state relative-caret-position="553">
+              <caret line="1431" column="72" selection-start-line="1431" selection-start-column="72" selection-end-line="1431" selection-end-column="72" />
               <folding>
                 <element signature="n#style#0;n#h1#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -80,6 +86,16 @@
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#14;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#1;n#div#14;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#2;n#div#14;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#3;n#div#14;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#4;n#div#14;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#5;n#div#14;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#6;n#div#14;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#58689#58708#0" expanded="true" />
+                <element signature="e#58862#58881#0" expanded="true" />
+                <element signature="e#58982#59012#0" expanded="true" />
+                <element signature="e#59285#59304#0" expanded="true" />
+                <element signature="e#59394#59423#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -88,8 +104,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bootstrap.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="950">
-              <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+            <state relative-caret-position="6175">
+              <caret line="247" column="82" selection-start-line="247" selection-start-column="82" selection-end-line="247" selection-end-column="82" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -97,8 +117,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lunbotu.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+            <state relative-caret-position="125">
+              <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -204,16 +224,15 @@
         <option value="$PROJECT_DIR$/css/lunbotu.css" />
         <option value="$PROJECT_DIR$/js/lunbotu.js" />
         <option value="$PROJECT_DIR$/lunbotu.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/bootstrap.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="100" />
-    <option name="y" value="51" />
-    <option name="width" value="920" />
-    <option name="height" value="725" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="905" />
+    <option name="width" value="1064" />
+    <option name="height" value="869" />
   </component>
   <component name="ProjectLevelVcsManager">
     <OptionsSetting value="false" id="Update" />
@@ -224,7 +243,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -237,15 +255,11 @@
               <item name="Learning_notes" type="462c0819:PsiDirectoryNode" />
               <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Learning_notes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Learning_notes" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -324,6 +338,8 @@
       <workItem from="1547085538824" duration="16287000" />
       <workItem from="1547186574612" duration="3171000" />
       <workItem from="1547276270190" duration="1230000" />
+      <workItem from="1547517730022" duration="3934000" />
+      <workItem from="1547607953581" duration="16841000" />
     </task>
     <task id="LOCAL-00001" summary="第一天">
       <created>1544432084192</created>
@@ -350,13 +366,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="332454000" />
+    <option name="totallyTimeSpent" value="353229000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49858356" visible="true" weight="0.17767504" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49858356" visible="true" weight="0.17503302" />
       <window_info id="Structure" order="1" sideWeight="0.50141644" side_tool="true" weight="0.11294584" />
       <window_info id="Favorites" order="2" sideWeight="0.50141644" side_tool="true" weight="0.11294584" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -539,8 +555,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="1300" column="38" lean-forward="true" selection-start-line="1300" selection-start-column="38" selection-end-line="1300" selection-end-column="38" />
+        <state relative-caret-position="553">
+          <caret line="1431" column="72" selection-start-line="1431" selection-start-column="72" selection-end-line="1431" selection-end-column="72" />
           <folding>
             <element signature="n#style#0;n#h1#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -593,21 +609,35 @@
             <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#14;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#1;n#div#14;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#2;n#div#14;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#3;n#div#14;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#4;n#div#14;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#5;n#div#14;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#6;n#div#14;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#58689#58708#0" expanded="true" />
+            <element signature="e#58862#58881#0" expanded="true" />
+            <element signature="e#58982#59012#0" expanded="true" />
+            <element signature="e#59285#59304#0" expanded="true" />
+            <element signature="e#59394#59423#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bootstrap.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="950">
-          <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+        <state relative-caret-position="6175">
+          <caret line="247" column="82" selection-start-line="247" selection-start-column="82" selection-end-line="247" selection-end-column="82" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lunbotu.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+        <state relative-caret-position="125">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="50" />
         </state>
       </provider>
     </entry>

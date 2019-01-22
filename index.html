@@ -1390,7 +1390,8 @@ display: block;
                 <li>然后我们在cmd下输入：adb shell dumpsys window windows，查看运行结果：<br/>
                     <img src="images/cmd_adb_shell.png" alt="cmd下输入adb shell dumpsys window windows的运行结果"/>
                 </li>
-                <li>当然我们可以进行一定的过滤（grep），输入adb shell dumpsys window windows|findstr mCurrent，运行结果如下图：
+                <li>当然我们可以进行一定的过滤（grep），输入adb shell dumpsys window windows|findstr mCurrent(或者
+                    adb shell dumpsys window w |findstr \/ |findstr name=)，运行结果如下图：
                     <img src="images/cmd_adb_shell_grep.png"
                          alt="cmd下输入adb shell dumpsys window windows|findstr mCurrent的运行结果"/>
                 </li>
@@ -1405,21 +1406,21 @@ display: block;
     <strong>那如果我们要在android studio模拟器上安装apk文件呢?</strong><br/>
     刚开始找到了安装方法，主要有两种：
     <div>
-    <ul>
-        <li style="float:left;">直接将电脑桌面上的.apk文件拖动到安卓模拟器里面，结果失败了，如图：<br/>
-            <img src="images/emulator_install_apk.png" alt=".apk文件直接拖动到安卓模拟器安装失败截图"/>
-        </li>
-        <li style="float:right;">
-            方法二链接：
-            <a href="https://blog.csdn.net/xuzhimolol/article/details/62235417" style="text-decoration: none;"
-               target="_blank">
-                https://blog.csdn.net/xuzhimolol/article/details/62235417
-            </a>
-            <br/>
-            <img src="images/adb_install_apk.png" alt="cmd 命令窗口输入adb install apk 失败截图"/>
-        </li>
-        <div class="clear" style="clear:both;"></div>
-    </ul>
+        <ul>
+            <li style="float:left;">直接将电脑桌面上的.apk文件拖动到安卓模拟器里面，结果失败了，如图：<br/>
+                <img src="images/emulator_install_apk.png" alt=".apk文件直接拖动到安卓模拟器安装失败截图"/>
+            </li>
+            <li style="float:right;">
+                方法二链接：
+                <a href="https://blog.csdn.net/xuzhimolol/article/details/62235417" style="text-decoration: none;"
+                   target="_blank">
+                    https://blog.csdn.net/xuzhimolol/article/details/62235417
+                </a>
+                <br/>
+                <img src="images/adb_install_apk.png" alt="cmd 命令窗口输入adb install apk 失败截图"/>
+            </li>
+            <div class="clear" style="clear:both;"></div>
+        </ul>
     </div>
     <strong>那安卓模拟器下显示apk文件无法安装的具体原因是什么呢？</strong><br/>
     详细解答见链接
@@ -1430,8 +1431,17 @@ display: block;
     于是，我打开Tools-Android-SDK Manager,安装了一些高version的SDK Platforms，可是还是没用，几经周折，我无意点开了一个<br/>
     按钮，吓我一跳，原来还有好多没下载好，如图：<br/>
     <img src="images/sdk_platforms.png" alt="sdk platforms packages下载"/>
-
-
+    <hr/>
+    <br/>
+    pycharm中new project时一定要注意勾选下图中的两个按钮，默认是未勾选，不然经常很多模板库都加不进来，包括appium，如下图：<br/>
+    <img src="images/py_project_set.png" alt="pycharm new project时需要注意的设置"/><br/>
+    <hr/>
+    <br/>
+    真机测试时手机上的开发者选项里几个必须勾选的按钮，若未勾选，将直接影响无法成功运行测试demo<br/>
+    下面左图红色框里的两个选项我都勾选了，以为就ok了，如果不把蓝色框里的按钮一起勾选，运行appium时就不会给手机安装真机测试所需要的两三个apk<br/>
+    比如appium settings，也就会导致无法运行测试demo了。右图是运行测试demo时appium报错信息<br/>
+    <img src="images/developper_option.png" src="开发者选项设置"/>
+    <img src="images/appium_error_log.png" src="手机开发者选项部分按钮未勾选运行测试demo时appium报错信息"/>
 
 </div>
 <script type="text/javascript">

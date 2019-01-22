@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14c79069-58bc-45d2-9243-ea0e8f2b763e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/adb_install_apk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/cmd_adb_shell.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/cmd_adb_shell_grep.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/cmd_appium-doctor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/cmd_python.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/emulator_install_apk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/sdk_platforms.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Local_Learning_notes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Local_Learning_notes.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/appium_error_log.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/developper_option.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/py_project_set.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -32,8 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="553">
-              <caret line="1431" column="72" selection-start-line="1431" selection-start-column="72" selection-end-line="1431" selection-end-column="72" />
+            <state relative-caret-position="509">
+              <caret line="1443" column="84" lean-forward="true" selection-start-line="1443" selection-start-column="84" selection-end-line="1443" selection-end-column="84" />
               <folding>
                 <element signature="n#style#0;n#h1#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -84,18 +77,13 @@
                 <element signature="n#style#0;n#span#0;n#p#10;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#p#11;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#14;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#1;n#div#14;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#2;n#div#14;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#3;n#div#14;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#4;n#div#14;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#5;n#div#14;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#6;n#div#14;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#58689#58708#0" expanded="true" />
-                <element signature="e#58862#58881#0" expanded="true" />
-                <element signature="e#58982#59012#0" expanded="true" />
-                <element signature="e#59285#59304#0" expanded="true" />
-                <element signature="e#59394#59423#0" expanded="true" />
+                <element signature="e#54229#54258#0" expanded="true" />
+                <element signature="e#54338#54367#0" expanded="true" />
+                <element signature="e#54527#54556#0" expanded="true" />
+                <element signature="e#54834#54863#0" expanded="true" />
+                <element signature="e#55615#55645#0" expanded="true" />
+                <element signature="e#55935#55964#0" expanded="true" />
+                <element signature="e#57201#57231#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -229,10 +217,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="905" />
-    <option name="width" value="1064" />
-    <option name="height" value="869" />
+    <option name="width" value="1065" />
+    <option name="height" value="870" />
   </component>
   <component name="ProjectLevelVcsManager">
     <OptionsSetting value="false" id="Update" />
@@ -243,6 +231,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -259,7 +248,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -340,6 +328,8 @@
       <workItem from="1547276270190" duration="1230000" />
       <workItem from="1547517730022" duration="3934000" />
       <workItem from="1547607953581" duration="16841000" />
+      <workItem from="1547690709704" duration="2449000" />
+      <workItem from="1548036928456" duration="2595000" />
     </task>
     <task id="LOCAL-00001" summary="第一天">
       <created>1544432084192</created>
@@ -366,7 +356,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="353229000" />
+    <option name="totallyTimeSpent" value="358273000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -555,8 +545,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="1431" column="72" selection-start-line="1431" selection-start-column="72" selection-end-line="1431" selection-end-column="72" />
+        <state relative-caret-position="509">
+          <caret line="1443" column="84" lean-forward="true" selection-start-line="1443" selection-start-column="84" selection-end-line="1443" selection-end-column="84" />
           <folding>
             <element signature="n#style#0;n#h1#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -607,18 +597,13 @@
             <element signature="n#style#0;n#span#0;n#p#10;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#p#11;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#14;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#14;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#2;n#div#14;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#3;n#div#14;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#4;n#div#14;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#5;n#div#14;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#6;n#div#14;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#58689#58708#0" expanded="true" />
-            <element signature="e#58862#58881#0" expanded="true" />
-            <element signature="e#58982#59012#0" expanded="true" />
-            <element signature="e#59285#59304#0" expanded="true" />
-            <element signature="e#59394#59423#0" expanded="true" />
+            <element signature="e#54229#54258#0" expanded="true" />
+            <element signature="e#54338#54367#0" expanded="true" />
+            <element signature="e#54527#54556#0" expanded="true" />
+            <element signature="e#54834#54863#0" expanded="true" />
+            <element signature="e#55615#55645#0" expanded="true" />
+            <element signature="e#55935#55964#0" expanded="true" />
+            <element signature="e#57201#57231#0" expanded="true" />
           </folding>
         </state>
       </provider>

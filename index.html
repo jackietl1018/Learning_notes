@@ -5,7 +5,7 @@
     <title>个人博客</title>
     <link href="images/title_icon.png" rel="icon">
     <link href="css/main.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/blur.css" type="text/css">
+    <link href="css/blur.css" rel="stylesheet" type="text/css">
     <script src="js/canvas-nest.min.js"></script>
 </head>
 <body>
@@ -846,7 +846,7 @@ display: block;
             区别于非内置行业元素的不同是内置行内元素可设置宽高属性，并有效
             详细介绍网址：https://segmentfault.com/q/1010000007186319
         --->
-        <canvas height="100" width="100" style="background:#e6e6e6;"></canvas>
+        <canvas height="100" style="background:#e6e6e6;" width="100"></canvas>
         <span style="height:100px;width:100px;">canvas默认宽高300*150</span>    <!-- 行内元素span设置宽高却是无效的 -->
         <br/>
         <canvas height="100" id="myCanvas_1" width="180"></canvas>
@@ -1003,7 +1003,7 @@ display: block;
             下面是我自己在canvas下体会一下如何画圆，和画圆弧。<br/>
             <canvas id="myCanvas_4" width="240"></canvas>
             <canvas id="myCanvas_5" width="240"></canvas>
-            <canvas id="myCanvas_6" width="240" onload="drawCircle(red,2,120,75,70,0,Math.PI*2,true)"></canvas>
+            <canvas id="myCanvas_6" onload="drawCircle(red,2,120,75,70,0,Math.PI*2,true)" width="240"></canvas>
             <!-- 你看画两个圆就得重复写一样形式的js代码，要是我们能够将这个方法封装成一个函数多好，想画的时候直接调用函数就ok。 -->
             <script>
                 var c4 = document.getElementById("myCanvas_4");
@@ -1262,8 +1262,8 @@ display: block;
         <span style="font-size:9px;">盛世情微，再无终老777</span><br/>
         <span style="font-size:6px;">盛世情微，再无终老777</span><br/>
         <span>如果想比9px字体都小，能否实现呢？</span>
-        <a href="https://blog.csdn.net/hangge0111/article/details/81946809" target="_blank"
-           style="text-decoration:none;color:tomato;">
+        <a href="https://blog.csdn.net/hangge0111/article/details/81946809" style="text-decoration:none;color:tomato;"
+           target="_blank">
             点击我，跳转到实现链接...(下面这行文字为实现出来的效果)
         </a>
         <br/>
@@ -1273,9 +1273,9 @@ display: block;
     </p>
     <div id="blur-div">
         <img id="blur-image" src="images/star_sky.jpg"/>
-        <canvas id="blur-canvas" width="700" height="450"></canvas>
-        <a href="javascript:resetPicture()" class="button" id="reset-button">RESET</a>
-        <a href="javascript:showPicture()" class="button" id="show-picture-button">SHOW</a>
+        <canvas height="450" id="blur-canvas" width="700"></canvas>
+        <a class="button" href="javascript:resetPicture()" id="reset-button">RESET</a>
+        <a class="button" href="javascript:showPicture()" id="show-picture-button">SHOW</a>
     </div>
     <div class="flex_box2">
         <div class="flex_child">
@@ -1333,7 +1333,7 @@ display: block;
     <hr/>
     <br/>
     在cmd命令窗口下分别输入python和python2，结果如下：<br/>
-    <img src="images/cmd_python.png" alt="cmd命令窗口输入python运行截图"/><br/>
+    <img alt="cmd命令窗口输入python运行截图" src="images/cmd_python.png"/><br/>
     观察截图可知，python2应该是未添加到环境变量的原因，导致显示'python2' 不是内部或外部命令，也不是可运行的程序
     或批处理文件。参照python3.7自动添加路径的形式，最终在cmd下输入python依然报同样的错误<br/>
     <strong>最后一行cls命令是清除cmd命令行记录的作用</strong><br/>
@@ -1367,7 +1367,7 @@ display: block;
     <br/>
     7.最后我们需要cmd下输入：appium-doctor看我们的环境是否全部配置成功且齐全，然而，在此之前，我们要知道appium-doctor也是需要安装的：<br/>
     cmd下输入：npm install -g appium-doctor进行安装，然后输入appium-doctor查看结果：<br/>
-    <img src="images/cmd_appium-doctor.png" alt="cmd窗口下输入appium-doctor截图"/>
+    <img alt="cmd窗口下输入appium-doctor截图" src="images/cmd_appium-doctor.png"/>
     <hr/>
     <br/>
     <strong>自动化测试实例</strong><br/>
@@ -1388,12 +1388,12 @@ display: block;
             <ol>
                 <li>比如我们这次测试针对手机里面的拨号器功能，那我们就打开手机上的拨号器</li>
                 <li>然后我们在cmd下输入：adb shell dumpsys window windows，查看运行结果：<br/>
-                    <img src="images/cmd_adb_shell.png" alt="cmd下输入adb shell dumpsys window windows的运行结果"/>
+                    <img alt="cmd下输入adb shell dumpsys window windows的运行结果" src="images/cmd_adb_shell.png"/>
                 </li>
                 <li>当然我们可以进行一定的过滤（grep），输入adb shell dumpsys window windows|findstr mCurrent(或者
                     adb shell dumpsys window w |findstr \/ |findstr name=)，运行结果如下图：
-                    <img src="images/cmd_adb_shell_grep.png"
-                         alt="cmd下输入adb shell dumpsys window windows|findstr mCurrent的运行结果"/>
+                    <img alt="cmd下输入adb shell dumpsys window windows|findstr mCurrent的运行结果"
+                         src="images/cmd_adb_shell_grep.png"/>
                 </li>
             </ol>
         </li>
@@ -1408,7 +1408,7 @@ display: block;
     <div>
         <ul>
             <li style="float:left;">直接将电脑桌面上的.apk文件拖动到安卓模拟器里面，结果失败了，如图：<br/>
-                <img src="images/emulator_install_apk.png" alt=".apk文件直接拖动到安卓模拟器安装失败截图"/>
+                <img alt=".apk文件直接拖动到安卓模拟器安装失败截图" src="images/emulator_install_apk.png"/>
             </li>
             <li style="float:right;">
                 方法二链接：
@@ -1417,7 +1417,7 @@ display: block;
                     https://blog.csdn.net/xuzhimolol/article/details/62235417
                 </a>
                 <br/>
-                <img src="images/adb_install_apk.png" alt="cmd 命令窗口输入adb install apk 失败截图"/>
+                <img alt="cmd 命令窗口输入adb install apk 失败截图" src="images/adb_install_apk.png"/>
             </li>
             <div class="clear" style="clear:both;"></div>
         </ul>
@@ -1430,11 +1430,11 @@ display: block;
     在我重新添加模拟器的过程中却遇到了很尴尬的问题，根本无法选取到arm cpu架构的模拟器，并且连86架构的选项也特别少<br/>
     于是，我打开Tools-Android-SDK Manager,安装了一些高version的SDK Platforms，可是还是没用，几经周折，我无意点开了一个<br/>
     按钮，吓我一跳，原来还有好多没下载好，如图：<br/>
-    <img src="images/sdk_platforms.png" alt="sdk platforms packages下载"/>
+    <img alt="sdk platforms packages下载" src="images/sdk_platforms.png"/>
     <hr/>
     <br/>
     pycharm中new project时一定要注意勾选下图中的两个按钮，默认是未勾选，不然经常很多模板库都加不进来，包括appium，如下图：<br/>
-    <img src="images/py_project_set.png" alt="pycharm new project时需要注意的设置"/><br/>
+    <img alt="pycharm new project时需要注意的设置" src="images/py_project_set.png"/><br/>
     <hr/>
     <br/>
     真机测试时手机上的开发者选项里几个必须勾选的按钮，若未勾选，将直接影响无法成功运行测试demo<br/>
@@ -1442,7 +1442,73 @@ display: block;
     比如appium settings，也就会导致无法运行测试demo了。右图是运行测试demo时appium报错信息<br/>
     <img src="images/developper_option.png" src="开发者选项设置"/>
     <img src="images/appium_error_log.png" src="手机开发者选项部分按钮未勾选运行测试demo时appium报错信息"/>
+</div>
 
+
+<div>
+    <h2>2019年1月30日-星期三</h2>
+    <strong>IntelliJ IDEA安装过程中遇到的一些problem（已经解决）</strong>
+    <hr/>
+    <p>1.刚开始为了避免激活等麻烦事情，我选择了IDEA community版本，可是在里面配置tomcat的时候遇到一个问题一直没法解决，与下面链接<br/>
+        <a href="https://blog.csdn.net/qq_33499534/article/details/85632282" style="text-decoration:none;"
+           target="_blank">
+            https://blog.csdn.net/qq_33499534/article/details/85632282
+        </a>
+        里面描述的情况一模一样
+    </p>
+    <hr/>
+    <p>2.于是我弃用了IDEA community版，改用IDEA Ultimate（终极版），具有更加强大的功能，并且也能很方便地配置tomcat</p>
+    <hr/>
+    <p>3.tomcat下载,我点击了红色框进行下载，结果下载到我的电脑本地目录：E:\Choreme_downloads是一个.exe安装文件，然后我进行了安装<br/>
+        好像安装过程中也无法选择安装目录，就默认安装到了C:\Program Files\Apache Software Foundation\Tomcat 9.0，点击蓝色框就是下载压缩包了，<br/>
+        下载好之后解压就可以，无需安装。在此之后，还需要进行<br/>
+        环境变量配置，配置过程如下：<br/>
+        <img alt="tomcat下载选择选项" src="images/tomcat_download.png"/><br/>
+        新建系统变量：CATALINA_HOME<br/>
+        变量值：C:\Program Files\Apache Software Foundation\Tomcat 9.0<br/>
+        系统变量Path中添加：%CATALINA_HOME%\bin<br/>
+        然后在cmd命令窗口下输入startup（如果未设置环境变量，会报错，“startup”不是内部或者可执行命令），成功启动tomcat，当然另一种启动方式是<br/>
+        到tomcat的bin目录下点击startup.bat，两种启动方式无论哪种，一旦启动都不能关闭命令窗口，不然就不能访问tomcat主页了，访问tomcat主页的方式是：<br/>
+        网址里输入localhost:8080<br/>
+        可是在我启动IntelliJ IDEA后，一个麻烦的事情出现了，有时候dos窗口下输入startup会报错，win+x快捷键，选择Windows Powershell以管理员身份打开命令窗口，<br/>
+        输入startup倒是可以启动，可是会闪退，之后仍然无法访问tomcat主页。这是因为我们首次运行IDEA，并没有很好地进行配置。
+    <hr/>
+    <br/>
+    <strong>首次安装好IDEA并打开后，配置如下：</strong><br/>
+    在IDEA里点击菜单栏里的run-edit configurations（这是全局的tomcat设置，针对单个项目可以单独添加设置），然后按照下图进行配置：<br/>
+    <img alt="IDEA里面tomcat初步设置" src="images/idea_tomcat1.png"/><br/>
+    之后新建一个单独的项目，进行配置，如下：我们可以看到会有一个warning提示，刚开始我也发现了，只是以为没什么影响，没理会，这才导致需要进行<br/>
+    IDEA对tomcat进行进一步设置<br/>
+    <img alt="对IDEA里面单个project进行tomcat配置" src="images/ideaproject_tomcat.png"/><br/>
+    进一步对IDEA配置tomcat如下，参考链接：
+    <a href="https://www.cnblogs.com/yayazi/p/7920257.html" style="text-decoration:none;" target="_blank">
+        https://www.cnblogs.com/yayazi/p/7920257.html</a>和
+    <a href="https://www.cnblogs.com/Knowledge-has-no-limit/p/7240585.html" style="text-decoration:none;"
+       target="_blank">
+        https://www.cnblogs.com/Knowledge-has-no-limit/p/7240585.html</a><br/>
+    </p>
+    <hr/>
+    <p>结果我傻愣愣地先dos窗口下启动好了tomcat，然后IDEA里面编译运行时一直报错：报错信息如下：<br/>
+        Error running "Tomcat 9.0.14":Address localhost:8080 is already in use<br/>
+        折腾了好些时间，具体原因很简单，参考链接：
+        <a href="https://zhidao.baidu.com/question/66486087.html" style="text-decoration: none;" target="_blank">
+            https://zhidao.baidu.com/question/66486087.html</a>
+    </p>
+    <hr/>
+    <p>
+        <strong>maven安装与在IDEA里面的配置</strong><br/>
+        我的maven下载目录是：E:\Choreme_downloads，下载好压缩包后进行解压，然后进行下面的操作<br/>
+        参考链接：<a href="https://www.cnblogs.com/eagle6688/p/7838224.html" style="text-decoration: none;" target="_blank">
+        https://www.cnblogs.com/eagle6688/p/7838224.html</a>
+    </p>
+    <hr/>
+    <p>
+        然而，这些弄好之后，我还是没把symphony-demo跑通，编译时还是出了些问题，继续解决好吧，停留两三天了都，暂时性卡住......
+    </p>
+    <hr/>
+    <p>先不说没跑通这个事情，即使能跑通，也是需要数据库支持的，为此，我下载好了my sql 数据库（community版本，应该够用吧），<br/>
+        下载目录：E:\Choreme_downloads， 安装目录：C:\Program Files
+    </p>
 </div>
 <script type="text/javascript">
     var para = document.getElementById("para");

@@ -1457,7 +1457,20 @@ display: block;
         里面描述的情况一模一样
     </p>
     <hr/>
-    <p>2.于是我弃用了IDEA community版，改用IDEA Ultimate（终极版），具有更加强大的功能，并且也能很方便地配置tomcat</p>
+    <p>2.于是我弃用了IDEA community版，改用IDEA Ultimate（终极版），具有更加强大的功能，并且也能很方便地配置tomcat。<br/>
+        但是使用IDEA Ultimate版就涉及到一个激活的问题，当然是希望永久激活呀！发现激活过程竟然和WebStorm有异曲同工之妙，<br/>
+        打开百度，搜索IntelliJ IDEA注册码，进入后，如下图：<br/>
+        <img src="images/IDEA_registercode.png" width="535" height="290" alt="IDEA永久激活插件下载链接"/><br/>
+        下载后之后参考IDEA激活链接原文地址：
+        <a href="https://blog.csdn.net/yl1712725180/article/details/80309862" style="text-decoration: none;"
+           target="_blank">
+            https://blog.csdn.net/yl1712725180/article/details/80309862</a>
+        <br/>
+        然而把里面的破解码输入到Activation code框里面是不行的，会出现key is invalid的情况，这时候就需要试试好心人下面的评论了，<br/>
+        我的解决办法License is valid till Nov 23, 2017的问题, 在avtivation code页面, 输入jar地址, 我的是 -javaagent:C:\Downloads\Tool\idea\
+        ideaIU-2018.3.3\bin\JetbrainsIdesCrack-4.2-release-sha1-3323d5d0b82e716609808090d3dc7cb3198b8c4b.jar 即可。<br/>
+        <strong>那么，我只要输入自己的jar地址就好，果然ok，成功永久激活IDEA，哈哈！</strong>
+    </p>
     <hr/>
     <p>3.tomcat下载,我点击了红色框进行下载，结果下载到我的电脑本地目录：E:\Choreme_downloads是一个.exe安装文件，然后我进行了安装<br/>
         好像安装过程中也无法选择安装目录，就默认安装到了C:\Program Files\Apache Software Foundation\Tomcat 9.0，点击蓝色框就是下载压缩包了，<br/>
@@ -1508,6 +1521,22 @@ display: block;
     <hr/>
     <p>先不说没跑通这个事情，即使能跑通，也是需要数据库支持的，为此，我下载好了my sql 数据库（community版本，应该够用吧），<br/>
         下载目录：E:\Choreme_downloads， 安装目录：C:\Program Files
+    </p>
+    <hr/>
+    <p>在不断跑项目的过程中，又遇到一个新的问题，那就是IDEA里面启动tomcat时输出的server log日志文件中文乱码问题：<br/>
+        解决方法：参考原文链接--
+        <a href="https://blog.csdn.net/nan_cheung/article/details/79337273" style="text-decoration: none;"
+           target="_blank">
+            https://blog.csdn.net/nan_cheung/article/details/79337273
+        </a>
+        <br/>
+        新问题：在用tomcat跑maven项目的时候，输出的server log日志文件里一个报错信息如下图：<br/>
+        <img src="images/APR_notfound.png" alt="tomcat server log APR not found报错信息" width="1000"/><br/>
+        解决方法：参考原文链接--
+        <a href="https://blog.csdn.net/jiankunking/article/details/51462111" style="text-decoration: none;"
+           target="_blank">
+            https://blog.csdn.net/jiankunking/article/details/51462111
+        </a>
     </p>
 </div>
 <script type="text/javascript">
